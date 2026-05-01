@@ -46,6 +46,12 @@ export const Route = createRootRoute({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Jay Farfan — Senior Product Designer" },
+      { name: "description", content: "A professional, bilingual portfolio website showcasing Jay Farfan's expertise as a Senior Product Designer." },
+      { property: "og:description", content: "A professional, bilingual portfolio website showcasing Jay Farfan's expertise as a Senior Product Designer." },
+      { name: "twitter:description", content: "A professional, bilingual portfolio website showcasing Jay Farfan's expertise as a Senior Product Designer." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bd774091-0bab-4bbf-8af5-e6813f49f986/id-preview-fac245e5--8ca99ae5-3c08-412c-9909-e41139f83529.lovable.app-1777668932827.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bd774091-0bab-4bbf-8af5-e6813f49f986/id-preview-fac245e5--8ca99ae5-3c08-412c-9909-e41139f83529.lovable.app-1777668932827.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
