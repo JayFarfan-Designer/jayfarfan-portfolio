@@ -1,0 +1,143 @@
+export type ProjectMedia = {
+  /** Easily replaceable: swap this image src later. */
+  hero: string;
+  /** Optional supporting visuals for case study */
+  supporting?: string[];
+};
+
+export type Project = {
+  slug: string;
+  number: string;
+  client: string;
+  /** Tailwind bg class using design token */
+  accentClass: string;
+  /** Color used by SVG illustrations */
+  accentVar: string;
+  illustration: "phone" | "chat" | "marketplace" | "ecommerce" | "dashboard" | "publicservice";
+  comingSoon?: boolean;
+  es: { title: string; description: string };
+  en: { title: string; description: string };
+  tags: string[];
+  media?: ProjectMedia;
+};
+
+export const projects: Project[] = [
+  {
+    slug: "certezia",
+    number: "01",
+    client: "Certezia",
+    accentClass: "bg-project-certezia",
+    accentVar: "var(--project-certezia)",
+    illustration: "phone",
+    es: {
+      title: "Rediseñando una experiencia de firma digital mobile-first",
+      description:
+        "Rediseño end-to-end de una solución de firma digital enfocada en reducir fricción en procesos de autenticación con DNIe.",
+    },
+    en: {
+      title: "Redesigning a mobile-first digital signature experience",
+      description:
+        "End-to-end redesign of a digital signature solution focused on reducing friction in DNIe authentication flows.",
+    },
+    tags: ["UX/UI", "Mobile-first", "Digital Identity", "Prototyping", "AI-assisted Design"],
+  },
+  {
+    slug: "komu-ai",
+    number: "02",
+    client: "Pablo / Komu AI",
+    accentClass: "bg-project-komu",
+    accentVar: "var(--project-komu)",
+    illustration: "chat",
+    es: {
+      title: "Diseñando un asistente financiero por WhatsApp desde cero",
+      description:
+        "Definición de producto, flujos y funcionalidades para un asistente financiero con IA orientado a jóvenes latinoamericanos.",
+    },
+    en: {
+      title: "Designing a WhatsApp-based financial assistant from scratch",
+      description:
+        "Product definition, flows and features for an AI-powered financial assistant designed for young Latin American users.",
+    },
+    tags: ["Product Strategy", "AI Product", "WhatsApp UX", "Fintech", "MVP"],
+  },
+  {
+    slug: "karway",
+    number: "03",
+    client: "Karway",
+    accentClass: "bg-project-karway",
+    accentVar: "var(--project-karway)",
+    illustration: "marketplace",
+    es: {
+      title: "Construyendo la visión de producto para un marketplace automotriz",
+      description:
+        "Liderazgo de iniciativas de producto para un marketplace automotriz, conectando objetivos de negocio, usuarios, viabilidad técnica y roadmap.",
+    },
+    en: {
+      title: "Shaping the product vision for an automotive marketplace",
+      description:
+        "Led product initiatives for an automotive marketplace, connecting business goals, users, technical feasibility and roadmap decisions.",
+    },
+    tags: ["Product Management", "Marketplace", "UX Strategy", "AI-assisted Analysis"],
+  },
+  {
+    slug: "kindberry",
+    number: "04",
+    client: "KindBerry",
+    accentClass: "bg-project-kindberry",
+    accentVar: "var(--project-kindberry)",
+    illustration: "ecommerce",
+    es: {
+      title: "Diseñando un e-commerce premium desde research hasta UX/UI",
+      description:
+        "Diseño de producto digital para una marca premium de ropa infantil, combinando research, benchmark, arquetipos y objetivos de negocio.",
+    },
+    en: {
+      title: "Designing a premium e-commerce experience from research to UX/UI",
+      description:
+        "Digital product design for a premium children's clothing brand, combining research, benchmarking, archetypes and business goals.",
+    },
+    tags: ["E-commerce", "UX Research", "UI Design", "Benchmark", "Product Design"],
+  },
+  {
+    slug: "pacifico-seguros",
+    number: "05",
+    client: "Pacífico Seguros",
+    accentClass: "bg-project-pacifico",
+    accentVar: "var(--project-pacifico)",
+    illustration: "dashboard",
+    es: {
+      title: "Mejorando experiencias digitales en servicios financieros y seguros",
+      description:
+        "Diseño UX/UI e investigación para productos digitales del sector asegurador, traduciendo necesidades de usuarios y stakeholders en soluciones claras.",
+    },
+    en: {
+      title: "Improving digital experiences in financial services and insurance",
+      description:
+        "UX/UI design and research for insurance digital products, translating user and stakeholder needs into clear solutions.",
+    },
+    tags: ["UX Design", "UX Research", "Insurance", "User Flows", "Service Design"],
+  },
+  {
+    slug: "minsa",
+    number: "06",
+    client: "MINSA / Digital Humans",
+    accentClass: "bg-project-minsa",
+    accentVar: "var(--project-minsa)",
+    illustration: "publicservice",
+    es: {
+      title: "Rediseñando una experiencia pública usada por millones de ciudadanos",
+      description:
+        "Participación en el rediseño de la app del Ministerio de Salud del Perú para visualizar información de vacunación COVID-19 y generar certificados digitales.",
+    },
+    en: {
+      title: "Redesigning a public experience used by millions of citizens",
+      description:
+        "Participated in the redesign of Peru's Ministry of Health app, used to view COVID-19 vaccination information and generate digital certificates.",
+    },
+    tags: ["GovTech", "UX/UI", "Information Architecture", "Accessibility", "High-impact Product"],
+  },
+];
+
+export function getProject(slug: string) {
+  return projects.find((p) => p.slug === slug);
+}
