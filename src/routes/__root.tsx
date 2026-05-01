@@ -77,5 +77,12 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
-  return <Outlet />;
+  return (
+    <LanguageProvider>
+      <SiteHeader />
+      <main className="pt-16 md:pt-20">
+        <Outlet />
+      </main>
+    </LanguageProvider>
+  );
 }
