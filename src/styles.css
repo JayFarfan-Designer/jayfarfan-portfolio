@@ -40,7 +40,7 @@
   --color-project-pacifico: var(--project-pacifico);
   --color-project-minsa: var(--project-minsa);
 
-  --font-display: "Instrument Serif", "Times New Roman", serif;
+  --font-display: "Inter Tight", "Inter", system-ui, sans-serif;
   --font-sans: "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
