@@ -3,10 +3,30 @@ import { useLanguage } from "@/lib/language";
 export function UXProcess() {
   const { t } = useLanguage();
   const steps = [
-    { es: "Problem Finding", en: "Problem Finding" },
-    { es: "Problem Framing", en: "Problem Framing" },
-    { es: "Solution Shaping", en: "Solution Shaping" },
-    { es: "Solution Delivery", en: "Solution Delivery" },
+    {
+      es: "Problem Finding",
+      en: "Problem Finding",
+      d_es: "Detectar señales y entender el contexto.",
+      d_en: "Detect signals and understand context.",
+    },
+    {
+      es: "Problem Framing",
+      en: "Problem Framing",
+      d_es: "Ordenar restricciones y definir el problema.",
+      d_en: "Organize constraints and define the problem.",
+    },
+    {
+      es: "Solution Shaping",
+      en: "Solution Shaping",
+      d_es: "Explorar, prototipar y validar caminos.",
+      d_en: "Explore, prototype and validate paths.",
+    },
+    {
+      es: "Solution Delivery",
+      en: "Solution Delivery",
+      d_es: "Diseñar para implementación real.",
+      d_en: "Design for real implementation.",
+    },
   ];
 
   return (
@@ -14,7 +34,7 @@ export function UXProcess() {
       <div className="container-editorial">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           <div className="lg:col-span-5">
-            <div className="eyebrow mb-4">— UX Process</div>
+            <div className="eyebrow mb-4">— {t("Proceso UX", "UX Process")}</div>
             <h2 className="headline-lg text-balance">
               {t(
                 "Diseñar bien empieza por encontrar el problema correcto.",
@@ -23,30 +43,40 @@ export function UXProcess() {
             </h2>
           </div>
 
-          <div className="lg:col-span-7 lg:pt-4">
-            <p className="text-base md:text-lg text-muted-foreground text-pretty max-w-xl">
+          <div className="lg:col-span-7 lg:pt-3">
+            <p className="text-base md:text-lg leading-relaxed text-muted-foreground text-pretty max-w-xl">
               {t(
-                "Trabajo con una mentalidad user-centric, combinando pensamiento sistémico, estrategia de producto, UX/UI e IA aplicada con criterio. Mi proceso busca entender el contexto, ordenar restricciones y convertir decisiones complejas en soluciones digitales claras, útiles y viables.",
+                "Trabajo con una mentalidad centrada en el usuario, combinando pensamiento sistémico, estrategia de producto, UX/UI e IA aplicada con criterio. Mi proceso busca entender el contexto, ordenar restricciones y convertir decisiones complejas en soluciones digitales claras, útiles y viables.",
                 "I work with a user-centric mindset, combining systems thinking, product strategy, UX/UI and responsible AI-assisted design. My process focuses on understanding context, organizing constraints and turning complex decisions into clear, useful and viable digital solutions."
               )}
             </p>
+          </div>
+        </div>
 
-            {/* Process visual: chaos → clarity */}
-            <div className="mt-14 rounded-2xl border border-hairline bg-surface p-8 md:p-12">
-              <ProcessIllustration />
-              <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                {steps.map((s, i) => (
-                  <div key={i} className="flex flex-col gap-2">
-                    <div className="font-mono text-xs text-muted-foreground">
-                      {String(i + 1).padStart(2, "0")}
-                    </div>
-                    <div className="font-display text-lg leading-tight">
-                      {t(s.es, s.en)}
-                    </div>
-                  </div>
-                ))}
+        {/* Chaos → clarity illustration */}
+        <div className="mt-16 md:mt-20 rounded-3xl border border-hairline bg-gradient-to-b from-surface to-background p-8 md:p-14 overflow-hidden">
+          <ChaosToClarity />
+
+          <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-4 gap-px bg-hairline border border-hairline rounded-2xl overflow-hidden">
+            {steps.map((s, i) => (
+              <div
+                key={i}
+                className="bg-background p-6 md:p-7 flex flex-col gap-3"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="font-mono text-xs text-muted-foreground tabular-nums">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span className="block w-6 h-px bg-foreground/30" />
+                </div>
+                <div className="font-display text-base md:text-lg font-medium tracking-tight">
+                  {t(s.es, s.en)}
+                </div>
+                <div className="text-sm text-muted-foreground leading-relaxed">
+                  {t(s.d_es, s.d_en)}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -54,40 +84,83 @@ export function UXProcess() {
   );
 }
 
-function ProcessIllustration() {
+function ChaosToClarity() {
   return (
-    <svg viewBox="0 0 800 160" className="w-full h-auto" fill="none">
-      {/* knot */}
-      <g transform="translate(40,80)" stroke="currentColor" strokeWidth="1.2" opacity="0.85">
-        <path d="M 0 0 C -10 -30, 30 -40, 40 -10 S 10 30, -10 20 S -30 -10, 10 -20 S 50 0, 30 25" />
-        <path d="M -15 -10 C 5 -30, 25 10, 5 25" />
-        <path d="M 5 -25 C 30 -10, -10 35, 25 15" />
+    <svg
+      viewBox="0 0 1000 220"
+      className="w-full h-auto text-foreground"
+      fill="none"
+      aria-hidden
+    >
+      <defs>
+        <linearGradient id="fade" x1="0" x2="1">
+          <stop offset="0" stopColor="currentColor" stopOpacity="0.55" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0.95" />
+        </linearGradient>
+      </defs>
+
+      {/* Stage 1 — chaos: tangled scribble */}
+      <g transform="translate(80,110)" stroke="currentColor" strokeOpacity="0.45" strokeWidth="1">
+        <path d="M -55 -40 C -20 -80, 40 -70, 55 -25 S 30 50, -10 35 S -70 -5, -25 -25 S 60 -10, 40 40 S -50 50, -60 0" />
+        <path d="M -40 -20 C -10 -50, 30 -40, 35 -10 S 5 30, -20 20" />
+        <path d="M 0 -45 C 25 -25, -15 30, 25 15" />
+        <circle cx="0" cy="0" r="2" fill="currentColor" opacity="0.6" />
       </g>
-      {/* loops becoming structured */}
-      <g transform="translate(220,80)" stroke="currentColor" strokeWidth="1.2" opacity="0.7">
-        <circle cx="0" cy="0" r="18" />
-        <circle cx="22" cy="0" r="14" />
-        <circle cx="40" cy="0" r="10" />
+
+      {/* Stage 2 — orbital framing */}
+      <g transform="translate(310,110)" stroke="currentColor" strokeOpacity="0.55" strokeWidth="1">
+        <ellipse cx="0" cy="0" rx="65" ry="32" />
+        <ellipse cx="0" cy="0" rx="65" ry="32" transform="rotate(60)" />
+        <ellipse cx="0" cy="0" rx="65" ry="32" transform="rotate(-60)" />
+        <circle cx="0" cy="0" r="4" fill="currentColor" />
       </g>
-      {/* grid forming */}
-      <g transform="translate(380,50)" stroke="currentColor" strokeWidth="1" opacity="0.6">
-        {Array.from({ length: 4 }).map((_, r) =>
-          Array.from({ length: 4 }).map((_, c) => (
-            <rect key={`${r}-${c}`} x={c * 18} y={r * 18} width="12" height="12" />
-          ))
+
+      {/* Stage 3 — grid forming */}
+      <g transform="translate(540,75)" stroke="currentColor" strokeOpacity="0.6" strokeWidth="1">
+        {Array.from({ length: 5 }).map((_, r) =>
+          Array.from({ length: 5 }).map((_, c) => {
+            const filled = (r + c) % 4 === 0;
+            return (
+              <rect
+                key={`${r}-${c}`}
+                x={c * 16}
+                y={r * 16}
+                width="10"
+                height="10"
+                rx="2"
+                fill={filled ? "currentColor" : "none"}
+                fillOpacity={filled ? 0.7 : 0}
+              />
+            );
+          })
         )}
       </g>
-      {/* shaped solution: single rounded rect */}
-      <g transform="translate(540,55)">
-        <rect width="80" height="50" rx="10" stroke="currentColor" strokeWidth="1.4" />
-        <circle cx="40" cy="25" r="4" fill="currentColor" />
+
+      {/* Stage 4 — single resolved shape */}
+      <g transform="translate(770,75)">
+        <rect width="120" height="70" rx="14" stroke="currentColor" strokeOpacity="0.85" strokeWidth="1.2" />
+        <rect x="14" y="14" width="44" height="6" rx="3" fill="currentColor" opacity="0.85" />
+        <rect x="14" y="26" width="80" height="4" rx="2" fill="currentColor" opacity="0.45" />
+        <rect x="14" y="34" width="64" height="4" rx="2" fill="currentColor" opacity="0.45" />
+        <rect x="14" y="48" width="36" height="14" rx="7" fill="currentColor" opacity="0.9" />
       </g>
-      {/* arrow / final dot */}
-      <g transform="translate(700,80)">
-        <line x1="-20" y1="0" x2="40" y2="0" stroke="currentColor" strokeWidth="1.2" />
-        <polyline points="32,-6 40,0 32,6" stroke="currentColor" strokeWidth="1.2" fill="none" />
-        <circle cx="60" cy="0" r="5" fill="currentColor" />
-      </g>
+
+      {/* Connecting line */}
+      <line
+        x1="80"
+        y1="180"
+        x2="920"
+        y2="180"
+        stroke="url(#fade)"
+        strokeWidth="1"
+        strokeDasharray="2 6"
+      />
+      {/* dots under each stage */}
+      {[80, 310, 565, 830].map((x, i) => (
+        <g key={i} transform={`translate(${x},180)`}>
+          <circle r="3" fill="currentColor" opacity={0.4 + i * 0.15} />
+        </g>
+      ))}
     </svg>
   );
 }
