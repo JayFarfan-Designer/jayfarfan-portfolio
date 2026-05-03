@@ -1,4 +1,6 @@
 import { useLanguage } from "@/lib/language";
+import { useState } from "react";
+import { Plus } from "lucide-react";
 
 const blocks = [
   {
@@ -22,7 +24,7 @@ const blocks = [
       ["Journey Mapping", "Journey Mapping"],
       ["Wireframing", "Wireframing"],
       ["Prototyping", "Prototyping"],
-      ["Usability improvement", "Usability improvement"],
+      ["Mejora de usabilidad", "Usability improvement"],
     ],
   },
   {
@@ -31,21 +33,21 @@ const blocks = [
     skills: [
       ["Visual Design", "Visual Design"],
       ["Design Systems", "Design Systems"],
-      ["Responsive Interfaces", "Responsive Interfaces"],
+      ["Interfaces responsivas", "Responsive Interfaces"],
       ["Interaction Design", "Interaction Design"],
       ["Component Thinking", "Component Thinking"],
-      ["High-fidelity prototypes", "High-fidelity prototypes"],
+      ["Prototipos high-fidelity", "High-fidelity prototypes"],
     ],
   },
   {
     es: { heading: "Research & Discovery" },
     en: { heading: "Research & Discovery" },
     skills: [
-      ["User Interviews", "User Interviews"],
+      ["Entrevistas con usuarios", "User Interviews"],
       ["Benchmarking", "Benchmarking"],
-      ["Competitive Analysis", "Competitive Analysis"],
+      ["Análisis competitivo", "Competitive Analysis"],
       ["Personas / arquetipos", "Personas / archetypes"],
-      ["Research synthesis", "Research synthesis"],
+      ["Síntesis de research", "Research synthesis"],
       ["Usability Testing", "Usability Testing"],
     ],
   },
@@ -56,7 +58,7 @@ const blocks = [
       ["ChatGPT", "ChatGPT"],
       ["Claude", "Claude"],
       ["Lovable", "Lovable"],
-      ["AI-assisted wireframing", "AI-assisted wireframing"],
+      ["Wireframing asistido por IA", "AI-assisted wireframing"],
       ["Síntesis con IA", "AI-assisted synthesis"],
       ["Prototipado rápido", "Rapid prototyping"],
       ["Uso responsable de IA", "Responsible AI use"],
@@ -67,27 +69,31 @@ const blocks = [
     en: { heading: "Facilitation & Collaboration" },
     skills: [
       ["Workshops", "Workshops"],
-      ["Stakeholder alignment", "Stakeholder alignment"],
-      ["Cross-functional collaboration", "Cross-functional collaboration"],
-      ["Design communication", "Design communication"],
-      ["Team rituals", "Team rituals"],
-      ["Knowledge sharing", "Knowledge sharing"],
+      ["Alineamiento con stakeholders", "Stakeholder alignment"],
+      ["Colaboración cross-functional", "Cross-functional collaboration"],
+      ["Comunicación de diseño", "Design communication"],
+      ["Rituales de equipo", "Team rituals"],
+      ["Compartir conocimiento", "Knowledge sharing"],
     ],
   },
 ];
 
 export function Skillset() {
   const { t, lang } = useLanguage();
+  const [open, setOpen] = useState<number | null>(0);
+
   return (
     <section className="py-24 md:py-32 border-t border-hairline">
       <div className="container-editorial">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-14 md:mb-20">
           <div className="lg:col-span-5">
             <div className="eyebrow mb-4">— Skillset</div>
-            <h2 className="headline-lg text-balance">Skillset.</h2>
+            <h2 className="headline-lg text-balance">
+              {t("Lo que sé hacer.", "What I do.")}
+            </h2>
           </div>
-          <div className="lg:col-span-7 lg:pt-4">
-            <p className="text-base md:text-lg text-muted-foreground max-w-xl text-pretty">
+          <div className="lg:col-span-7 lg:pt-3">
+            <p className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-xl text-pretty">
               {t(
                 "Combino métodos de producto, diseño, research, IA y colaboración para llevar ideas complejas hacia soluciones implementables.",
                 "I combine product methods, design, research, AI and collaboration to move complex ideas toward implementable solutions."
@@ -96,23 +102,52 @@ export function Skillset() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-hairline">
+        <div className="border-t border-hairline">
           {blocks.map((b, i) => {
             const heading = lang === "es" ? b.es.heading : b.en.heading;
+            const isOpen = open === i;
             return (
-              <div
-                key={i}
-                className="border-b border-hairline md:[&:nth-child(odd)]:border-r lg:[&:nth-child(3n+1)]:border-r lg:[&:nth-child(3n+2)]:border-r lg:[&:nth-child(odd)]:border-r-0 [border-color:var(--color-hairline)] p-8 md:p-10"
-              >
-                <div className="font-mono text-xs text-muted-foreground mb-3">
-                  0{i + 1}
+              <div key={i} className="border-b border-hairline">
+                <button
+                  onClick={() => setOpen(isOpen ? null : i)}
+                  className="w-full flex items-center justify-between gap-6 py-6 md:py-7 text-left group"
+                >
+                  <div className="flex items-baseline gap-6 md:gap-10 min-w-0">
+                    <span className="font-mono text-xs text-muted-foreground tabular-nums">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="font-display text-xl md:text-2xl font-medium tracking-tight truncate">
+                      {heading}
+                    </span>
+                  </div>
+                  <span
+                    className={
+                      "shrink-0 w-9 h-9 rounded-full border border-hairline flex items-center justify-center transition-all duration-300 group-hover:border-foreground/40 " +
+                      (isOpen ? "rotate-45 bg-foreground text-background border-foreground" : "")
+                    }
+                  >
+                    <Plus className="w-4 h-4" />
+                  </span>
+                </button>
+                <div
+                  className={
+                    "grid transition-[grid-template-rows,opacity] duration-500 ease-out " +
+                    (isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0")
+                  }
+                >
+                  <div className="overflow-hidden">
+                    <div className="pb-8 md:pb-10 pl-12 md:pl-20 pr-4 max-w-3xl flex flex-wrap gap-2">
+                      {b.skills.map((s, j) => (
+                        <span
+                          key={j}
+                          className="px-3.5 py-1.5 rounded-full border border-hairline text-sm text-foreground/80 bg-surface"
+                        >
+                          {lang === "es" ? s[0] : s[1]}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <h3 className="font-display text-2xl mb-6">{heading}</h3>
-                <ul className="space-y-2 text-muted-foreground text-sm">
-                  {b.skills.map((s, j) => (
-                    <li key={j}>{lang === "es" ? s[0] : s[1]}</li>
-                  ))}
-                </ul>
               </div>
             );
           })}
