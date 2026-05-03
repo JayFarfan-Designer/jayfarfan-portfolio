@@ -15,9 +15,9 @@ export function SiteHeader() {
   }, []);
 
   const navItems = [
-    { to: "/#work" as const, label: t("Proyectos", "Work") },
-    { to: "/about" as const, label: "About" },
-    { to: "/#contact" as const, label: "Contact" },
+    { href: "/#work", label: t("Proyectos", "Work") },
+    { href: "/about", label: t("Sobre mí", "About") },
+    { href: "/#contact", label: t("Contacto", "Contact") },
   ];
 
   return (
@@ -25,21 +25,26 @@ export function SiteHeader() {
       className={
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500 " +
         (scrolled
-          ? "backdrop-blur-xl bg-background/70 border-b border-hairline"
+          ? "backdrop-blur-xl bg-background/80 border-b border-hairline"
           : "bg-transparent")
       }
     >
       <div className="container-editorial flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="font-display text-xl md:text-2xl tracking-tight leading-none">
-          Jay Farfan<span className="text-muted-foreground">.</span>
+        <Link to="/" className="group inline-flex items-center gap-2.5 leading-none">
+          <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-foreground text-background font-display text-[0.78rem] font-semibold tracking-tight">
+            JF
+          </span>
+          <span className="font-display text-[0.95rem] font-medium tracking-tight">
+            Jay Farfan
+          </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center gap-9">
           {navItems.map((item) => (
             <a
               key={item.label}
-              href={item.to}
-              className="eyebrow hover:text-foreground transition-colors link-underline"
+              href={item.href}
+              className="text-sm text-foreground/75 hover:text-foreground transition-colors link-underline"
             >
               {item.label}
             </a>
@@ -47,7 +52,7 @@ export function SiteHeader() {
           <a
             href="#"
             onClick={(e) => e.preventDefault()}
-            className="eyebrow hover:text-foreground transition-colors link-underline"
+            className="text-sm text-foreground/75 hover:text-foreground transition-colors link-underline"
           >
             {t("Descargar CV", "Download CV")}
           </a>
@@ -65,7 +70,6 @@ export function SiteHeader() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <div
         className={
           "md:hidden overflow-hidden transition-[max-height,opacity] duration-500 border-t border-hairline " +
@@ -76,18 +80,14 @@ export function SiteHeader() {
           {navItems.map((item) => (
             <a
               key={item.label}
-              href={item.to}
+              href={item.href}
               onClick={() => setOpen(false)}
-              className="font-display text-2xl"
+              className="font-display text-2xl font-medium"
             >
               {item.label}
             </a>
           ))}
-          <a
-            href="#"
-            onClick={(e) => e.preventDefault()}
-            className="font-display text-2xl"
-          >
+          <a href="#" onClick={(e) => e.preventDefault()} className="font-display text-2xl font-medium">
             {t("Descargar CV", "Download CV")}
           </a>
           <div className="pt-4">
@@ -107,11 +107,11 @@ function LangToggle({
   setLang: (l: "es" | "en") => void;
 }) {
   return (
-    <div className="inline-flex items-center gap-0 font-mono text-[0.7rem] tracking-[0.18em] uppercase border border-hairline rounded-full p-1">
+    <div className="inline-flex items-center font-mono text-[0.68rem] tracking-[0.18em] uppercase border border-hairline rounded-full p-0.5">
       <button
         onClick={() => setLang("es")}
         className={
-          "px-3 py-1 rounded-full transition-colors " +
+          "px-2.5 py-1 rounded-full transition-colors " +
           (lang === "es"
             ? "bg-foreground text-background"
             : "text-muted-foreground hover:text-foreground")
@@ -122,7 +122,7 @@ function LangToggle({
       <button
         onClick={() => setLang("en")}
         className={
-          "px-3 py-1 rounded-full transition-colors " +
+          "px-2.5 py-1 rounded-full transition-colors " +
           (lang === "en"
             ? "bg-foreground text-background"
             : "text-muted-foreground hover:text-foreground")
