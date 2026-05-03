@@ -65,12 +65,12 @@ function AboutPage() {
         </h1>
       </section>
 
-      <section className="border-y border-hairline bg-surface">
+      <section className="border-y border-hairline">
         <div className="container-editorial py-20 md:py-28 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-5">
             <AboutMark />
           </div>
-          <div className="lg:col-span-7 space-y-6 text-base md:text-lg text-muted-foreground text-pretty max-w-2xl">
+          <div className="lg:col-span-7 space-y-6 text-base md:text-lg leading-relaxed text-muted-foreground text-pretty max-w-2xl">
             <p>
               {t(
                 "Soy Senior Product Designer con una base poco tradicional: vengo de la ingeniería civil, y eso marcó mi forma de diseñar. Antes de pensar en pantallas, necesito entender el sistema: qué problema estamos resolviendo, qué restricciones existen, qué necesita el usuario y qué tiene sentido para el negocio.",
@@ -100,14 +100,21 @@ function AboutPage() {
       </section>
 
       <section className="container-editorial py-20 md:py-28">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-hairline rounded-2xl overflow-hidden border border-hairline">
+        <div className="eyebrow mb-10">— {t("Principios", "Principles")}</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
           {blocks.map((b, i) => (
-            <div key={i} className="bg-background p-8 md:p-12">
-              <div className="font-mono text-xs text-muted-foreground mb-4">
-                0{i + 1}
+            <div
+              key={i}
+              className="group relative rounded-2xl border border-hairline bg-surface/40 p-8 md:p-10 transition-all duration-300 hover:border-foreground/25 hover:bg-surface"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <span className="font-mono text-xs text-muted-foreground tabular-nums">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="block w-6 h-px bg-foreground/30" />
+                <span className="eyebrow">{b.label}</span>
               </div>
-              <div className="eyebrow mb-3">{b.label}</div>
-              <div className="font-display text-2xl md:text-3xl leading-snug">
+              <div className="font-display text-xl md:text-2xl leading-snug font-medium tracking-tight text-foreground/95 text-pretty">
                 {b.body}
               </div>
             </div>
@@ -115,19 +122,13 @@ function AboutPage() {
         </div>
 
         <div className="mt-16 flex flex-wrap gap-4">
-          <a
-            href="#"
-            onClick={(e) => e.preventDefault()}
-            className="inline-flex items-center gap-3 bg-foreground text-background rounded-full px-6 py-3.5 text-sm font-medium hover:-translate-y-0.5 transition-transform"
-          >
-            LinkedIn <span>↗</span>
+          <a href="#" onClick={(e) => e.preventDefault()} className="btn-base btn-primary group">
+            LinkedIn
+            <span className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
           </a>
-          <a
-            href="#"
-            onClick={(e) => e.preventDefault()}
-            className="inline-flex items-center gap-3 border border-hairline rounded-full px-6 py-3.5 text-sm font-medium hover:bg-surface-elevated transition-colors"
-          >
-            {t("Descargar CV", "Download CV")} <span>↗</span>
+          <a href="#" onClick={(e) => e.preventDefault()} className="btn-base btn-secondary group">
+            {t("Descargar CV", "Download CV")}
+            <span className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
           </a>
         </div>
       </section>
