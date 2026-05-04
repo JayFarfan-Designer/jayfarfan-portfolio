@@ -48,6 +48,7 @@ export const projects: Project[] = [
     accentClass: "bg-project-komu",
     accentVar: "var(--project-komu)",
     illustration: "chat",
+    comingSoon: true,
     es: {
       title: "Diseñando un asistente financiero por WhatsApp desde cero",
       description:
@@ -67,6 +68,7 @@ export const projects: Project[] = [
     accentClass: "bg-project-karway",
     accentVar: "var(--project-karway)",
     illustration: "marketplace",
+    comingSoon: true,
     es: {
       title: "Construyendo la visión de producto para un marketplace automotriz",
       description:
@@ -86,6 +88,7 @@ export const projects: Project[] = [
     accentClass: "bg-project-kindberry",
     accentVar: "var(--project-kindberry)",
     illustration: "ecommerce",
+    comingSoon: true,
     es: {
       title: "Diseñando un e-commerce premium desde research hasta UX/UI",
       description:
@@ -105,6 +108,7 @@ export const projects: Project[] = [
     accentClass: "bg-project-pacifico",
     accentVar: "var(--project-pacifico)",
     illustration: "dashboard",
+    comingSoon: true,
     es: {
       title: "Mejorando experiencias digitales en servicios financieros y seguros",
       description:
@@ -124,6 +128,7 @@ export const projects: Project[] = [
     accentClass: "bg-project-minsa",
     accentVar: "var(--project-minsa)",
     illustration: "publicservice",
+    comingSoon: true,
     es: {
       title: "Rediseñando una experiencia pública usada por millones de ciudadanos",
       description:
