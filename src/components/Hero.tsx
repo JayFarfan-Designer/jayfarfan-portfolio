@@ -16,7 +16,7 @@ export function Hero() {
       <div className="container-editorial relative w-full pt-28 pb-20 md:pt-32 md:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-end">
           <div className="lg:col-span-12 xl:col-span-12 max-w-[1400px]">
-            <div className="flex items-center gap-3 mb-10 animate-fade-up">
+            <div className="flex items-center gap-3 mb-10 animate-fade-up text-lg">
               <span className="block w-8 h-px bg-foreground/60" />
               <span className="eyebrow text-base">Senior Product Designer</span>
             </div>

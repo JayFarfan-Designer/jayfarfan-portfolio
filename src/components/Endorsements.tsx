@@ -55,7 +55,7 @@ export function Endorsements() {
               <blockquote className="text-base md:text-[1.05rem] leading-relaxed text-foreground/90 text-pretty flex-1">
                 “{lang === "es" ? c.es : c.en}”
               </blockquote>
-              <figcaption className="mt-8 pt-6 border-t border-hairline flex items-center gap-3">
+              <figcaption className="mt-8 pt-6 border-t border-hairline flex items-center gap-3 text-lg">
                 <div className="w-10 h-10 rounded-full bg-foreground/8 border border-hairline flex items-center justify-center font-mono text-[0.7rem] tracking-wider">
                   {initials(c.author)}
                 </div>

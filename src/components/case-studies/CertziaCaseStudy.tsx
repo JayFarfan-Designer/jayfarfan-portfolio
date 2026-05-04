@@ -145,8 +145,8 @@ export function CertziaCaseStudy({ project }: Props) {
           <Link to="/" className="eyebrow text-lg text-white/80 link-underline mb-12 inline-block">
             ← {t("Volver al inicio", "Back to home")}
           </Link>
-          <div className="flex items-center gap-3 mb-6">
-            <span className="font-mono tracking-[0.2em] opacity-80 text-xl">
+          <div className="flex items-center gap-3 mb-6 text-lg">
+            <span className="font-mono tracking-[0.2em] opacity-80 text-lg">
               {project.number}
             </span>
             <span className="block w-8 h-px bg-white/60" />
