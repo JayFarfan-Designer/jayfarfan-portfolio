@@ -21,7 +21,38 @@ export function SelectedWork() {
               )}
             </h2>
           </div>
-...
+          <div className="hidden md:block eyebrow text-lg text-muted-foreground">
+            {String(projects.length).padStart(2, "0")} —{" "}
+            {t("casos", "cases")}
+          </div>
+        </div>
+
+        <div className="space-y-5 md:space-y-6">
+          {projects.map((p) => {
+            const content = lang === "es" ? p.es : p.en;
+            return (
+              <Link
+                key={p.slug}
+                to="/work/$slug"
+                params={{ slug: p.slug }}
+                className="group block"
+              >
+                <article
+                  className="relative rounded-3xl overflow-hidden border border-white/10 transition-all duration-500 group-hover:-translate-y-1 group-hover:border-white/20"
+                  style={{
+                    background: `linear-gradient(135deg, ${p.accentVar} 0%, color-mix(in oklab, ${p.accentVar} 70%, black) 100%)`,
+                  }}
+                >
+                  <div
+                    aria-hidden
+                    className="absolute inset-0 opacity-70"
+                    style={{
+                      background:
+                        "radial-gradient(circle at 85% 15%, rgba(255,255,255,0.18) 0%, transparent 55%), radial-gradient(circle at 10% 90%, rgba(0,0,0,0.25) 0%, transparent 50%)",
+                    }}
+                  />
+                  <div className="relative grid grid-cols-1 md:grid-cols-12 gap-0">
+                    <div className="md:col-span-6 p-8 md:p-12 lg:p-14 flex flex-col text-white">
                       <div className="flex items-center justify-between mb-10 md:mb-14">
                         <div className="flex items-center gap-3">
                           <span className="font-mono tracking-[0.2em] opacity-80 text-xl">
