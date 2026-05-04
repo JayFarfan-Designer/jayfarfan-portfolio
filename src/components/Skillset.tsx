@@ -87,7 +87,7 @@ export function Skillset() {
       <div className="container-editorial">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-14 md:mb-20">
           <div className="lg:col-span-5">
-            <div className="eyebrow mb-4">— Skillset</div>
+            <div className="eyebrow text-base mb-4">— Skillset</div>
             <h2 className="headline-lg text-balance">
               {t("Lo que sé hacer.", "What I do.")}
             </h2>

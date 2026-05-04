@@ -34,7 +34,7 @@ export function Endorsements() {
     <section className="py-24 md:py-32 border-t border-hairline">
       <div className="container-editorial">
         <div className="mb-14 md:mb-20 max-w-3xl">
-          <div className="eyebrow mb-4">— {t("Endorsements", "Endorsements")}</div>
+          <div className="eyebrow text-base mb-4">— {t("Endorsements", "Endorsements")}</div>
           <h2 className="headline-lg text-balance">
             {t(
               "Lo que otros destacan sobre trabajar conmigo.",
@@ -61,7 +61,7 @@ export function Endorsements() {
                 </div>
                 <div>
                   <div className="text-sm font-medium tracking-tight">{c.author}</div>
-                  <div className="eyebrow text-muted-foreground mt-0.5">
+                  <div className="eyebrow text-base text-muted-foreground mt-0.5">
                     {t(c.role_es, c.role_en)}
                   </div>
                 </div>

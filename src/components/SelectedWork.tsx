@@ -11,7 +11,7 @@ export function SelectedWork() {
       <div className="container-editorial">
         <div className="flex items-end justify-between mb-12 md:mb-20 gap-6">
           <div>
-            <div className="eyebrow mb-4">
+            <div className="eyebrow text-base mb-4">
               — {t("Proyectos seleccionados", "Selected work")}
             </div>
             <h2 className="headline-lg max-w-[18ch] text-balance">
@@ -21,7 +21,7 @@ export function SelectedWork() {
               )}
             </h2>
           </div>
-          <div className="hidden md:block eyebrow text-muted-foreground">
+          <div className="hidden md:block eyebrow text-base text-muted-foreground">
             {String(projects.length).padStart(2, "0")} —{" "}
             {t("casos", "cases")}
           </div>

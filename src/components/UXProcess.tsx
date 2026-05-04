@@ -34,7 +34,7 @@ export function UXProcess() {
       <div className="container-editorial">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           <div className="lg:col-span-5">
-            <div className="eyebrow mb-4">— {t("Proceso UX", "UX Process")}</div>
+            <div className="eyebrow text-base mb-4">— {t("Proceso UX", "UX Process")}</div>
             <h2 className="headline-lg text-balance">
               {t(
                 "Diseñar bien empieza por encontrar el problema correcto.",
