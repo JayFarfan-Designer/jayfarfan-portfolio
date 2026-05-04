@@ -140,7 +140,7 @@ export function Skillset() {
                       {b.skills.map((s, j) => (
                         <span
                           key={j}
-                          className="px-3.5 py-1.5 rounded-full border border-hairline text-sm text-foreground/80 bg-surface"
+                          className="shrink-0 whitespace-nowrap px-3.5 py-1.5 rounded-full border border-hairline text-sm text-foreground/80 bg-surface"
                         >
                           {lang === "es" ? s[0] : s[1]}
                         </span>
