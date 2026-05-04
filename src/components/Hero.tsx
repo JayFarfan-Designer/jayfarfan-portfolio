@@ -31,27 +31,15 @@ export function Hero() {
               )}
             </h1>
 
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
-              <p
-                className="md:col-span-7 text-lg md:text-xl leading-relaxed text-muted-foreground text-pretty animate-fade-up"
-                style={{ animationDelay: "200ms" }}
-              >
-                {t(
-                  "Diseño productos digitales que conectan usuarios, negocio y tecnología para crear soluciones simples, escalables y listas para implementarse.",
-                  "I design digital products that connect users, business and technology to create simple, scalable and implementation-ready solutions."
-                )}
-              </p>
-
-              <div
-                className="md:col-span-5 md:pt-2 animate-fade-up"
-                style={{ animationDelay: "260ms" }}
-              >
-                <div className="eyebrow text-lg text-foreground/70 leading-relaxed">
-                  Product Design <span className="text-muted-foreground/50 mx-1.5">·</span>
-                  UX Strategy <span className="text-muted-foreground/50 mx-1.5">·</span>
-                  Product Thinking <span className="text-muted-foreground/50 mx-1.5">·</span>
-                  AI-assisted Design
-                </div>
+            <div
+              className="mt-12 animate-fade-up"
+              style={{ animationDelay: "260ms" }}
+            >
+              <div className="eyebrow text-lg text-foreground/70 leading-relaxed whitespace-nowrap overflow-x-auto">
+                Product Design <span className="text-muted-foreground/50 mx-1.5">·</span>
+                UX Strategy <span className="text-muted-foreground/50 mx-1.5">·</span>
+                Product Thinking <span className="text-muted-foreground/50 mx-1.5">·</span>
+                AI-assisted Design
               </div>
             </div>
 
