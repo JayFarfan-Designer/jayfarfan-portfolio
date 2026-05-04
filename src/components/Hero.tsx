@@ -18,11 +18,11 @@ export function Hero() {
           <div className="lg:col-span-9 xl:col-span-10">
             <div className="flex items-center gap-3 mb-10 animate-fade-up">
               <span className="block w-8 h-px bg-foreground/60" />
-              <span className="eyebrow">Senior Product Designer</span>
+              <span className="eyebrow text-base">Senior Product Designer</span>
             </div>
 
             <h1
-              className="headline-xl text-balance max-w-[22ch] animate-fade-up"
+              className="headline-xl text-balance max-w-[22ch] animate-fade-up text-7xl"
               style={{ animationDelay: "100ms" }}
             >
               {t(
@@ -46,7 +46,7 @@ export function Hero() {
                 className="md:col-span-5 md:pt-2 animate-fade-up"
                 style={{ animationDelay: "260ms" }}
               >
-                <div className="eyebrow text-foreground/70 leading-relaxed">
+                <div className="eyebrow text-base text-foreground/70 leading-relaxed">
                   Product Design <span className="text-muted-foreground/50 mx-1.5">·</span>
                   UX Strategy <span className="text-muted-foreground/50 mx-1.5">·</span>
                   Product Thinking <span className="text-muted-foreground/50 mx-1.5">·</span>
@@ -77,7 +77,7 @@ export function Hero() {
       </div>
 
       <div className="absolute bottom-6 right-6 hidden md:flex flex-col items-center gap-3">
-        <span className="eyebrow rotate-90 origin-center mb-6">Scroll</span>
+        <span className="eyebrow text-base rotate-90 origin-center mb-6">Scroll</span>
         <span className="block w-px h-10 bg-foreground/30 animate-pulse" />
       </div>
     </section>

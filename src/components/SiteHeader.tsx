@@ -34,7 +34,7 @@ export function SiteHeader() {
           <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-foreground text-background font-display text-[0.78rem] font-semibold tracking-tight">
             JF
           </span>
-          <span className="font-display text-[0.95rem] font-medium tracking-tight">
+          <span className="font-display font-medium tracking-tight text-3xl">
             Jay Farfan
           </span>
         </Link>
