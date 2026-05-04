@@ -89,11 +89,11 @@ export function SelectedWork() {
                       </div>
 
                       <div className="mt-10 md:mt-12">
-                        <span className="inline-flex items-center gap-2 text-white font-medium link-underline text-xl">
+                        <span className="btn-base btn-secondary group/btn">
                           {p.comingSoon
                             ? t("Próximamente", "Coming soon")
                             : t("Ver caso", "View case study")}
-                          <span className="transition-transform group-hover:translate-x-1">
+                          <span className="inline-block transition-transform group-hover/btn:translate-x-1">
                             →
                           </span>
                         </span>
