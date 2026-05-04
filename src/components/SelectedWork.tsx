@@ -16,8 +16,8 @@ export function SelectedWork() {
             </div>
             <h2 className="headline-lg max-w-[18ch] text-balance">
               {t(
-                "Trabajo que conecta estrategia, diseño y ejecución.",
-                "Work that connects strategy, design and execution."
+                "Diseño que conecta estrategia, diseño y ejecución.",
+                "Design that connects strategy, design and execution."
               )}
             </h2>
           </div>
@@ -55,22 +55,22 @@ export function SelectedWork() {
                     <div className="md:col-span-6 p-8 md:p-12 lg:p-14 flex flex-col text-white">
                       <div className="flex items-center justify-between mb-10 md:mb-14">
                         <div className="flex items-center gap-3">
-                          <span className="font-mono text-xs tracking-[0.2em] opacity-80">
+                          <span className="font-mono tracking-[0.2em] opacity-80 text-xl">
                             {p.number}
                           </span>
                           <span className="block w-6 h-px bg-white/50" />
-                          <span className="font-mono text-xs tracking-[0.2em] opacity-80 uppercase">
+                          <span className="font-mono tracking-[0.2em] opacity-80 uppercase text-xl">
                             {p.client}
                           </span>
                         </div>
-                        <span className="font-mono text-[0.65rem] tracking-[0.2em] uppercase opacity-70 px-2.5 py-1 rounded-full border border-white/25">
+                        <span className="font-mono tracking-[0.2em] uppercase opacity-70 px-2.5 py-1 rounded-full border border-white/25 text-xs">
                           {p.comingSoon
                             ? t("Próximamente", "Coming soon")
                             : "Case Study"}
                         </span>
                       </div>
 
-                      <h3 className="font-display text-2xl md:text-3xl lg:text-[2rem] leading-[1.1] font-medium tracking-tight text-white max-w-[22ch] mb-6 text-balance">
+                      <h3 className="font-display md:text-3xl lg:text-[2rem] leading-[1.1] font-medium tracking-tight text-white max-w-[22ch] mb-6 text-balance text-4xl">
                         {content.title}
                       </h3>
                       <p className="text-white/85 text-base md:text-[1.05rem] leading-relaxed max-w-md text-pretty">
@@ -89,7 +89,7 @@ export function SelectedWork() {
                       </div>
 
                       <div className="mt-10 md:mt-12">
-                        <span className="inline-flex items-center gap-2 text-white text-sm font-medium link-underline">
+                        <span className="inline-flex items-center gap-2 text-white font-medium link-underline text-xl">
                           {p.comingSoon
                             ? t("Próximamente", "Coming soon")
                             : t("Ver caso", "View case study")}

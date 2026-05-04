@@ -146,7 +146,7 @@ export function CertziaCaseStudy({ project }: Props) {
             ← {t("Volver al inicio", "Back to home")}
           </Link>
           <div className="flex items-center gap-3 mb-6">
-            <span className="font-mono text-xs tracking-[0.2em] opacity-80">
+            <span className="font-mono tracking-[0.2em] opacity-80 text-xl">
               {project.number}
             </span>
             <span className="block w-8 h-px bg-white/60" />
@@ -159,7 +159,7 @@ export function CertziaCaseStudy({ project }: Props) {
             {c.description}
           </p>
           <div className="mt-10 flex flex-wrap gap-2">
-            {["UX/UI", "Mobile-first", "Digital Identity", "User Testing", "Design System", "AI-assisted Design"].map(
+            {["UX/UI", "Mobile-first", "User Testing", "User Testing", "Design System", "AI-assisted Design"].map(
               (tag) => (
                 <span
                   key={tag}
