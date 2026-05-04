@@ -122,7 +122,7 @@ function AboutPage() {
         </div>
 
         <div className="mt-16 flex flex-wrap gap-4">
-          <a href="#" onClick={(e) => e.preventDefault()} className="btn-base btn-primary group">
+          <a href="https://www.linkedin.com/in/jayfarfan/" target="_blank" rel="noopener noreferrer" className="btn-base btn-primary group">
             LinkedIn
             <span className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
           </a>
