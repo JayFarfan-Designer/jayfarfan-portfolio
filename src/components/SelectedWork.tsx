@@ -120,6 +120,19 @@ export function SelectedWork() {
                     </div>
                   </div>
                 </article>
+            );
+            return p.comingSoon ? (
+              <div key={p.slug} className="block">
+                {inner}
+              </div>
+            ) : (
+              <Link
+                key={p.slug}
+                to="/work/$slug"
+                params={{ slug: p.slug }}
+                className="group block"
+              >
+                {inner}
               </Link>
             );
           })}
