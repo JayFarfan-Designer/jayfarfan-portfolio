@@ -56,7 +56,7 @@ function AboutPage() {
   return (
     <>
       <section className="container-editorial pt-16 md:pt-24 pb-20 md:pb-28">
-        <div className="eyebrow text-base mb-6">— About</div>
+        <div className="eyebrow text-lg mb-6">— About</div>
         <h1 className="headline-xl max-w-[16ch] text-balance">
           {t(
             "Diseñador de producto. Pensamiento de ingeniero. Criterio humano.",
@@ -100,7 +100,7 @@ function AboutPage() {
       </section>
 
       <section className="container-editorial py-20 md:py-28">
-        <div className="eyebrow text-base mb-10">— {t("Principios", "Principles")}</div>
+        <div className="eyebrow text-lg mb-10">— {t("Principios", "Principles")}</div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
           {blocks.map((b, i) => (
             <div
@@ -112,7 +112,7 @@ function AboutPage() {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span className="block w-6 h-px bg-foreground/30" />
-                <span className="eyebrow text-base">{b.label}</span>
+                <span className="eyebrow text-lg">{b.label}</span>
               </div>
               <div className="font-display text-xl md:text-2xl leading-snug font-medium tracking-tight text-foreground/95 text-pretty">
                 {b.body}
