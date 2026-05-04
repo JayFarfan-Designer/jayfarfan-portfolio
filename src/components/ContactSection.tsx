@@ -34,7 +34,7 @@ export function ContactSection() {
             </h2>
             <p className="mt-10 max-w-2xl text-base md:text-lg leading-relaxed text-muted-foreground text-pretty">
               {t(
-                "Actualmente estoy disponible para oportunidades full-time como Senior Product Designer, así como proyectos freelance donde pueda ayudar a ordenar problemas complejos y convertirlos en soluciones digitales claras, útiles y escalables.",
+                "Actualmente estoy disponible para oportunidades full-time como Senior Product Designer y/o Lider de equipos.\nTambién me interesan proyectos freelance donde pueda ayudarte a resolver problemas complejos y diseñar productos digitales increibles.",
                 "I'm currently available for full-time opportunities as a Senior Product Designer, as well as freelance projects where I can help organize complex problems and turn them into clear, useful and scalable digital solutions."
               )}
             </p>

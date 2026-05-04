@@ -4,7 +4,7 @@ import { Plus } from "lucide-react";
 
 const blocks = [
   {
-    es: { heading: "Estrategia de producto" },
+    es: { heading: "Diseño asistido por iA" },
     en: { heading: "Product Strategy" },
     skills: [
       ["Product Thinking", "Product Thinking"],
@@ -95,7 +95,7 @@ export function Skillset() {
           <div className="lg:col-span-7 lg:pt-3">
             <p className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-xl text-pretty">
               {t(
-                "Combino métodos de producto, diseño, research, IA y colaboración para llevar ideas complejas hacia soluciones implementables.",
+                "\nCombino Metodología, Diseño, Research, IA y trabajo en equipo para llevar ideas complejas hacia soluciones implementables.",
                 "I combine product methods, design, research, AI and collaboration to move complex ideas toward implementable solutions."
               )}
             </p>
@@ -113,7 +113,7 @@ export function Skillset() {
                   className="w-full flex items-center justify-between gap-6 py-6 md:py-7 text-left group"
                 >
                   <div className="flex items-baseline gap-6 md:gap-10 min-w-0">
-                    <span className="font-mono text-xs text-muted-foreground tabular-nums">
+                    <span className="font-mono text-muted-foreground tabular-nums text-sm">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span className="font-display text-xl md:text-2xl font-medium tracking-tight truncate">
