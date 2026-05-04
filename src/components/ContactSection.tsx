@@ -28,7 +28,7 @@ export function ContactSection() {
             <div className="eyebrow text-lg mb-6">— {t("Contacto", "Contact")}</div>
             <h2 className="headline-xl max-w-[20ch] text-balance text-6xl">
               {t(
-                "Abierto a nuevos retos, equipos y productos por construir.",
+                "Abierto a nuevos retos, equipos y productos por construir",
                 "Open to new challenges, teams and products to build."
               )}
             </h2>

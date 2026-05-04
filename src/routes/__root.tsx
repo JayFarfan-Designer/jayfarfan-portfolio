@@ -35,7 +35,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Jay Farfan — Senior Product Designer. Resuelvo problemas complejos combinando estrategia, criterio humano e inteligencia artificial.",
+          "Jay Farfan — Senior Product Designer. Resuelvo problemas complejos combinando estrategia, criterio humano e inteligencia artificial",
       },
       { name: "author", content: "Jay Farfan" },
       { property: "og:title", content: "Jay Farfan — Senior Product Designer" },

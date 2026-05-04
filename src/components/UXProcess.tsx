@@ -37,7 +37,7 @@ export function UXProcess() {
             <div className="eyebrow mb-4 text-lg">— {t("Proceso UX", "UX Process")}</div>
             <h2 className="headline-lg text-balance">
               {t(
-                "Diseñar bien empieza por encontrar el problema correcto.",
+                "Diseñar bien empieza por encontrar el problema correcto",
                 "Good design starts by finding the right problem."
               )}
             </h2>
