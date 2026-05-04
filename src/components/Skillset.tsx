@@ -136,7 +136,7 @@ export function Skillset() {
                   }
                 >
                   <div className="overflow-hidden">
-                    <div className="pb-8 md:pb-10 pl-12 md:pl-20 pr-4 max-w-3xl flex flex-wrap gap-2">
+                    <div className="pb-8 md:pb-10 pl-12 md:pl-20 pr-4 max-w-3xl lg:max-w-none flex flex-wrap gap-2">
                       {b.skills.map((s, j) => (
                         <span
                           key={j}
