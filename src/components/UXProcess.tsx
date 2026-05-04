@@ -46,7 +46,7 @@ export function UXProcess() {
           <div className="lg:col-span-7 lg:pt-3">
             <p className="text-base md:text-lg leading-relaxed text-muted-foreground text-pretty max-w-xl">
               {t(
-                "Trabajo con una mentalidad centrada en el usuario, combinando pensamiento sistémico, estrategia de producto, UX/UI e IA aplicada con criterio. Mi proceso busca entender el contexto, ordenar restricciones y convertir decisiones complejas en soluciones digitales claras, útiles y viables.",
+                "\nTrabajo con una mentalidad centrada en el usuario, combinando pensamiento sistémico, estrategia de producto, UX/UI e IA aplicada con criterio. \nMi proceso busca entender el contexto, definirproblemas y convertir decisiones complejas en soluciones digitales claras, útiles y viables.",
                 "I work with a user-centric mindset, combining systems thinking, product strategy, UX/UI and responsible AI-assisted design. My process focuses on understanding context, organizing constraints and turning complex decisions into clear, useful and viable digital solutions."
               )}
             </p>
@@ -64,7 +64,7 @@ export function UXProcess() {
                 className="bg-background p-6 md:p-7 flex flex-col gap-3"
               >
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-xs text-muted-foreground tabular-nums">
+                  <span className="font-mono text-muted-foreground tabular-nums text-sm">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span className="block w-6 h-px bg-foreground/30" />
