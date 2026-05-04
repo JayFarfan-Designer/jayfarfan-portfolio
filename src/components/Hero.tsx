@@ -59,7 +59,7 @@ export function Hero() {
               className="mt-14 flex flex-wrap items-center gap-4 animate-fade-up"
               style={{ animationDelay: "320ms" }}
             >
-              <a href="#work" className="btn-base btn-primary group text-lg">
+              <a href="#work" className="btn-base btn-secondary group text-xl">
                 {t("Ver proyectos", "View work")}
                 <span className="inline-block transition-transform group-hover:translate-y-0.5">↓</span>
               </a>
