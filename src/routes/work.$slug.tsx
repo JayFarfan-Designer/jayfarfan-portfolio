@@ -23,7 +23,7 @@ export const Route = createFileRoute("/work/$slug")({
   notFoundComponent: () => (
     <div className="container-editorial py-32 text-center">
       <h1 className="headline-lg">Project not found</h1>
-      <Link to="/" className="eyebrow text-base mt-6 inline-block link-underline">← Back home</Link>
+      <Link to="/" className="eyebrow text-lg mt-6 inline-block link-underline">← Back home</Link>
     </div>
   ),
 });
@@ -37,7 +37,7 @@ function ProjectDetail() {
     return (
       <div className="container-editorial py-32 text-center">
         <h1 className="headline-lg">Project not found</h1>
-        <Link to="/" className="eyebrow text-base mt-6 inline-block link-underline">← Back home</Link>
+        <Link to="/" className="eyebrow text-lg mt-6 inline-block link-underline">← Back home</Link>
       </div>
     );
   }
@@ -100,7 +100,7 @@ function ProjectDetail() {
           }}
         />
         <div className="container-editorial relative pt-16 pb-20 md:pt-24 md:pb-28 text-white">
-          <Link to="/" className="eyebrow text-base text-white/80 link-underline mb-12 inline-block">
+          <Link to="/" className="eyebrow text-lg text-white/80 link-underline mb-12 inline-block">
             ← {t("Volver al inicio", "Back home")}
           </Link>
           <div className="flex items-center gap-3 mb-6">
@@ -108,7 +108,7 @@ function ProjectDetail() {
               {project.number}
             </span>
             <span className="block w-8 h-px bg-white/60" />
-            <span className="eyebrow text-base text-white/80">{project.client}</span>
+            <span className="eyebrow text-lg text-white/80">{project.client}</span>
           </div>
           <h1 className="headline-xl text-white max-w-[20ch] text-balance">
             {c.title}
@@ -140,7 +140,7 @@ function ProjectDetail() {
       <section className="container-editorial py-16 md:py-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-hairline">
         {meta.map((m) => (
           <div key={m.label}>
-            <div className="eyebrow text-base mb-2">{m.label}</div>
+            <div className="eyebrow text-lg mb-2">{m.label}</div>
             <div className="font-display text-xl">{m.value}</div>
           </div>
         ))}
@@ -230,7 +230,7 @@ function ProjectDetail() {
         <div className="container-editorial">
           <div className="flex items-end justify-between mb-10">
             <h2 className="headline-md">{t("Explorar otros proyectos", "Browse other projects")}</h2>
-            <Link to="/" hash="work" className="eyebrow text-base link-underline">
+            <Link to="/" hash="work" className="eyebrow text-lg link-underline">
               {t("Todos los proyectos", "All projects")} →
             </Link>
           </div>
@@ -249,7 +249,7 @@ function ProjectDetail() {
                     <ProjectVisual project={p} className="p-6" />
                   </div>
                   <div className="p-6 text-white">
-                    <div className="eyebrow text-base text-white/70 mb-2">{p.client}</div>
+                    <div className="eyebrow text-lg text-white/70 mb-2">{p.client}</div>
                     <div className="font-display text-xl leading-tight">{oc.title}</div>
                   </div>
                 </Link>

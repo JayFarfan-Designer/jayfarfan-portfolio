@@ -142,7 +142,7 @@ export function CertziaCaseStudy({ project }: Props) {
           }}
         />
         <div className="container-editorial relative pt-16 pb-20 md:pt-24 md:pb-28 text-white">
-          <Link to="/" className="eyebrow text-base text-white/80 link-underline mb-12 inline-block">
+          <Link to="/" className="eyebrow text-lg text-white/80 link-underline mb-12 inline-block">
             ← {t("Volver al inicio", "Back to home")}
           </Link>
           <div className="flex items-center gap-3 mb-6">
@@ -150,7 +150,7 @@ export function CertziaCaseStudy({ project }: Props) {
               {project.number}
             </span>
             <span className="block w-8 h-px bg-white/60" />
-            <span className="eyebrow text-base text-white/80">
+            <span className="eyebrow text-lg text-white/80">
               {project.client} — {t("Caso de estudio", "Case study")}
             </span>
           </div>
@@ -186,7 +186,7 @@ export function CertziaCaseStudy({ project }: Props) {
       {/* KEY METRICS */}
       <section className="border-b border-hairline">
         <div className="container-editorial py-16 md:py-20">
-          <div className="eyebrow text-base mb-8">{t("Métricas clave", "Key metrics")}</div>
+          <div className="eyebrow text-lg mb-8">{t("Métricas clave", "Key metrics")}</div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {metrics.map((m, i) => (
               <div
@@ -449,7 +449,7 @@ export function CertziaCaseStudy({ project }: Props) {
                   >
                     <ProjectVisual project={project} className="p-6" />
                   </div>
-                  <figcaption className="eyebrow text-base">{slot.label}</figcaption>
+                  <figcaption className="eyebrow text-lg">{slot.label}</figcaption>
                 </figure>
               ))}
             </div>
@@ -464,7 +464,7 @@ export function CertziaCaseStudy({ project }: Props) {
             <h2 className="headline-md">
               {t("Explorar otros proyectos", "Explore other projects")}
             </h2>
-            <Link to="/" className="eyebrow text-base link-underline">
+            <Link to="/" className="eyebrow text-lg link-underline">
               {t("Todos los proyectos", "All projects")} →
             </Link>
           </div>
@@ -483,7 +483,7 @@ export function CertziaCaseStudy({ project }: Props) {
                     <ProjectVisual project={p} className="p-6" />
                   </div>
                   <div className="p-6 text-white">
-                    <div className="eyebrow text-base text-white/70 mb-2">{p.client}</div>
+                    <div className="eyebrow text-lg text-white/70 mb-2">{p.client}</div>
                     <div className="font-display text-xl leading-tight">{oc.title}</div>
                   </div>
                 </Link>
