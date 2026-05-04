@@ -136,11 +136,11 @@ export function Skillset() {
                   }
                 >
                   <div className="overflow-hidden">
-                    <div className="pb-8 md:pb-10 pl-12 md:pl-20 pr-4 flex flex-nowrap gap-2 overflow-x-auto">
+                    <div className="pb-8 md:pb-10 pl-12 md:pl-20 pr-4 max-w-3xl flex flex-wrap gap-2">
                       {b.skills.map((s, j) => (
                         <span
                           key={j}
-                          className="shrink-0 whitespace-nowrap px-3.5 py-1.5 rounded-full border border-hairline text-sm text-foreground/80 bg-surface"
+                          className="px-3.5 py-1.5 rounded-full border border-hairline text-sm text-foreground/80 bg-surface"
                         >
                           {lang === "es" ? s[0] : s[1]}
                         </span>
