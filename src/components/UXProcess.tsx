@@ -43,7 +43,7 @@ export function UXProcess() {
             </h2>
           </div>
 
-          <div className="lg:col-span-7 lg:pt-3">
+          <div className="lg:col-span-7 lg:pt-14">
             <p className="text-base md:text-lg leading-relaxed text-muted-foreground text-pretty max-w-xl">
               {t(
                 "\nTrabajo con una mentalidad centrada en el usuario, combinando pensamiento sistémico, estrategia de producto, UX/UI e IA aplicada con criterio. \nMi proceso busca entender el contexto, definirproblemas y convertir decisiones complejas en soluciones digitales claras, útiles y viables.",
