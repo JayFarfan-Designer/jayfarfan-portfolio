@@ -100,27 +100,27 @@ function ProjectDetail() {
           }}
         />
         <div className="container-editorial relative pt-16 pb-20 md:pt-24 md:pb-28 text-white">
-          <Link to="/" className="eyebrow text-lg text-white/80 link-underline mb-12 inline-block">
+          <Link to="/" className="eyebrow text-lg link-underline mb-12 inline-block text-slate-100">
             ← {t("Volver al inicio", "Back home")}
           </Link>
           <div className="flex items-center gap-3 mb-6 text-lg">
-            <span className="font-mono tracking-[0.2em] opacity-80 text-lg">
+            <span className="font-mono tracking-[0.2em] opacity-80 text-base">
               {project.number}
             </span>
-            <span className="block w-8 h-px bg-white/60" />
-            <span className="eyebrow text-lg text-white/80">{project.client}</span>
+            <span className="block w-8 h-px bg-white/60 text-base" />
+            <span className="eyebrow text-slate-100 text-base">{project.client}</span>
           </div>
           <h1 className="headline-xl text-white max-w-[20ch] text-balance">
             {c.title}
           </h1>
-          <p className="mt-8 text-white/90 max-w-2xl text-base md:text-lg text-pretty">
+          <p className="mt-8 text-white/90 max-w-2xl text-base text-pretty md:text-lg">
             {c.description}
           </p>
           <div className="mt-10 flex flex-wrap gap-2">
             {project.tags.map((tag) => (
               <span
                 key={tag}
-                className="px-3 py-1 rounded-full border border-white/30 text-xs text-white/85"
+                className="px-3 py-1 rounded-full border border-white/30 text-white/85 text-sm"
               >
                 {tag}
               </span>
@@ -151,7 +151,7 @@ function ProjectDetail() {
         {caseSections.map((s, i) => (
           <div key={s.title} className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
             <div className="lg:col-span-4">
-              <div className="font-mono text-xs text-muted-foreground mb-3">
+              <div className="font-mono text-muted-foreground mb-3 text-sm">
                 {String(i + 1).padStart(2, "0")}
               </div>
               <h2 className="headline-md">{s.title}</h2>
@@ -167,7 +167,7 @@ function ProjectDetail() {
         {/* Process / iterations media slot */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           <div className="lg:col-span-4">
-            <div className="font-mono text-xs text-muted-foreground mb-3">05</div>
+            <div className="font-mono text-muted-foreground mb-3 text-sm">05</div>
             <h2 className="headline-md">{t("Proceso e iteraciones", "Process & iterations")}</h2>
           </div>
           <div className="lg:col-span-8 space-y-6">
@@ -194,7 +194,7 @@ function ProjectDetail() {
         {/* Prototype / screens */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           <div className="lg:col-span-4">
-            <div className="font-mono text-xs text-muted-foreground mb-3">06</div>
+            <div className="font-mono text-muted-foreground mb-3 text-sm">06</div>
             <h2 className="headline-md">{t("Prototipo / Pantallas", "Prototype / Screens")}</h2>
           </div>
           <div className="lg:col-span-8">
@@ -211,7 +211,7 @@ function ProjectDetail() {
         {/* Takeaways */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           <div className="lg:col-span-4">
-            <div className="font-mono text-xs text-muted-foreground mb-3">07</div>
+            <div className="font-mono text-muted-foreground mb-3 text-sm">07</div>
             <h2 className="headline-md">{t("Aprendizajes", "Takeaways")}</h2>
           </div>
           <div className="lg:col-span-8">

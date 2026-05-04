@@ -52,7 +52,7 @@ export function Endorsements() {
               <div className="font-display text-foreground/30 text-sm tracking-[0.2em] uppercase mb-6">
                 {String(i + 1).padStart(2, "0")} / {String(cards.length).padStart(2, "0")}
               </div>
-              <blockquote className="text-base md:text-[1.05rem] leading-relaxed text-foreground/90 text-pretty flex-1">
+              <blockquote className="text-foreground/90 text-base md:text-[1.05rem] leading-relaxed md:text-lg text-base text-pretty flex-1">
                 “{lang === "es" ? c.es : c.en}”
               </blockquote>
               <figcaption className="mt-8 pt-6 border-t border-hairline flex items-center gap-3 text-lg">
