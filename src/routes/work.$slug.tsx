@@ -3,6 +3,7 @@ import { useLanguage } from "@/lib/language";
 import { getProject, projects } from "@/data/projects";
 import { ProjectVisual } from "@/components/ProjectVisual";
 import { SiteFooter } from "@/components/SiteFooter";
+import { CertziaCaseStudy } from "@/components/case-studies/CertziaCaseStudy";
 
 export const Route = createFileRoute("/work/$slug")({
   component: ProjectDetail,
@@ -39,6 +40,10 @@ function ProjectDetail() {
         <Link to="/" className="eyebrow mt-6 inline-block link-underline">← Back home</Link>
       </div>
     );
+  }
+
+  if (project.slug === "certezia") {
+    return <CertziaCaseStudy project={project} />;
   }
 
   const c = lang === "es" ? project.es : project.en;
