@@ -104,7 +104,7 @@ function ProjectDetail() {
             ← {t("Volver al inicio", "Back home")}
           </Link>
           <div className="flex items-center gap-3 mb-6">
-            <span className="font-mono text-xs tracking-[0.2em] opacity-80">
+            <span className="font-mono tracking-[0.2em] opacity-80 text-xl">
               {project.number}
             </span>
             <span className="block w-8 h-px bg-white/60" />

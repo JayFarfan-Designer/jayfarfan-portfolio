@@ -39,7 +39,7 @@ export const projects: Project[] = [
       description:
         "End-to-end redesign of a digital signature solution focused on reducing friction in DNIe authentication flows.",
     },
-    tags: ["UX/UI", "Mobile-first", "Digital Identity", "Prototyping", "AI-assisted Design"],
+    tags: ["UX/UI", "Mobile-first", "User Testing", "Prototyping", "AI-assisted Design"],
   },
   {
     slug: "komu-ai",
