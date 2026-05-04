@@ -22,15 +22,15 @@ export function SiteFooter() {
         </div>
         <div className="flex items-center gap-6 eyebrow text-lg">
           <a
-            href="#"
-            onClick={(e) => e.preventDefault()}
+            href="https://www.linkedin.com/in/jayfarfan/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hover:text-foreground link-underline"
           >
             LinkedIn
           </a>
           <a
-            href="#"
-            onClick={(e) => e.preventDefault()}
+            href="mailto:josem4n@gmail.com"
             className="hover:text-foreground link-underline"
           >
             Email

@@ -4,8 +4,8 @@ export function ContactSection() {
   const { t } = useLanguage();
 
   const links = [
-    { label: "LinkedIn", href: "#" },
-    { label: "Email", href: "mailto:hello@jayfarfan.com" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/jayfarfan/" },
+    { label: "Email", href: "mailto:josem4n@gmail.com" },
     { label: t("Descargar CV", "Download CV"), href: "#" },
   ];
 
@@ -47,7 +47,8 @@ export function ContactSection() {
                 <a
                   key={l.label}
                   href={l.href}
-                  onClick={(e) => l.href === "#" && e.preventDefault()}
+                  target={l.href.startsWith("http") ? "_blank" : undefined}
+                  rel={l.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="btn-base btn-tertiary justify-between !py-4 !px-5 group"
                 >
                   <span className="font-display text-base md:text-lg font-medium">
