@@ -4,7 +4,7 @@ import { Plus } from "lucide-react";
 
 const blocks = [
   {
-    es: { heading: "Diseño asistido por iA" },
+    es: { heading: "Estrategia de Producto" },
     en: { heading: "Product Strategy" },
     skills: [
       ["Product Thinking", "Product Thinking"],
