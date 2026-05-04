@@ -121,7 +121,7 @@ export function CertziaCaseStudy({ project }: Props) {
   // Reusable section header
   const SectionHeader = ({ index, title }: { index: string; title: string }) => (
     <div className="lg:col-span-4">
-      <div className="font-mono text-xs text-muted-foreground mb-3">{index}</div>
+      <div className="font-mono text-muted-foreground mb-3 text-sm">{index}</div>
       <h2 className="headline-md">{title}</h2>
     </div>
   );
@@ -142,20 +142,20 @@ export function CertziaCaseStudy({ project }: Props) {
           }}
         />
         <div className="container-editorial relative pt-16 pb-20 md:pt-24 md:pb-28 text-white">
-          <Link to="/" className="eyebrow text-lg text-white/80 link-underline mb-12 inline-block">
+          <Link to="/" className="eyebrow text-lg link-underline mb-12 inline-block text-slate-100">
             ← {t("Volver al inicio", "Back to home")}
           </Link>
           <div className="flex items-center gap-3 mb-6 text-lg">
-            <span className="font-mono tracking-[0.2em] opacity-80 text-lg">
+            <span className="font-mono tracking-[0.2em] opacity-80 text-base">
               {project.number}
             </span>
-            <span className="block w-8 h-px bg-white/60" />
-            <span className="eyebrow text-lg text-white/80">
-              {project.client} — {t("Caso de estudio", "Case study")}
+            <span className="block w-8 h-px bg-white/60 text-base" />
+            <span className="eyebrow text-slate-100 text-base">
+              {project.client}
             </span>
           </div>
           <h1 className="headline-xl text-white max-w-[20ch] text-balance">{c.title}</h1>
-          <p className="mt-8 text-white/90 max-w-2xl text-base md:text-lg text-pretty">
+          <p className="mt-8 text-white/90 max-w-2xl text-base text-pretty md:text-lg">
             {c.description}
           </p>
           <div className="mt-10 flex flex-wrap gap-2">
@@ -163,7 +163,7 @@ export function CertziaCaseStudy({ project }: Props) {
               (tag) => (
                 <span
                   key={tag}
-                  className="px-3 py-1 rounded-full border border-white/30 text-xs text-white/85"
+                  className="px-3 py-1 rounded-full border border-white/30 text-white/85 text-sm"
                 >
                   {tag}
                 </span>
@@ -194,12 +194,12 @@ export function CertziaCaseStudy({ project }: Props) {
                 className="rounded-2xl border border-hairline bg-surface p-6 md:p-8 flex flex-col justify-between min-h-[180px]"
               >
                 <div>
-                  <div className="font-display text-4xl md:text-5xl font-medium tracking-tight leading-none">
+                  <div className="font-display md:text-5xl font-medium tracking-tight leading-none text-4xl">
                     {m.value}
                   </div>
-                  <div className="mt-2 text-sm text-foreground/80">{m.valueSuffix}</div>
+                  <div className="mt-2 text-foreground/80 text-lg">{m.valueSuffix}</div>
                 </div>
-                <p className="mt-6 text-xs md:text-sm text-muted-foreground leading-relaxed">
+                <p className="mt-6 text-xs text-muted-foreground leading-relaxed md:text-base">
                   {m.label}
                 </p>
               </div>
@@ -296,8 +296,8 @@ export function CertziaCaseStudy({ project }: Props) {
               <ol className="flex flex-wrap items-center gap-x-2 gap-y-3 min-w-max md:min-w-0">
                 {flowSteps.map((step, i) => (
                   <li key={step} className="flex items-center gap-2">
-                    <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-hairline text-xs md:text-sm text-foreground/90 whitespace-nowrap">
-                      <span className="font-mono text-[10px] text-muted-foreground">
+                    <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-hairline text-xs md:text-sm text-foreground/90 whitespace-nowrap text-base">
+                      <span className="font-mono text-muted-foreground w-6 text-base">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                       {step}
@@ -327,7 +327,7 @@ export function CertziaCaseStudy({ project }: Props) {
                 key={i}
                 className="rounded-2xl border border-hairline bg-surface p-6 md:p-7 flex flex-col"
               >
-                <div className="font-mono text-xs text-muted-foreground mb-4">
+                <div className="font-mono text-muted-foreground mb-4 text-sm">
                   {String(i + 1).padStart(2, "0")}
                 </div>
                 <h3 className="font-display text-lg md:text-xl font-medium leading-snug tracking-tight text-balance">

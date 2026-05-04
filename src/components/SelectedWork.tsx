@@ -70,7 +70,7 @@ export function SelectedWork() {
                         )}
                       </div>
 
-                      <h3 className="font-display md:text-3xl lg:text-[2rem] leading-[1.1] font-medium tracking-tight text-white max-w-[22ch] mb-6 text-balance text-4xl">
+                      <h3 className="font-display md:text-3xl lg:text-[2rem] leading-[1.1] font-medium tracking-tight text-white max-w-[22ch] mb-6 text-balance md:text-5xl font-medium tracking-tight leading-none text-4xl">
                         {content.title}
                       </h3>
                       <p className="text-white/85 text-base md:text-[1.05rem] leading-relaxed max-w-md text-pretty">
