@@ -92,7 +92,7 @@ export function Skillset() {
               {t("Lo que sé hacer.", "What I do.")}
             </h2>
           </div>
-          <div className="lg:col-span-7 lg:pt-3">
+          <div className="lg:col-span-7 lg:pt-14">
             <p className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-xl text-pretty">
               {t(
                 "\nCombino Metodología, Diseño, Research, IA y trabajo en equipo para llevar ideas complejas hacia soluciones implementables.",
