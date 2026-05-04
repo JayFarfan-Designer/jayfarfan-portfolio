@@ -63,11 +63,11 @@ export function SelectedWork() {
                             {p.client}
                           </span>
                         </div>
-                        <span className="font-mono tracking-[0.2em] uppercase opacity-70 px-2.5 py-1 rounded-full border border-white/25 text-xs">
-                          {p.comingSoon
-                            ? t("Próximamente", "Coming soon")
-                            : "Case Study"}
-                        </span>
+                        {p.comingSoon && (
+                          <span className="font-mono tracking-[0.2em] uppercase opacity-70 px-2.5 py-1 rounded-full border border-white/25 text-xs">
+                            {t("Próximamente", "Coming soon")}
+                          </span>
+                        )}
                       </div>
 
                       <h3 className="font-display md:text-3xl lg:text-[2rem] leading-[1.1] font-medium tracking-tight text-white max-w-[22ch] mb-6 text-balance text-4xl">
