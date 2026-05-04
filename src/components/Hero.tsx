@@ -26,7 +26,7 @@ export function Hero() {
               style={{ animationDelay: "100ms" }}
             >
               {t(
-                "Resuelvo problemas complejos combinando estrategia, criterio humano e inteligencia artificial.",
+                "Resuelvo problemas complejos combinando estrategia, criterio humano e inteligencia artificial",
                 "I solve complex problems by combining strategy, human judgment and artificial intelligence."
               )}
             </h1>

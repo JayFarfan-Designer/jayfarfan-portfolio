@@ -16,7 +16,7 @@ export function SelectedWork() {
             </div>
             <h2 className="headline-lg max-w-[18ch] text-balance">
               {t(
-                "Diseño que conecta estrategia, diseño y ejecución.",
+                "Diseño que conecta estrategia, diseño y ejecución",
                 "Design that connects strategy, design and execution."
               )}
             </h2>

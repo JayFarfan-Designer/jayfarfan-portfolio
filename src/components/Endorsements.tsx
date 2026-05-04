@@ -37,7 +37,7 @@ export function Endorsements() {
           <div className="eyebrow mb-4 text-lg">— {t("Endorsements", "Endorsements")}</div>
           <h2 className="headline-lg text-balance">
             {t(
-              "Lo que otros destacan sobre trabajar conmigo.",
+              "Lo que otros destacan sobre trabajar conmigo",
               "What others highlight about working with me."
             )}
           </h2>
