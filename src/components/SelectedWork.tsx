@@ -89,14 +89,18 @@ export function SelectedWork() {
                       </div>
 
                       <div className="mt-10 md:mt-12">
-                        <span className="btn-base btn-secondary group/btn">
-                          {p.comingSoon
-                            ? t("Próximamente", "Coming soon")
-                            : t("Ver caso", "View case study")}
-                          <span className="inline-block transition-transform group-hover/btn:translate-x-1">
-                            →
+                        {p.comingSoon ? (
+                          <span className="font-mono tracking-[0.2em] uppercase text-sm text-white/80">
+                            {t("Próximamente", "Coming soon")}
                           </span>
-                        </span>
+                        ) : (
+                          <span className="btn-base btn-secondary group/btn">
+                            {t("Ver proyecto", "View project")}
+                            <span className="inline-block transition-transform group-hover/btn:translate-x-1">
+                              →
+                            </span>
+                          </span>
+                        )}
                       </div>
                     </div>
 
