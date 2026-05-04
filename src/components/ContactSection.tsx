@@ -26,7 +26,7 @@ export function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-7">
             <div className="eyebrow text-lg mb-6">— {t("Contacto", "Contact")}</div>
-            <h2 className="headline-xl max-w-[20ch] text-balance">
+            <h2 className="headline-xl max-w-[20ch] text-balance text-6xl">
               {t(
                 "Abierto a nuevos retos, equipos y productos por construir.",
                 "Open to new challenges, teams and products to build."
