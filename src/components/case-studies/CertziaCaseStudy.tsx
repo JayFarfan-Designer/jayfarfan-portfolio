@@ -142,7 +142,7 @@ export function CertziaCaseStudy({ project }: Props) {
           }}
         />
         <div className="container-editorial relative pt-16 pb-20 md:pt-24 md:pb-28 text-white">
-          <Link to="/" className="eyebrow text-lg link-underline mb-12 inline-block text-slate-100">
+          <Link to="/" className="eyebrow text-lg link-underline mb-12 inline-block !text-white">
             ← {t("Volver al inicio", "Back to home")}
           </Link>
           <div className="flex items-center gap-3 mb-6 text-lg">
@@ -150,7 +150,7 @@ export function CertziaCaseStudy({ project }: Props) {
               {project.number}
             </span>
             <span className="block w-8 h-px bg-white/60 text-base" />
-            <span className="eyebrow text-slate-100 text-base">
+            <span className="eyebrow text-base !text-white">
               {project.client}
             </span>
           </div>
@@ -194,10 +194,10 @@ export function CertziaCaseStudy({ project }: Props) {
                 className="rounded-2xl border border-hairline bg-surface p-6 md:p-8 flex flex-col justify-between min-h-[180px]"
               >
                 <div>
-                  <div className="font-display md:text-5xl font-medium tracking-tight leading-none text-4xl">
+                  <div className="font-display font-medium tracking-tight leading-none text-2xl md:text-3xl">
                     {m.value}
                   </div>
-                  <div className="mt-2 text-foreground/80 text-lg">{m.valueSuffix}</div>
+                  <div className="mt-2 text-foreground/80 text-sm">{m.valueSuffix}</div>
                 </div>
                 <p className="mt-6 text-xs text-muted-foreground leading-relaxed md:text-base">
                   {m.label}
