@@ -107,7 +107,7 @@ function AboutPage() {
               key={i}
               className="group relative rounded-2xl border border-hairline bg-surface/40 p-8 md:p-10 transition-all duration-300 hover:border-foreground/25 hover:bg-surface"
             >
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-3 mb-6 text-lg">
                 <span className="font-mono text-muted-foreground tabular-nums text-sm">
                   {String(i + 1).padStart(2, "0")}
                 </span>

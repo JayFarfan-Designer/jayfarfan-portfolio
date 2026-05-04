@@ -63,7 +63,7 @@ export function UXProcess() {
                 key={i}
                 className="bg-background p-6 md:p-7 flex flex-col gap-3"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 text-lg">
                   <span className="font-mono text-muted-foreground tabular-nums text-sm">
                     {String(i + 1).padStart(2, "0")}
                   </span>

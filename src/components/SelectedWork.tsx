@@ -54,12 +54,12 @@ export function SelectedWork() {
                   <div className="relative grid grid-cols-1 md:grid-cols-12 gap-0">
                     <div className="md:col-span-6 p-8 md:p-12 lg:p-14 flex flex-col text-white">
                       <div className="flex items-center justify-between mb-10 md:mb-14">
-                        <div className="flex items-center gap-3">
-                          <span className="font-mono tracking-[0.2em] opacity-80 text-xl">
+                        <div className="flex items-center gap-3 text-lg">
+                          <span className="font-mono tracking-[0.2em] opacity-80 text-lg">
                             {p.number}
                           </span>
                           <span className="block w-6 h-px bg-white/50" />
-                          <span className="font-mono tracking-[0.2em] opacity-80 uppercase text-xl">
+                          <span className="font-mono tracking-[0.2em] opacity-80 uppercase text-lg">
                             {p.client}
                           </span>
                         </div>
