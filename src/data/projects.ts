@@ -55,7 +55,7 @@ export const projects: Project[] = [
     comingSoon: true,
     media: { hero: pabloHero },
     es: {
-      title: "Construyendo el entorno digital completo para un asistente financiero en WhatsApp",
+      title: "Diseñando un asistente financiero iA en WhatsApp y su ecosistema de Producto",
       description:
         "Co-fundé y Re-diseñé Pablo, un asistente financiero con IA en WhatsApp, diseñando su experiencia conversacional, Dashboard y Landing page.\nA partir de Research profundo, transformé necesidades de usuarios en un sistema digital completo.\nEl resultado fue una experiencia más clara, útil y cercana, con mejoras directas en la adopción y conversión del producto.",
     },
