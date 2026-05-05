@@ -159,7 +159,7 @@ export function CertziaCaseStudy({ project }: Props) {
             {c.description}
           </p>
           <div className="mt-10 flex flex-wrap gap-2">
-            {["UX/UI", "NFC Interaction", "User Testing", "User Testing", "Design System", "AI-assisted Design"].map(
+            {["Flow Optimization", "NFC Interaction", "User Testing", "User Testing", "Design System", "AI-assisted Design"].map(
               (tag) => (
                 <span
                   key={tag}
