@@ -96,7 +96,7 @@ export function SelectedWork() {
                     </div>
                   </div>
 
-                  <div className="md:col-span-6 relative aspect-[4/3] md:aspect-auto md:min-h-[440px] flex items-center justify-center">
+                  <div className="md:col-span-6 relative aspect-[4/3] md:aspect-auto md:min-h-[360px] flex items-center justify-center">
                     <div
                       aria-hidden
                       className="absolute inset-0"
@@ -107,7 +107,8 @@ export function SelectedWork() {
                     />
                     <ProjectVisual
                       project={p}
-                      className="relative z-10 p-8 md:p-10"
+                      imageSrc={p.media?.hero}
+                      className="relative z-10 p-6 md:p-8"
                     />
                   </div>
                 </div>
