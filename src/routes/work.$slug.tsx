@@ -10,7 +10,7 @@ export const Route = createFileRoute("/work/$slug")({
   head: ({ params }) => {
     const project = getProject(params.slug);
     const title = project ? `${project.client} — Jay Farfan` : "Case Study — Jay Farfan";
-    const description = project?.en.description ?? "Case study by Jay Farfan, Senior Product Designer.";
+    const description = project?.en.description ?? "Case study by Jay Farfan, SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER.";
     return {
       meta: [
         { title },
@@ -50,7 +50,7 @@ function ProjectDetail() {
   const otherProjects = projects.filter((p) => p.slug !== slug).slice(0, 3);
 
   const meta = [
-    { label: t("Rol", "Role"), value: "Senior Product Designer" },
+    { label: t("Rol", "Role"), value: "SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER" },
     { label: t("Equipo", "Team"), value: t("Equipo multidisciplinario", "Cross-functional team") },
     { label: t("Duración", "Timeline"), value: "—" },
     { label: t("Estado", "Status"), value: project.comingSoon ? t("Próximamente", "Coming soon") : t("En desarrollo", "In progress") },

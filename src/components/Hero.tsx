@@ -18,7 +18,7 @@ export function Hero() {
           <div className="lg:col-span-12 xl:col-span-12 max-w-[1400px]">
             <div className="flex items-center gap-3 mb-10 animate-fade-up text-lg">
               <span className="block w-8 h-px bg-foreground/60" />
-              <span className="eyebrow text-base">Senior Product Designer</span>
+              <span className="eyebrow text-base">SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER</span>
             </div>
 
             <h1
