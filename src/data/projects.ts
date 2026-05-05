@@ -55,16 +55,16 @@ export const projects: Project[] = [
     comingSoon: true,
     media: { hero: pabloHero },
     es: {
-      title: "Diseñando un asistente financiero por WhatsApp desde cero",
+      title: "Construyendo el entorno digital completo para un asistente financiero en WhatsApp",
       description:
-        "Definición de producto, flujos y funcionalidades para un asistente financiero con IA orientado a jóvenes latinoamericanos.",
+        "Co-fundé y Re-diseñé Pablo, un asistente financiero con IA en WhatsApp, diseñando su experiencia conversacional, Dashboard y Landing page.\nA partir de Research profundo, transformé necesidades de usuarios en un sistema digital completo.\nEl resultado fue una experiencia más clara, útil y cercana, con mejoras directas en la adopción y conversión del producto.",
     },
     en: {
-      title: "Designing a WhatsApp-based financial assistant from scratch",
+      title: "Building the complete digital environment for a WhatsApp financial assistant",
       description:
-        "Product definition, flows and features for an AI-powered financial assistant designed for young Latin American users.",
+        "Co-founded and Re-designed Pablo, an AI financial assistant on WhatsApp, designing its conversational experience, Dashboard and Landing page.\nFrom deep Research, I transformed user needs into a complete digital system.\nThe result was a clearer, more useful and closer experience, with direct improvements in product adoption and conversion.",
     },
-    tags: ["Product Strategy", "AI Product", "WhatsApp UX", "Fintech", "MVP"],
+    tags: ["Fintech", "AI Product", "WhatsApp UX", "Product Strategy", "MVP"],
   },
   {
     slug: "karway",
