@@ -1,3 +1,5 @@
+import certeziaHero from "@/assets/certezia-hero.png";
+
 export type ProjectMedia = {
   /** Easily replaceable: swap this image src later. */
   hero: string;
@@ -29,6 +31,7 @@ export const projects: Project[] = [
     accentClass: "bg-project-certezia",
     accentVar: "var(--project-certezia)",
     illustration: "phone",
+    media: { hero: certeziaHero },
     es: {
       title: "Rediseñando la firma digital en un flujo de alta fricción",
       description:
