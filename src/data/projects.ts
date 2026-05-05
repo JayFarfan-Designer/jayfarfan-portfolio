@@ -30,16 +30,16 @@ export const projects: Project[] = [
     accentVar: "var(--project-certezia)",
     illustration: "phone",
     es: {
-      title: "Rediseñando una experiencia de firma digital mobile-first",
+      title: "Rediseñando la firma digital en un flujo de alta fricción",
       description:
-        "Rediseño end-to-end de una solución de firma digital enfocada en reducir fricción en procesos de autenticación con DNIe.",
+        "Optimicé el flujo principal de Certezia, reduciendo la fricción en su momento más crítico: la interacción entre el teléfono y un documento físico.\nValidado con usuarios, el resultado fue una experiencia más clara, confiable y fácil de completar.",
     },
     en: {
-      title: "Redesigning a mobile-first digital signature experience",
+      title: "Redesigning the digital signature in a high-friction flow",
       description:
-        "End-to-end redesign of a digital signature solution focused on reducing friction in DNIe authentication flows.",
+        "I optimized Certezia's core flow, reducing friction at its most critical moment: the interaction between the phone and a physical document.\nValidated with users, the result was a clearer, more reliable, and easier-to-complete experience.",
     },
-    tags: ["UX/UI", "Mobile-first", "User Testing", "Prototyping", "AI-assisted Design"],
+    tags: ["UX/UI", "Interacción compleja", "User Testing", "Prototyping", "AI-assisted Design"],
   },
   {
     slug: "komu-ai",
