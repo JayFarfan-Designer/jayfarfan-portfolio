@@ -1,4 +1,5 @@
 import certeziaHero from "@/assets/certezia-hero.png";
+import pabloHero from "@/assets/pablo-hero.png";
 
 export type ProjectMedia = {
   /** Easily replaceable: swap this image src later. */
@@ -52,6 +53,7 @@ export const projects: Project[] = [
     accentVar: "var(--project-komu)",
     illustration: "chat",
     comingSoon: true,
+    media: { hero: pabloHero },
     es: {
       title: "Diseñando un asistente financiero por WhatsApp desde cero",
       description:
