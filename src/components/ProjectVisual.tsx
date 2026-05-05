@@ -9,13 +9,16 @@ type Props = {
   project: Project;
   imageSrc?: string;
   className?: string;
+  imageClassName?: string;
+  imageWrapperClassName?: string;
 };
 
-export function ProjectVisual({ project, imageSrc, className }: Props) {
+export function ProjectVisual({ project, imageSrc, className, imageClassName, imageWrapperClassName }: Props) {
   return (
     <div
       className={
-        "relative w-full h-full flex items-center justify-center overflow-hidden " +
+        "relative w-full h-full flex items-center overflow-hidden " +
+        (imageWrapperClassName ?? "justify-center ") +
         (className ?? "")
       }
       data-visual-slot={project.slug}
@@ -24,7 +27,7 @@ export function ProjectVisual({ project, imageSrc, className }: Props) {
         <img
           src={imageSrc}
           alt={project.client}
-          className="w-full h-full object-contain"
+          className={imageClassName ?? "w-full h-full object-contain"}
         />
       ) : (
         <Illustration kind={project.illustration} accent={project.accentVar} />
