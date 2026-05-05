@@ -12,12 +12,12 @@ export function SelectedWork() {
         <div className="flex items-end justify-between mb-12 md:mb-20 gap-6">
           <div>
             <div className="eyebrow mb-4 text-lg">
-              — {t("Proyectos seleccionados", "Selected work")}
+              — {t("DEL PROBLEMA A LA SOLUCIÓN", "FROM PROBLEM TO SOLUTION")}
             </div>
             <h2 className="headline-lg max-w-[18ch] text-balance">
               {t(
-                "Diseño que conecta estrategia, diseño y ejecución",
-                "Design that connects strategy, design and execution."
+                "Casos donde la Estrategia se convierte en Producto",
+                "Cases where Strategy becomes Product"
               )}
             </h2>
           </div>
