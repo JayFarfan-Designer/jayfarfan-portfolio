@@ -10,13 +10,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Jay Farfan, Senior Product Designer with a background in civil engineering. Strategy, UX/UI and AI-assisted design.",
+          "Jay Farfan, SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER with a background in civil engineering. Strategy, UX/UI and AI-assisted design.",
       },
       { property: "og:title", content: "About — Jay Farfan" },
       {
         property: "og:description",
         content:
-          "Senior Product Designer focused on systems, strategy and responsible AI-assisted design.",
+          "SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER focused on systems, strategy and responsible AI-assisted design.",
       },
     ],
   }),
@@ -73,8 +73,8 @@ function AboutPage() {
           <div className="lg:col-span-7 space-y-6 text-base md:text-lg leading-relaxed text-muted-foreground text-pretty max-w-2xl">
             <p>
               {t(
-                "Soy Senior Product Designer con una base poco tradicional: vengo de la ingeniería civil, y eso marcó mi forma de diseñar. Antes de pensar en pantallas, necesito entender el sistema: qué problema estamos resolviendo, qué restricciones existen, qué necesita el usuario y qué tiene sentido para el negocio.",
-                "I'm a Senior Product Designer with a non-traditional foundation: I come from civil engineering, and that shaped the way I design. Before thinking about screens, I need to understand the system: what problem we are solving, what constraints exist, what the user needs and what makes sense for the business."
+                "Soy SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER con una base poco tradicional: vengo de la ingeniería civil, y eso marcó mi forma de diseñar. Antes de pensar en pantallas, necesito entender el sistema: qué problema estamos resolviendo, qué restricciones existen, qué necesita el usuario y qué tiene sentido para el negocio.",
+                "I'm a SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER with a non-traditional foundation: I come from civil engineering, and that shaped the way I design. Before thinking about screens, I need to understand the system: what problem we are solving, what constraints exist, what the user needs and what makes sense for the business."
               )}
             </p>
             <p>
