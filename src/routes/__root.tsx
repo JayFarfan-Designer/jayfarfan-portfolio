@@ -31,25 +31,25 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Jay Farfan — Senior Product Designer" },
+      { title: "Jay Farfan — SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER" },
       {
         name: "description",
         content:
-          "Jay Farfan — Senior Product Designer. Resuelvo problemas complejos combinando estrategia, criterio humano e inteligencia artificial",
+          "Jay Farfan — SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER. Resuelvo problemas complejos combinando estrategia, criterio humano e inteligencia artificial",
       },
       { name: "author", content: "Jay Farfan" },
-      { property: "og:title", content: "Jay Farfan — Senior Product Designer" },
+      { property: "og:title", content: "Jay Farfan — SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER" },
       {
         property: "og:description",
         content:
-          "Portfolio of Jay Farfan, Senior Product Designer combining strategy, human judgment and AI.",
+          "Portfolio of Jay Farfan, SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER combining strategy, human judgment and AI.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Jay Farfan — Senior Product Designer" },
-      { name: "description", content: "A professional, bilingual portfolio website showcasing Jay Farfan's expertise as a Senior Product Designer." },
-      { property: "og:description", content: "A professional, bilingual portfolio website showcasing Jay Farfan's expertise as a Senior Product Designer." },
-      { name: "twitter:description", content: "A professional, bilingual portfolio website showcasing Jay Farfan's expertise as a Senior Product Designer." },
+      { name: "twitter:title", content: "Jay Farfan — SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER" },
+      { name: "description", content: "A professional, bilingual portfolio website showcasing Jay Farfan's expertise as a SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER." },
+      { property: "og:description", content: "A professional, bilingual portfolio website showcasing Jay Farfan's expertise as a SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER." },
+      { name: "twitter:description", content: "A professional, bilingual portfolio website showcasing Jay Farfan's expertise as a SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bd774091-0bab-4bbf-8af5-e6813f49f986/id-preview-fac245e5--8ca99ae5-3c08-412c-9909-e41139f83529.lovable.app-1777668932827.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bd774091-0bab-4bbf-8af5-e6813f49f986/id-preview-fac245e5--8ca99ae5-3c08-412c-9909-e41139f83529.lovable.app-1777668932827.png" },
     ],

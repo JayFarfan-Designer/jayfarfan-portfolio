@@ -11,11 +11,11 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Jay Farfan — Senior Product Designer" },
+      { title: "Jay Farfan — SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER" },
       {
         name: "description",
         content:
-          "Portfolio of Jay Farfan, Senior Product Designer combining strategy, human judgment and AI to craft simple, scalable digital products.",
+          "Portfolio of Jay Farfan, SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER combining strategy, human judgment and AI to craft simple, scalable digital products.",
       },
     ],
   }),
