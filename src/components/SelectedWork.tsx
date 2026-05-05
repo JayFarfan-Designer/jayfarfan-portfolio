@@ -109,6 +109,8 @@ export function SelectedWork() {
                       project={p}
                       imageSrc={p.media?.hero}
                       className="relative z-10 p-6 md:p-8"
+                      imageWrapperClassName={p.slug === "komu-ai" ? "justify-end pr-2 md:pr-4 " : undefined}
+                      imageClassName={p.slug === "komu-ai" ? "h-[88%] w-auto max-w-[88%] object-contain object-right ml-auto" : undefined}
                     />
                   </div>
                 </div>
