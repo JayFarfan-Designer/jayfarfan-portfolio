@@ -307,7 +307,7 @@ export function CertziaCaseStudy({ project }: Props) {
           <div className="lg:col-span-8 space-y-5 text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
             <p className="whitespace-pre-line">
               {t(
-                "Trabajé junto al equipo de Certezia para entender el problema desde negocio, usuario y sistema:\n\nBusiness Model Canvas\nArquetipos de usuario\nIdentificación de necesidades\nBenchmark de soluciones similares\nAnálisis del flujo As-Is\nService Blueprint del proceso de firma",
+                "Trabajé junto al equipo de Certezia para entender el problema desde negocio, usuario y sistema:\n\n- Business Model Canvas\n- Arquetipos de usuario\n- Identificación de necesidades\n- Benchmark de soluciones similares\n- Análisis del flujo As-Is\n- Service Blueprint del proceso de firma",
                 "I worked with the Certezia team to understand the problem from business, user, and system perspectives:\n\nBusiness Model Canvas\nUser archetypes\nNeeds identification\nBenchmark of similar solutions\nAs-Is flow analysis\nService Blueprint of the signing process"
               )}
             </p>
