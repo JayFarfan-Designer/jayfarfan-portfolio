@@ -93,25 +93,6 @@ export function CertziaCaseStudy({ project }: Props) {
     t("Mejor percepción de control", "Better sense of control"),
   ];
 
-  const deliverables = [
-    t("Flujos To-Be.", "To-Be flows."),
-    t("Wireframes.", "Wireframes."),
-    t("Prototipo interactivo.", "Interactive prototype."),
-    t("UI final.", "Final UI."),
-    t("Design system.", "Design system."),
-    t("Estados, errores y ayudas contextuales.", "System states, errors and contextual help."),
-    t("Pruebas de usabilidad.", "Usability testing."),
-    t("Síntesis de hallazgos.", "Synthesis of findings."),
-    t("Lista priorizada de mejoras.", "Prioritized improvement list."),
-    t("Documentación e insumos de handoff.", "Documentation and handoff inputs."),
-  ];
-
-  const mediaSlots = [
-    { id: "final-screens", label: t("Pantallas finales", "Final screens") },
-    { id: "critical-flow", label: t("Flujo crítico", "Critical flow") },
-    { id: "states-errors", label: t("Estados y errores", "States and errors") },
-  ];
-
   // Reusable section header
   const SectionHeader = ({ index, title }: { index: string; title: string }) => (
     <div className="lg:col-span-4">
