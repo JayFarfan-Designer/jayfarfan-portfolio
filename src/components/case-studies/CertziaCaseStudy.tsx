@@ -490,7 +490,7 @@ export function CertziaCaseStudy({ project }: Props) {
                   className="flex gap-6 md:gap-10 py-8 md:py-12 first:pt-0 last:pb-0"
                 >
                   <span className="font-mono text-xs text-muted-foreground pt-3 shrink-0 w-10 md:text-base">
-                    {String(i + 1).padStart(2, "0").replace("01", "D.")}
+                    {String(i + 1).padStart(2, "0").replace("01", "A.")}
                   </span>
                   <p className="font-display text-2xl md:text-4xl font-medium tracking-tight leading-[1.15] text-foreground/95 text-pretty max-w-[22ch]">
                     {item}
