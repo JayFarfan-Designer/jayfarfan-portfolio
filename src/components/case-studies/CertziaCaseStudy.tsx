@@ -235,31 +235,32 @@ export function CertziaCaseStudy({ project }: Props) {
 
         {/* Challenge */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-          <SectionHeader index="02" title={t("El reto", "The challenge")} />
+          <SectionHeader index="02" title={t("El problema", "The problem")} />
           <div className="lg:col-span-8 space-y-5 text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
             <p>
               {t(
-                "El MVP inicial funcionaba, pero tenía demasiada fricción en el momento más sensible: el escaneo NFC del DNIe.",
-                "The initial MVP worked, but it had too much friction at the most sensitive moment: the NFC scan of the electronic ID."
+                "El flujo inicial tenía tres problemas principales:",
+                "The initial flow had three main problems:"
+              )}
+            </p>
+            <p className="whitespace-pre-line">
+              {t(
+                "El usuario debía ingresar el PIN mientras sostenía el DNI → se interrumpía el escaneo\nMensajes genéricos (“error”, “intentar nuevamente”) sin capacidad de recuperación\nDemasiados pasos + UI sin sistema propio (librería Android)",
+                "The user had to enter the PIN while holding the ID → scanning was interrupted\nGeneric messages (\"error\", \"try again\") without recovery capacity\nToo many steps + UI without its own system (Android library)"
               )}
             </p>
             <p>
               {t(
-                "El usuario debía acercar el documento al teléfono, mantenerlo estable e ingresar información sensible dentro de un flujo con poca guía. Si algo fallaba, los errores eran genéricos y no explicaban si el problema estaba en el PIN, el CAN, el NFC o el movimiento físico del DNIe.",
-                "Users had to bring the document close to the phone, keep it stable and enter sensitive information inside a flow with limited guidance. When something failed, errors were generic and did not explain whether the issue was related to the PIN, CAN, NFC or the physical movement of the ID."
+                "Resultado: una experiencia confusa, frágil y poco confiable.",
+                "Result: a confusing, fragile and unreliable experience."
               )}
             </p>
             <p>
               {t(
-                "Además, la app usaba principalmente componentes Android sin un sistema visual propio, lo que generaba inconsistencias, poca jerarquía y menor percepción de confianza.",
-                "The app also relied mostly on Android components without its own visual system, creating inconsistencies, weak hierarchy and a lower sense of trust."
+                "una experiencia confusa, frágil y poco confiable.",
+                "a confusing, fragile and unreliable experience."
               )}
             </p>
-            <p>
-              {t(
-                "El objetivo fue transformar una experiencia técnica y frágil en un flujo mobile-first más claro, guiado y recuperable.",
-                "The goal was to turn a technical and fragile experience into a clearer, guided and recoverable mobile-first flow."
-              )}
             </p>
           </div>
         </div>
