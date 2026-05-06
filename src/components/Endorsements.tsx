@@ -21,8 +21,8 @@ const cards = [
     image: willingtonImg,
   },
   {
-    es: "“Destaco su habilidad para conectar diseño, negocio y tecnología, entendiendo profundamente las necesidades de los usuarios para proponer soluciones claras y valiosas.”",
-    en: "“I highlight his ability to connect design, business and technology, deeply understanding user needs to propose clear and valuable solutions.”",
+    es: "“Lo que más destaco de Jay es su capacidad para mantener siempre al usuario como prioridad, transformando necesidades complejas en experiencias claras, funcionales y bien resueltas.”",
+    en: "“What I highlight most about Jay is his ability to always keep the user as a priority, transforming complex needs into clear, functional, and well-resolved experiences.”",
     author: "Eliana Campos del Valle",
     role_es: "Design Lead · Produbanco",
     role_en: "Design Lead · Produbanco",
