@@ -510,11 +510,11 @@ export function CertziaCaseStudy({ project }: Props) {
         {/* Flujo final */}
         <div className="space-y-8">
           <SectionHeader index="10" title={t("Flujo final", "Final flow")} />
-          <div className="w-full">
+          <div className="w-full rounded-2xl bg-zinc-900 p-3 md:p-4 border border-hairline">
             <img
               src={certeziaFlujoFinal}
               alt={t("Flujo final del producto Certezia", "Certezia final product flow")}
-              className="w-full h-auto rounded-2xl border border-hairline"
+              className="w-full h-auto rounded-lg block"
               loading="lazy"
             />
           </div>
