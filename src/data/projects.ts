@@ -69,8 +69,28 @@ export const projects: Project[] = [
     tags: ["Fintech", "AI Product", "MVP Design", "Product Strategy", "MVP"],
   },
   {
-    slug: "karway",
+    slug: "minsa",
     number: "03",
+    client: "MINSA / Digital Humans",
+    accentClass: "bg-project-minsa",
+    accentVar: "var(--project-minsa)",
+    illustration: "publicservice",
+    comingSoon: true,
+    es: {
+      title: "Rediseñando una experiencia pública usada por millones de ciudadanos",
+      description:
+        "Participación en el rediseño de la app del Ministerio de Salud del Perú para visualizar información de vacunación COVID-19 y generar certificados digitales.",
+    },
+    en: {
+      title: "Redesigning a public experience used by millions of citizens",
+      description:
+        "Participated in the redesign of Peru's Ministry of Health app, used to view COVID-19 vaccination information and generate digital certificates.",
+    },
+    tags: ["GovTech", "UX/UI", "Information Architecture", "Accessibility", "High-impact Product"],
+  },
+  {
+    slug: "karway",
+    number: "04",
     client: "Karway",
     accentClass: "bg-project-karway",
     accentVar: "var(--project-karway)",
@@ -91,7 +111,7 @@ export const projects: Project[] = [
   },
   {
     slug: "kindberry",
-    number: "04",
+    number: "05",
     client: "KindBerry",
     accentClass: "bg-project-kindberry",
     accentVar: "var(--project-kindberry)",
@@ -109,46 +129,6 @@ export const projects: Project[] = [
         "Digital product design for a premium children's clothing brand, combining research, benchmarking, archetypes and business goals.",
     },
     tags: ["E-commerce", "UX Research", "UI Design", "Benchmark", "Product Design"],
-  },
-  {
-    slug: "pacifico-seguros",
-    number: "05",
-    client: "Pacífico Seguros",
-    accentClass: "bg-project-pacifico",
-    accentVar: "var(--project-pacifico)",
-    illustration: "dashboard",
-    comingSoon: true,
-    es: {
-      title: "Mejorando experiencias digitales en servicios financieros y seguros",
-      description:
-        "Diseño UX/UI e investigación para productos digitales del sector asegurador, traduciendo necesidades de usuarios y stakeholders en soluciones claras.",
-    },
-    en: {
-      title: "Improving digital experiences in financial services and insurance",
-      description:
-        "UX/UI design and research for insurance digital products, translating user and stakeholder needs into clear solutions.",
-    },
-    tags: ["UX Design", "UX Research", "Insurance", "User Flows", "Service Design"],
-  },
-  {
-    slug: "minsa",
-    number: "06",
-    client: "MINSA / Digital Humans",
-    accentClass: "bg-project-minsa",
-    accentVar: "var(--project-minsa)",
-    illustration: "publicservice",
-    comingSoon: true,
-    es: {
-      title: "Rediseñando una experiencia pública usada por millones de ciudadanos",
-      description:
-        "Participación en el rediseño de la app del Ministerio de Salud del Perú para visualizar información de vacunación COVID-19 y generar certificados digitales.",
-    },
-    en: {
-      title: "Redesigning a public experience used by millions of citizens",
-      description:
-        "Participated in the redesign of Peru's Ministry of Health app, used to view COVID-19 vaccination information and generate digital certificates.",
-    },
-    tags: ["GovTech", "UX/UI", "Information Architecture", "Accessibility", "High-impact Product"],
   },
 ];
 
