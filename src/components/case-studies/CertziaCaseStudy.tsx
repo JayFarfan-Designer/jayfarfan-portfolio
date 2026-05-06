@@ -229,8 +229,6 @@ export function CertziaCaseStudy({ project }: Props) {
                 "El reto: hacer que un proceso técnico, físico y sensible funcione para usuarios no expertos.",
                 "The challenge: making a technical, physical and sensitive process work for non-expert users."
               )}
-                "The challenge was to turn a technically and legally sensitive process into a clear experience for non-expert users. It was not enough for the system to work: users needed to understand what was happening, trust the process and complete the signature without frustration."
-              )}
             </p>
             <p>
               {t(
