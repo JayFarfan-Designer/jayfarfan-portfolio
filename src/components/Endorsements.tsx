@@ -2,15 +2,15 @@ import { useLanguage } from "@/lib/language";
 
 const cards = [
   {
-    es: "Destaco su habilidad para conectar diseño, negocio y tecnología, entendiendo profundamente las necesidades de los usuarios para proponer soluciones claras y valiosas.",
-    en: "I highlight his ability to connect design, business and technology, deeply understanding user needs to propose clear and valuable solutions.",
+    es: "Jay siempre mantuvo el foco en el usuario, transformando flujos complejos en experiencias simples, intuitivas y fáciles de usar. Además, destacó por su comunicación y coordinación con distintas áreas del equipo.",
+    en: "Jay always kept the focus on the user, transforming complex flows into simple, intuitive, and easy-to-use experiences. Furthermore, he stood out for his communication and coordination with different areas of the team.",
     author: "Solangie Chiucca de la Cruz",
     role_es: "Colega",
     role_en: "Colleague",
   },
   {
-    es: "Destaca por tener siempre presente que el diseño debe realizarse tomando como prioridad al usuario final.",
-    en: "He stands out for always keeping in mind that design should prioritize the end user.",
+    es: "Destaco su habilidad para conectar diseño, negocio y tecnología, entendiendo profundamente las necesidades de los usuarios para proponer soluciones claras y valiosas.",
+    en: "I highlight his ability to connect design, business and technology, deeply understanding user needs to propose clear and valuable solutions.",
     author: "Willington Jesús Ortiz Maurtua",
     role_es: "Colega",
     role_en: "Colleague",
