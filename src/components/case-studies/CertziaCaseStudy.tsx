@@ -33,7 +33,6 @@ export function CertziaCaseStudy({ project }: Props) {
     {
       value: "UI Kit",
       label: t("Base visual lista para escalar", "Visual base ready to scale"),
-      ),
     },
   ];
 
