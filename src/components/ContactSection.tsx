@@ -50,6 +50,7 @@ export function ContactSection() {
                   href={l.href}
                   target={l.href.startsWith("http") ? "_blank" : undefined}
                   rel={l.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  download={l.download ? true : undefined}
                   className="btn-base btn-tertiary justify-between !py-4 !px-5 group"
                 >
                   <span className="font-display text-base md:text-lg font-medium">
