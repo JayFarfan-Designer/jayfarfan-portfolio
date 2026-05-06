@@ -5,6 +5,7 @@ import { type Project, projects } from "@/data/projects";
 import { ProjectVisual } from "@/components/ProjectVisual";
 import { SiteFooter } from "@/components/SiteFooter";
 import certeziaProblema from "@/assets/certezia-problema.png";
+import certeziaFlujoRedisenado from "@/assets/certezia-flujo-rediseñado.webp";
 
 type Props = { project: Project };
 
