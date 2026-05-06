@@ -42,14 +42,6 @@ export function SelectedWork() {
                   (p.comingSoon ? "" : "group-hover:-translate-y-1 group-hover:border-white/20")
                 }
               >
-                className={
-                  "relative rounded-3xl overflow-hidden border border-white/10 transition-all duration-500 " +
-                  (p.comingSoon ? "" : "group-hover:-translate-y-1 group-hover:border-white/20")
-                }
-                style={{
-                  background: `linear-gradient(135deg, ${p.accentVar} 0%, color-mix(in oklab, ${p.accentVar} 70%, black) 100%)`,
-                }}
-              >
                 <div
                   aria-hidden
                   className="absolute inset-0 opacity-70"
