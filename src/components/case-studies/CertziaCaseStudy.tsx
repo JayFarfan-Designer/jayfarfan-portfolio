@@ -20,7 +20,7 @@ export function CertziaCaseStudy({ project }: Props) {
   const metrics = [
     {
       value: "40%",
-      label: t("Menos pasos en flujo crítico", "Fewer steps in critical flow"),
+      label: t("Menos pasos en flujo crítico de firma ", "Fewer steps in critical signing flow "),
     },
     {
       value: "User Testing",
