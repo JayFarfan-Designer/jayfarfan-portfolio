@@ -5,7 +5,7 @@ import { type Project, projects } from "@/data/projects";
 import { ProjectVisual } from "@/components/ProjectVisual";
 import { SiteFooter } from "@/components/SiteFooter";
 import certeziaProblema from "@/assets/certezia-problema.webp";
-import certeziaFlujoRedisenado from "@/assets/certezia-flujo-rediseñado.webp";
+import certeziaFlujoRedisenado from "@/assets/certezia-flujo-redisenado.webp";
 import certeziaVistaPrototipo from "@/assets/certezia-vista-prototipo.webp";
 import certeziaVistaTesting from "@/assets/certezia-vista-testing.webp";
 import certeziaFlujoFinal from "@/assets/certezia-flujo-final.png";
