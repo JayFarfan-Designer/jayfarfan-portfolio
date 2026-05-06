@@ -190,7 +190,7 @@ export function CertziaCaseStudy({ project }: Props) {
       {/* KEY METRICS */}
       <section className="border-b border-hairline">
         <div className="container-editorial py-16 md:py-20">
-          <div className="eyebrow text-lg mb-8">{t("Métricas clave", "Key metrics")}</div>
+          <div className="eyebrow text-lg mb-8">{"\n"}</div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {metrics.map((m, i) => (
               <div
