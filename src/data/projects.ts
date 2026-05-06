@@ -1,5 +1,7 @@
 import certeziaHero from "@/assets/certezia-hero.png";
 import pabloHero from "@/assets/pablo-hero.png";
+import karwayHero from "@/assets/karway-hero.png";
+import kindberryHero from "@/assets/kindberry-hero.png";
 
 export type ProjectMedia = {
   /** Easily replaceable: swap this image src later. */
