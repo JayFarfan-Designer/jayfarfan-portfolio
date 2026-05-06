@@ -46,7 +46,7 @@ export const projects: Project[] = [
       description:
         "I optimized Certezia's core flow, reducing friction at its most critical moment: the interaction between the phone and a physical document.\nValidated with users, the result was a clearer, more reliable, and easier-to-complete experience.",
     },
-    tags: ["Flow Optimization", "NFC Interaction", "User Testing", "Prototyping", "AI-assisted Design"],
+    tags: ["Flow Optimization", "NFC Interaction", "Prototyping", "AI-assisted Design"],
   },
   {
     slug: "komu-ai",
