@@ -261,7 +261,6 @@ export function CertziaCaseStudy({ project }: Props) {
                 "a confusing, fragile and unreliable experience."
               )}
             </p>
-            </p>
           </div>
         </div>
 
