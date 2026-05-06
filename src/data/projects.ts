@@ -2,6 +2,7 @@ import certeziaHero from "@/assets/certezia-hero.png";
 import pabloHero from "@/assets/pablo-hero.png";
 import karwayHero from "@/assets/karway-hero.png";
 import kindberryHero from "@/assets/kindberry-hero.png";
+import minsaHero from "@/assets/minsa-hero.png";
 
 export type ProjectMedia = {
   /** Easily replaceable: swap this image src later. */
@@ -76,6 +77,7 @@ export const projects: Project[] = [
     accentVar: "var(--project-minsa)",
     illustration: "publicservice",
     comingSoon: true,
+    media: { hero: minsaHero },
     es: {
       title: "Rediseñando una experiencia pública usada por millones de ciudadanos",
       description:
