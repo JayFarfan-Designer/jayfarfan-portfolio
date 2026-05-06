@@ -17,12 +17,12 @@ export function CertziaCaseStudy({ project }: Props) {
       value: t("40%", "40%"),
       valueSuffix: t("Menos fricción en la experiencia de firma.", "Fewer friction points in the signing experience."),
       label: t(
-        "Reducción del flujo crítico frente a la versión inicial recibida.",
+        "Base visual lista para escalar",
         "Reduction in the critical flow compared to the initial version received."
       ),
     },
     {
-      value: "5",
+      value: "UI KIT",
       valueSuffix: t("usuarios testeados", "users tested"),
       label: t(
         "Pruebas de usabilidad con usuarios reales.",
