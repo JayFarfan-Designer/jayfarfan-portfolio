@@ -500,7 +500,7 @@ export function CertziaCaseStudy({ project }: Props) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           <SectionHeader index="10" title={t("IA en el proceso", "AI in the process")} />
           <div className="lg:col-span-8 space-y-6">
-            <p className="text-foreground text-base md:text-lg max-w-2xl text-pretty font-semibold">
+            <p className="text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
               {t(
                 "Usé IA para acelerar el proceso sin perder criterio humano.",
                 "I used AI to speed up the process without losing human judgment."
@@ -521,9 +521,7 @@ export function CertziaCaseStudy({ project }: Props) {
                 </li>
               ))}
             </ul>
-            <p
-              className="font-display text-xl md:text-2xl font-medium tracking-tight text-foreground/95 text-pretty leading-snug border-l-2 border-foreground/40 pl-5"
-            >
+            <p className="text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
               {t(
                 "Siempre con validación humana y foco en el usuario.",
                 "Always with human validation and a focus on the user."
