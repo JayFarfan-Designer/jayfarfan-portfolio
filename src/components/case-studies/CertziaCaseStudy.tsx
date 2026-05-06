@@ -494,7 +494,8 @@ export function CertziaCaseStudy({ project }: Props) {
                       .padStart(2, "0")
                       .replace("01", "A.")
                       .replace("02", "B.")
-                      .replace("03", "C.")}
+                      .replace("03", "C.")
+                      .replace("04", "D.")}
                   </span>
                   <p className="font-display text-2xl md:text-4xl font-medium tracking-tight leading-[1.15] text-foreground/95 text-pretty max-w-[22ch]">
                     {item}
