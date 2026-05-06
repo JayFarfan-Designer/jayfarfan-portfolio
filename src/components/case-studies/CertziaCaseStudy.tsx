@@ -19,35 +19,20 @@ export function CertziaCaseStudy({ project }: Props) {
 
   const metrics = [
     {
-      value: t("40%", "40%"),
-      valueSuffix: "\n",
-      label: t(
-        "Base visual lista para escalar",
-        "Reduction in the critical flow compared to the initial version received."
-      ),
+      value: "40%",
+      label: t("Menos pasos en flujo crítico", "Fewer steps in critical flow"),
     },
     {
-      value: "UI KIT",
-      valueSuffix: "\n",
-      label: t(
-        "Pruebas de usabilidad con usuarios reales.",
-        "Usability testing with real users."
-      ),
+      value: "User Testing",
+      label: t("Validado con usuarios reales", "Validated with real users"),
     },
     {
       value: "8/10",
-      valueSuffix: "NPS",
-      label: t(
-        "Validación formal del nuevo flujo en sesiones de prueba.",
-        "Formal validation of the new flow in testing sessions."
-      ),
+      label: t("NPs en pruebas con usuarios", "NPs in user testing"),
     },
     {
-      value: t("Entregado", "Delivered"),
-      valueSuffix: t("proyecto", "project"),
-      label: t(
-        "UI final, design system, documentación y handoff.",
-        "Final UI, design system, documentation and handoff."
+      value: "UI Kit",
+      label: t("Base visual lista para escalar", "Visual base ready to scale"),
       ),
     },
   ];
