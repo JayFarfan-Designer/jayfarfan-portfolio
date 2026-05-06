@@ -34,7 +34,7 @@ export function Endorsements() {
     <section className="py-24 md:py-32 border-t border-hairline">
       <div className="container-editorial">
         <div className="mb-14 md:mb-20 max-w-3xl">
-          <div className="eyebrow mb-4 text-lg">— {t("Endorsements", "Endorsements")}</div>
+          <div className="eyebrow mb-4 text-lg">— {t("RECOMENDACIONES", "RECOMENDACIONES")}</div>
           <h2 className="headline-lg text-balance">
             {t(
               "Lo que otros destacan sobre trabajar conmigo",
