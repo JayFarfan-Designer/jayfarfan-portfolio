@@ -151,15 +151,46 @@ function AboutPage() {
           ))}
         </ul>
 
-        <div className="mt-16 flex flex-wrap gap-4">
-          <a href="https://www.linkedin.com/in/jayfarfan/" target="_blank" rel="noopener noreferrer" className="btn-base btn-primary group">
-            LinkedIn
-            <span className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
-          </a>
-          <a href={cvHref} download={cvFile} className="btn-base btn-secondary group">
-            {t("Descargar CV", "Download CV")}
-            <span className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
-          </a>
+      </section>
+
+      <section className="border-t border-hairline">
+        <div className="container-editorial py-20 md:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+            <div className="lg:col-span-7">
+              <div className="eyebrow text-sm mb-5">— {t("Contacto", "Contact")}</div>
+              <h2 className="font-display text-3xl md:text-4xl tracking-tight leading-[1.1] font-medium text-foreground/95 max-w-[20ch] text-balance">
+                {t("Trabajemos juntos.", "Let's work together.")}
+              </h2>
+              <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground text-pretty">
+                {t(
+                  "Disponible para oportunidades full-time como Senior Product Designer y para proyectos freelance donde pueda aportar criterio, estrategia y diseño.",
+                  "Available for full-time Senior Product Designer roles and freelance projects where I can bring judgment, strategy and design."
+                )}
+              </p>
+            </div>
+
+            <div className="lg:col-span-5 lg:pt-2">
+              <div className="flex flex-col gap-2.5">
+                {[
+                  { label: "LinkedIn", href: "https://www.linkedin.com/in/jayfarfan/" },
+                  { label: "Email", href: "mailto:josem4n@gmail.com" },
+                  { label: t("Descargar CV", "Download CV"), href: cvHref, download: cvFile },
+                ].map((l) => (
+                  <a
+                    key={l.label}
+                    href={l.href}
+                    target={l.href.startsWith("http") ? "_blank" : undefined}
+                    rel={l.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    download={l.download ?? undefined}
+                    className="btn-base btn-tertiary justify-between !py-3 !px-4 group"
+                  >
+                    <span className="font-display text-sm md:text-base font-medium">{l.label}</span>
+                    <span className="text-foreground/60 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
