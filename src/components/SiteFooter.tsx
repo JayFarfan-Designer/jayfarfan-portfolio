@@ -13,14 +13,14 @@ export function SiteFooter() {
             Jay Farfan
           </span>
         </div>
-        <div className="eyebrow text-lg">
+        <div className="eyebrow text-xs">
           © {new Date().getFullYear()} —{" "}
           {t(
             "Diseñado y construido por Jay Farfan",
             "Designed & built by Jay Farfan"
           )}
         </div>
-        <div className="flex items-center gap-6 eyebrow text-lg">
+        <div className="flex items-center gap-6 eyebrow text-xs">
           <a
             href="https://www.linkedin.com/in/jayfarfan/"
             target="_blank"
