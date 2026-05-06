@@ -497,7 +497,7 @@ export function CertziaCaseStudy({ project }: Props) {
                       .replace("03", "C.")
                       .replace("04", "D.")}
                   </span>
-                  <p className="font-display text-2xl md:text-4xl font-medium tracking-tight leading-[1.15] text-foreground/95 text-pretty max-w-[22ch]">
+                  <p className="font-display md:text-4xl font-medium tracking-tight leading-[1.15] text-foreground/95 text-pretty max-w-[22ch] text-3xl text-zinc-400">
                     {item}
                   </p>
                 </li>
