@@ -16,10 +16,7 @@ export function CertziaCaseStudy({ project }: Props) {
     {
       value: t("40%", "40%"),
       valueSuffix: t("Menos fricción en la experiencia de firma.", "Fewer friction points in the signing experience."),
-      label: t(
-        "Reducción del flujo crítico frente a la versión inicial recibida.",
-        "Reduction in the critical flow compared to the initial version received."
-      ),
+      label: "\n",
     },
     {
       value: "5",
