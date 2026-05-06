@@ -334,8 +334,8 @@ export function CertziaCaseStudy({ project }: Props) {
             </ul>
             <p>
               {t(
-                "El rediseño debía basarse en separar la carga cognitiva de la interacción física.",
-                "The redesign had to be based on separating cognitive load from physical interaction."
+                "\n",
+                "\n"
               )}
             </p>
           </div>
@@ -366,7 +366,7 @@ export function CertziaCaseStudy({ project }: Props) {
 
         {/* Validation */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-          <SectionHeader index="06" title={t("Validación", "Validation")} />
+          <SectionHeader index="06" title={t("Rediseño", "Redesign")} />
           <div className="lg:col-span-8 space-y-5 text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
             <p>
               {t(
