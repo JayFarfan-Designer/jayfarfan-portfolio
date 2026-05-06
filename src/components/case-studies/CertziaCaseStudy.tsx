@@ -301,20 +301,20 @@ export function CertziaCaseStudy({ project }: Props) {
           </div>
         </div>
 
-        {/* Main user */}
+        {/* Discovery */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-          <SectionHeader index="03" title={t("Usuario principal", "Main user")} />
+          <SectionHeader index="03" title={t("Discovery", "Discovery")} />
           <div className="lg:col-span-8 space-y-5 text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
-            <p>
+            <p className="whitespace-pre-line">
               {t(
-                "El rediseño se enfocó en firmantes personas naturales con DNIe: usuarios que necesitaban firmar un documento desde el celular sin necesariamente conocer conceptos como firma digital, CAN, PIN, NFC o certificados.",
-                "The redesign focused on individual signers with an electronic ID: users who needed to sign a document from their phone without necessarily understanding concepts such as digital signatures, CAN, PIN, NFC or certificates."
+                "Trabajé junto al equipo de Certezia para entender el problema desde negocio, usuario y sistema:\n\nBusiness Model Canvas\nArquetipos de usuario\nIdentificación de necesidades\nBenchmark de soluciones similares\nAnálisis del flujo As-Is\nService Blueprint del proceso de firma",
+                "I worked with the Certezia team to understand the problem from business, user, and system perspectives:\n\nBusiness Model Canvas\nUser archetypes\nNeeds identification\nBenchmark of similar solutions\nAs-Is flow analysis\nService Blueprint of the signing process"
               )}
             </p>
             <p>
               {t(
-                "El usuario no quería aprender tecnología. Quería completar una tarea importante de forma rápida, válida y segura.",
-                "The user did not want to learn the technology. They wanted to complete an important task quickly, validly and securely."
+                "Esto permitió mapear dónde ocurría la fricción real.",
+                "This allowed us to map where the real friction was occurring."
               )}
             </p>
           </div>
