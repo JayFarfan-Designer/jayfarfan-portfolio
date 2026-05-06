@@ -419,31 +419,35 @@ export function CertziaCaseStudy({ project }: Props) {
               ))}
             </ul>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 pt-2">
-              <figure className="rounded-2xl overflow-hidden border border-hairline bg-surface/60">
-                <img
-                  src={certeziaVistaPrototipo}
-                  alt={t(
-                    "Vista del prototipo interactivo de Certezia en Figma",
-                    "View of the interactive Certezia prototype in Figma"
-                  )}
-                  className="w-full h-auto block"
-                  loading="lazy"
-                />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 pt-2 items-start">
+              <figure className="rounded-2xl overflow-hidden border border-hairline bg-surface/60 flex flex-col">
+                <div className="aspect-[16/10] w-full overflow-hidden bg-surface">
+                  <img
+                    src={certeziaVistaPrototipo}
+                    alt={t(
+                      "Vista del prototipo interactivo de Certezia en Figma",
+                      "View of the interactive Certezia prototype in Figma"
+                    )}
+                    className="w-full h-full object-cover object-left"
+                    loading="lazy"
+                  />
+                </div>
                 <figcaption className="px-5 py-4 text-xs md:text-sm text-muted-foreground leading-relaxed">
                   {t("Prototipado en Figma", "Prototyped in Figma")}
                 </figcaption>
               </figure>
-              <figure className="rounded-2xl overflow-hidden border border-hairline bg-surface/60">
-                <img
-                  src={certeziaVistaTesting}
-                  alt={t(
-                    "Sesión de test de usabilidad de Certezia en Lookback",
-                    "Certezia usability testing session in Lookback"
-                  )}
-                  className="w-full h-auto block"
-                  loading="lazy"
-                />
+              <figure className="rounded-2xl overflow-hidden border border-hairline bg-surface/60 flex flex-col">
+                <div className="aspect-[16/10] w-full overflow-hidden bg-surface">
+                  <img
+                    src={certeziaVistaTesting}
+                    alt={t(
+                      "Sesión de test de usabilidad de Certezia en Lookback",
+                      "Certezia usability testing session in Lookback"
+                    )}
+                    className="w-full h-full object-cover object-center"
+                    loading="lazy"
+                  />
+                </div>
                 <figcaption className="px-5 py-4 text-xs md:text-sm text-muted-foreground leading-relaxed">
                   {t("Test de Usabilidad en Lookback", "Usability testing in Lookback")}
                 </figcaption>
