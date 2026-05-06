@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLanguage } from "@/lib/language";
 import { SiteFooter } from "@/components/SiteFooter";
+import jayPortrait from "@/assets/jay-portrait.jpg";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
@@ -70,7 +71,14 @@ function AboutPage() {
       <section className="border-y border-hairline">
         <div className="container-editorial py-20 md:py-28 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-5">
-            <AboutMark />
+            <div className="relative overflow-hidden rounded-2xl border border-hairline bg-surface/40 aspect-[3/4] max-w-sm">
+              <img
+                src={jayPortrait}
+                alt="Jay Farfan — Senior Product Designer"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
           </div>
           <div className="lg:col-span-7 space-y-7 text-base md:text-lg leading-relaxed text-muted-foreground text-pretty max-w-2xl">
             {lang === "es" ? (
