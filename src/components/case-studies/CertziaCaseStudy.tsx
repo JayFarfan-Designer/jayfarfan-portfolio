@@ -85,7 +85,7 @@ export function CertziaCaseStudy({ project }: Props) {
   ];
 
   const results = [
-    t("Menos fricción en la experiencia de firma frente al flujo inicial recibido.", "Fewer friction points in the signing experience compared to the initial flow received."),
+    t("\n", "\n"),
     t("NPS 8/10 en pruebas de usabilidad.", "8/10 NPS in usability testing."),
     t("Flujo de escaneo NFC más claro y guiado.", "Clearer and more guided NFC scanning flow."),
     t("Errores más específicos y recuperables.", "More specific and recoverable errors."),
@@ -391,12 +391,12 @@ export function CertziaCaseStudy({ project }: Props) {
 
         {/* Results */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-          <SectionHeader index="07" title={t("Resultados", "Results")} />
+          <SectionHeader index="07" title={t("Prototipo + Testing", "Prototype + Testing")} />
           <div className="lg:col-span-8 space-y-8">
-            <p className="text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
+            <p className="text-muted-foreground text-base md:text-lg max-w-2xl text-pretty whitespace-pre-line">
               {t(
-                "El rediseño permitió mejorar la claridad, reducir fricción y elevar la percepción de confianza en el flujo de firma digital.",
-                "The redesign improved clarity, reduced friction and increased the sense of trust in the digital signature flow."
+                "Construí un prototipo interactivo completo del flujo crítico de Certezia.\n\nCon este, validé el nuevo flujo con usuarios reales:",
+                "I built a complete interactive prototype of the Certezia critical flow.\n\nWith this, I validated the new flow with real users:"
               )}
             </p>
             <ul className="space-y-3">
