@@ -372,7 +372,7 @@ export function CertziaCaseStudy({ project }: Props) {
             </p>
             <p>
               {t(
-                "Separar carga cognitiva de la interacción física.",
+                "- Separar carga cognitiva de la interacción física.",
                 "Separating cognitive load from physical interaction."
               )}
             </p>
