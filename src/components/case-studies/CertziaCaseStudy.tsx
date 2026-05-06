@@ -568,29 +568,33 @@ export function CertziaCaseStudy({ project }: Props) {
             <h2 className="headline-md">
               {t("Explorar otros proyectos", "Explore other projects")}
             </h2>
-            <Link to="/" className="eyebrow text-lg link-underline">
-              {t("Todos los proyectos", "All projects")} →
-            </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {otherProjects.map((p) => {
               const oc = lang === "es" ? p.es : p.en;
               return (
-                <Link
+                <a
                   key={p.slug}
-                  to="/work/$slug"
-                  params={{ slug: p.slug }}
-                  className="group block rounded-2xl overflow-hidden border border-hairline"
-                  style={{ backgroundColor: p.accentVar }}
+                  href={`/#project-${p.slug}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block rounded-2xl overflow-hidden border border-white/10 transition-all duration-300 hover:-translate-y-1 hover:border-white/25"
+                  style={{
+                    background: `linear-gradient(135deg, ${p.accentVar} 0%, color-mix(in oklab, ${p.accentVar} 70%, black) 100%)`,
+                  }}
                 >
-                  <div className="aspect-[4/3] flex items-center justify-center bg-black/15">
-                    <ProjectVisual project={p} className="p-6" />
+                  <div className="aspect-[4/3] flex items-center justify-center bg-black/10">
+                    <ProjectVisual project={p} imageSrc={p.media?.hero} className="p-6" />
                   </div>
                   <div className="p-6 text-white">
-                    <div className="eyebrow text-lg text-white/70 mb-2">{p.client}</div>
-                    <div className="font-display text-xl leading-tight">{oc.title}</div>
+                    <div className="font-mono tracking-[0.2em] uppercase text-xs text-white/90 mb-2 drop-shadow-sm">
+                      {p.client}
+                    </div>
+                    <div className="font-display text-xl leading-tight text-white drop-shadow-sm">
+                      {oc.title}
+                    </div>
                   </div>
-                </Link>
+                </a>
               );
             })}
           </div>
