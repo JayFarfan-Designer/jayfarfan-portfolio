@@ -4,6 +4,7 @@ import { useLanguage } from "@/lib/language";
 import { type Project, projects } from "@/data/projects";
 import { ProjectVisual } from "@/components/ProjectVisual";
 import { SiteFooter } from "@/components/SiteFooter";
+import certeziaProblema from "@/assets/certezia-problema.png";
 
 type Props = { project: Project };
 
@@ -236,19 +237,70 @@ export function CertziaCaseStudy({ project }: Props) {
         {/* Challenge */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           <SectionHeader index="02" title={t("El problema", "The problem")} />
-          <div className="lg:col-span-8 space-y-5 text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
-            <p>
-              {t(
-                "El flujo inicial tenía tres problemas principales:",
-                "The initial flow had three main problems:"
-              )}
-            </p>
-            <p className="whitespace-pre-line">
-              {t(
-                "- El usuario debía ingresar el PIN mientras sostenía el DNI → se interrumpía el escaneo\n- Mensajes genéricos (“error”, “intentar nuevamente”) sin capacidad de recuperación\n- Demasiados pasos + UI sin sistema propio (librería Android)",
-                "- The user had to enter the PIN while holding the ID → scanning was interrupted\n- Generic messages (\"error\", \"try again\") without recovery capacity\n- Too many steps + UI without its own system (Android library)"
-              )}
-            </p>
+          <div className="lg:col-span-8 space-y-10">
+            <div className="space-y-5 text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
+              <p>
+                {t(
+                  "El flujo inicial tenía tres problemas principales:",
+                  "The initial flow had three main problems:"
+                )}
+              </p>
+              <p className="whitespace-pre-line">
+                {t(
+                  "- El usuario debía ingresar el PIN mientras sostenía el DNI → se interrumpía el escaneo\n- Mensajes genéricos (“error”, “intentar nuevamente”) sin capacidad de recuperación\n- Demasiados pasos + UI sin sistema propio (librería Android)",
+                  "- The user had to enter the PIN while holding the ID → scanning was interrupted\n- Generic messages (\"error\", \"try again\") without recovery capacity\n- Too many steps + UI without its own system (Android library)"
+                )}
+              </p>
+            </div>
+
+            <figure className="space-y-8">
+              <img
+                src={certeziaProblema}
+                alt={t(
+                  "Tres pantallas móviles que muestran los problemas de UX del flujo original de Certezia",
+                  "Three mobile screens showing the UX issues in the original Certezia flow"
+                )}
+                className="w-full h-auto mx-auto"
+                loading="lazy"
+              />
+              <figcaption className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                {[
+                  {
+                    title: t("Guía visual confusa", "Confusing visual guidance"),
+                    body: t(
+                      "Indicaba una forma de colocar el DNIe que dificultaba la lectura correcta del NFC.",
+                      "Suggested a way to position the DNIe that made NFC reading unreliable."
+                    ),
+                  },
+                  {
+                    title: t("PIN solicitado durante el escaneo", "PIN requested during scanning"),
+                    body: t(
+                      "Obligaba al usuario a interactuar con la pantalla mientras sostenía el DNIe, interrumpiendo la conexión.",
+                      "Forced the user to interact with the screen while holding the DNIe, interrupting the connection."
+                    ),
+                  },
+                  {
+                    title: t("Errores sin contexto", "Contextless errors"),
+                    body: t(
+                      "Mensajes genéricos que no explicaban el problema ni ofrecían una forma de recuperarse.",
+                      "Generic messages that didn’t explain the issue or how to recover."
+                    ),
+                  },
+                ].map((item, i) => (
+                  <div key={i} className="space-y-2">
+                    <div className="font-mono text-muted-foreground text-xs">
+                      {String(i + 1).padStart(2, "0")}
+                    </div>
+                    <h3 className="font-display text-base md:text-lg font-medium leading-snug tracking-tight text-foreground text-balance">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed text-pretty">
+                      {item.body}
+                    </p>
+                  </div>
+                ))}
+              </figcaption>
+            </figure>
           </div>
         </div>
 
