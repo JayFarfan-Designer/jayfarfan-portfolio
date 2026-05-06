@@ -462,43 +462,9 @@ export function CertziaCaseStudy({ project }: Props) {
           </div>
         </div>
 
-        {/* IA en el proceso */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-          <SectionHeader index="09" title={t("IA en el proceso", "AI in the process")} />
-          <div className="lg:col-span-8 space-y-6">
-            <p className="text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
-              {t("Utilicé herramientas de IA para:", "I used AI tools to:")}
-            </p>
-            <ul className="space-y-2 list-disc pl-5">
-              {[
-                t("Acelerar análisis e investigación.", "Accelerate analysis and research."),
-                t("Procesar insights de testing.", "Process testing insights."),
-                t("Iterar prototipos rápidamente.", "Iterate prototypes quickly."),
-                t(
-                  "Documentar el sistema de diseño.",
-                  "Document the design system."
-                ),
-              ].map((item) => (
-                <li
-                  key={item}
-                  className="font-semibold text-foreground text-base md:text-lg"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className="text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
-              {t(
-                "Siempre con criterio, validación humana y foco en el usuario.",
-                "Always with judgment, human validation and a focus on the user."
-              )}
-            </p>
-          </div>
-        </div>
-
         {/* Aprendizajes */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-          <SectionHeader index="10" title={t("Aprendizajes", "Learnings")} />
+          <SectionHeader index="09" title={t("Aprendizajes", "Learnings")} />
           <div className="lg:col-span-8">
             <ul className="space-y-2 list-disc pl-5">
               {[
@@ -527,6 +493,42 @@ export function CertziaCaseStudy({ project }: Props) {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+
+        {/* IA en el proceso */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+          <SectionHeader index="10" title={t("IA en el proceso", "AI in the process")} />
+          <div className="lg:col-span-8 space-y-6">
+            <p className="text-foreground text-base md:text-lg max-w-2xl text-pretty font-semibold">
+              {t(
+                "Usé IA para acelerar el proceso sin perder criterio humano.",
+                "I used AI to speed up the process without losing human judgment."
+              )}
+            </p>
+            <ul className="flex flex-wrap gap-2">
+              {[
+                t("Investigación", "Research"),
+                t("Síntesis", "Synthesis"),
+                t("Prototipado", "Prototyping"),
+                t("Documentación", "Documentation"),
+              ].map((chip) => (
+                <li
+                  key={chip}
+                  className="px-3 py-1.5 rounded-full border border-hairline bg-surface/60 text-foreground/90 text-sm font-medium"
+                >
+                  {chip}
+                </li>
+              ))}
+            </ul>
+            <p
+              className="font-display text-xl md:text-2xl font-medium tracking-tight text-foreground/95 text-pretty leading-snug border-l-2 border-foreground/40 pl-5"
+            >
+              {t(
+                "Siempre con validación humana y foco en el usuario.",
+                "Always with human validation and a focus on the user."
+              )}
+            </p>
           </div>
         </div>
       </section>
