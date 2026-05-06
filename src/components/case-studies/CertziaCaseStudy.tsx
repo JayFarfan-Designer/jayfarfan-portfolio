@@ -4,7 +4,7 @@ import { useLanguage } from "@/lib/language";
 import { type Project, projects } from "@/data/projects";
 import { ProjectVisual } from "@/components/ProjectVisual";
 import { SiteFooter } from "@/components/SiteFooter";
-import certeziaProblema from "@/assets/certezia-problema.png";
+import certeziaProblema from "@/assets/certezia-problema.webp";
 import certeziaFlujoRedisenado from "@/assets/certezia-flujo-rediseñado.webp";
 import certeziaVistaPrototipo from "@/assets/certezia-vista-prototipo.webp";
 import certeziaVistaTesting from "@/assets/certezia-vista-testing.webp";
@@ -91,25 +91,6 @@ export function CertziaCaseStudy({ project }: Props) {
     t("Mayor claridad en el proceso", "Greater clarity in the process"),
     t("Menor fricción en escaneo NFC", "Less friction in NFC scanning"),
     t("Mejor percepción de control", "Better sense of control"),
-  ];
-
-  const deliverables = [
-    t("Flujos To-Be.", "To-Be flows."),
-    t("Wireframes.", "Wireframes."),
-    t("Prototipo interactivo.", "Interactive prototype."),
-    t("UI final.", "Final UI."),
-    t("Design system.", "Design system."),
-    t("Estados, errores y ayudas contextuales.", "System states, errors and contextual help."),
-    t("Pruebas de usabilidad.", "Usability testing."),
-    t("Síntesis de hallazgos.", "Synthesis of findings."),
-    t("Lista priorizada de mejoras.", "Prioritized improvement list."),
-    t("Documentación e insumos de handoff.", "Documentation and handoff inputs."),
-  ];
-
-  const mediaSlots = [
-    { id: "final-screens", label: t("Pantallas finales", "Final screens") },
-    { id: "critical-flow", label: t("Flujo crítico", "Critical flow") },
-    { id: "states-errors", label: t("Estados y errores", "States and errors") },
   ];
 
   // Reusable section header
@@ -456,69 +437,96 @@ export function CertziaCaseStudy({ project }: Props) {
           </div>
         </div>
 
-        {/* Deliverables */}
+        {/* Resultado */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-          <SectionHeader index="08" title={t("Entregables", "Deliverables")} />
+          <SectionHeader index="08" title={t("Resultado", "Outcome")} />
           <div className="lg:col-span-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10">
-              {deliverables.map((d, i) => (
-                <div
-                  key={i}
-                  className="flex items-baseline gap-4 py-3 border-b border-hairline"
+            <ul className="space-y-2 list-disc pl-5">
+              {[
+                t("−40% pasos en el flujo crítico.", "−40% steps in the critical flow."),
+                t(
+                  "Menor fricción en interacción física con DNIe.",
+                  "Less friction in physical interaction with the eID."
+                ),
+                t("Mejor comprensión del proceso.", "Better understanding of the process."),
+                t("Mayor confianza del usuario.", "Greater user trust."),
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="font-semibold text-foreground text-base md:text-lg"
                 >
-                  <span className="font-mono text-[10px] text-muted-foreground w-6">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span className="text-foreground/90">{d}</span>
-                </div>
+                  {item}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
 
-        {/* Learnings */}
+        {/* IA en el proceso */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-          <SectionHeader index="09" title={t("Aprendizajes", "Learnings")} />
-          <div className="lg:col-span-8 space-y-6 max-w-2xl">
-            <p className="font-display text-xl md:text-2xl font-medium tracking-tight text-foreground/95 text-pretty leading-snug">
-              {t(
-                "En productos legalmente sensibles, la confianza no depende solo de que el sistema funcione. También depende de que el usuario entienda qué está pasando, sepa cómo recuperarse cuando algo falla y sienta que la interfaz lo acompaña en cada paso.",
-                "In legally sensitive products, trust does not depend only on the system working. It also depends on users understanding what is happening, knowing how to recover when something fails and feeling guided by the interface at every step."
-              )}
-            </p>
-            <p className="text-muted-foreground text-base md:text-lg text-pretty">
-              {t(
-                "En Certezia, mejorar la experiencia significó reducir carga cognitiva, ordenar el flujo y colocar la información correcta en el momento correcto.",
-                "In Certezia, improving the experience meant reducing cognitive load, reorganizing the flow and placing the right information at the right moment."
-              )}
-            </p>
-          </div>
-        </div>
-
-        {/* Project visuals / placeholders */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-          <SectionHeader index="10" title={t("Visuales del proyecto", "Project visuals")} />
+          <SectionHeader index="09" title={t("IA en el proceso", "AI in the process")} />
           <div className="lg:col-span-8 space-y-6">
-            <p className="text-sm text-muted-foreground max-w-2xl">
+            <p className="text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
+              {t("Utilicé herramientas de IA para:", "I used AI tools to:")}
+            </p>
+            <ul className="space-y-2 list-disc pl-5">
+              {[
+                t("Acelerar análisis e investigación.", "Accelerate analysis and research."),
+                t("Procesar insights de testing.", "Process testing insights."),
+                t("Iterar prototipos rápidamente.", "Iterate prototypes quickly."),
+                t(
+                  "Documentar el sistema de diseño.",
+                  "Document the design system."
+                ),
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="font-semibold text-foreground text-base md:text-lg"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p className="text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
               {t(
-                "Mockups provisionales — pronto serán reemplazados por capturas reales de la app.",
-                "Placeholder mockups — to be replaced with real app screenshots soon."
+                "Siempre con criterio, validación humana y foco en el usuario.",
+                "Always with judgment, human validation and a focus on the user."
               )}
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-              {mediaSlots.map((slot) => (
-                <figure key={slot.id} className="space-y-3">
-                  <div
-                    className="rounded-2xl border border-hairline aspect-[4/5] flex items-center justify-center overflow-hidden"
-                    style={{ backgroundColor: project.accentVar }}
-                    data-media-slot={slot.id}
-                  >
-                    <ProjectVisual project={project} className="p-6" />
-                  </div>
-                  <figcaption className="eyebrow text-lg">{slot.label}</figcaption>
-                </figure>
+          </div>
+        </div>
+
+        {/* Aprendizajes */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+          <SectionHeader index="10" title={t("Aprendizajes", "Learnings")} />
+          <div className="lg:col-span-8">
+            <ul className="space-y-2 list-disc pl-5">
+              {[
+                t(
+                  "Diseñar para lo físico cambia completamente el UX.",
+                  "Designing for the physical world completely changes UX."
+                ),
+                t(
+                  "El microcopy es clave en sistemas complejos.",
+                  "Microcopy is key in complex systems."
+                ),
+                t(
+                  "Separar acciones reduce fricción más que simplificar visualmente.",
+                  "Splitting actions reduces friction more than simplifying visuals."
+                ),
+                t(
+                  "Un buen sistema de estados vale tanto como el flujo principal.",
+                  "A solid state system is as valuable as the main flow."
+                ),
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="font-semibold text-foreground text-base md:text-lg"
+                >
+                  {item}
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </section>
