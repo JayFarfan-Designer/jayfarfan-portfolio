@@ -453,7 +453,7 @@ export function CertziaCaseStudy({ project }: Props) {
               ].map((item) => (
                 <li
                   key={item}
-                  className="font-semibold text-foreground text-base md:text-lg"
+                  className="text-foreground text-base md:text-lg font-normal text-zinc-300"
                 >
                   {item}
                 </li>
