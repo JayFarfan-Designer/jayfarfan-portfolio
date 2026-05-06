@@ -1,5 +1,7 @@
 import certeziaHero from "@/assets/certezia-hero.png";
 import pabloHero from "@/assets/pablo-hero.png";
+import karwayHero from "@/assets/karway-hero.png";
+import kindberryHero from "@/assets/kindberry-hero.png";
 
 export type ProjectMedia = {
   /** Easily replaceable: swap this image src later. */
@@ -73,6 +75,7 @@ export const projects: Project[] = [
     accentClass: "bg-project-karway",
     accentVar: "var(--project-karway)",
     illustration: "marketplace",
+    media: { hero: karwayHero },
     comingSoon: true,
     es: {
       title: "Construyendo la visión de producto para un marketplace automotriz",
@@ -93,6 +96,7 @@ export const projects: Project[] = [
     accentClass: "bg-project-kindberry",
     accentVar: "var(--project-kindberry)",
     illustration: "ecommerce",
+    media: { hero: kindberryHero },
     comingSoon: true,
     es: {
       title: "Diseñando un e-commerce premium desde research hasta UX/UI",
