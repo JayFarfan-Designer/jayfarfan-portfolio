@@ -216,18 +216,18 @@ export function CertziaCaseStudy({ project }: Props) {
       <section className="container-editorial py-20 md:py-28 space-y-20 md:space-y-28">
         {/* Overview */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-          <SectionHeader index="01" title={t("Overview", "Overview")} />
+          <SectionHeader index="01" title={t("Contexto", "Contexto")} />
           <div className="lg:col-span-8 space-y-5 text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
             <p>
               {t(
-                "Certezia es una app mobile-first de firma digital que permite autenticar identidad y firmar documentos PDF desde el celular usando DNIe.",
-                "Certezia is a mobile-first digital signature app that allows users to authenticate their identity and sign PDF documents from a mobile phone using an electronic ID."
+                "Certezia es una app que permite firmar documentos PDF de forma legal usando el DNI electrónico (DNIe) desde el celular.",
+                "Certezia is an app that allows you to legally sign PDF documents using the electronic ID (DNIe) from your phone."
               )}
             </p>
             <p>
               {t(
-                "El reto era convertir un proceso técnico y legalmente sensible en una experiencia clara para usuarios no expertos. No bastaba con que el sistema funcionara: el usuario debía entender qué estaba pasando, confiar en el proceso y completar la firma sin frustración.",
-                "The challenge was to turn a technically and legally sensitive process into a clear experience for non-expert users. It was not enough for the system to work: users needed to understand what was happening, trust the process and complete the signature without frustration."
+                "El reto: hacer que un proceso técnico, físico y sensible funcione para usuarios no expertos.",
+                "The challenge: making a technical, physical and sensitive process work for non-expert users."
               )}
             </p>
             <p>
