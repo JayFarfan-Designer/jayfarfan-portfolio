@@ -115,26 +115,41 @@ function AboutPage() {
       </section>
 
       <section className="container-editorial py-20 md:py-28">
-        <div className="eyebrow text-lg mb-10">— {t("Principios", "Principles")}</div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-14 md:mb-20">
+          <div className="lg:col-span-4">
+            <div className="eyebrow text-lg mb-4">— {t("Principios", "Principles")}</div>
+            <h2 className="headline-lg text-balance max-w-[14ch]">
+              {t("Cómo trabajo.", "How I work.")}
+            </h2>
+          </div>
+          <div className="lg:col-span-8 lg:pt-12">
+            <p className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-xl text-pretty">
+              {t(
+                "Cuatro convicciones que guían cada proyecto.",
+                "Four convictions that guide every project."
+              )}
+            </p>
+          </div>
+        </div>
+
+        <ul className="border-t border-hairline">
           {blocks.map((b, i) => (
-            <div
+            <li
               key={i}
-              className="group relative rounded-2xl border border-hairline bg-surface/40 p-8 md:p-10 transition-all duration-300 hover:border-foreground/25 hover:bg-surface"
+              className="group border-b border-hairline py-8 md:py-10 grid grid-cols-12 gap-6 md:gap-10 items-baseline"
             >
-              <div className="flex items-center gap-3 mb-6 text-lg">
-                <span className="font-mono text-muted-foreground tabular-nums text-sm">
+              <div className="col-span-12 md:col-span-3 flex items-center gap-4">
+                <span className="font-mono text-muted-foreground tabular-nums text-xs">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="block w-6 h-px bg-foreground/30" />
-                <span className="eyebrow text-lg">{b.label}</span>
+                <span className="eyebrow text-xs md:text-sm">{b.label}</span>
               </div>
-              <div className="font-display text-xl md:text-2xl leading-snug font-medium tracking-tight text-foreground/95 text-pretty">
+              <div className="col-span-12 md:col-span-9 font-display text-2xl md:text-3xl leading-[1.15] tracking-tight font-medium text-foreground/95 text-pretty">
                 {b.body}
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
 
         <div className="mt-16 flex flex-wrap gap-4">
           <a href="https://www.linkedin.com/in/jayfarfan/" target="_blank" rel="noopener noreferrer" className="btn-base btn-primary group">
