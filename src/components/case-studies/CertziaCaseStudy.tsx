@@ -370,7 +370,7 @@ export function CertziaCaseStudy({ project }: Props) {
                 "I redesigned the complete flow with a key principle:"
               )}
             </p>
-            <p>
+            <p className="font-semibold text-foreground">
               {t(
                 "- Separar carga cognitiva de la interacción física.",
                 "Separating cognitive load from physical interaction."
