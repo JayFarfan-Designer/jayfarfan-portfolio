@@ -32,13 +32,15 @@ export function SelectedWork() {
             const content = lang === "es" ? p.es : p.en;
             const inner = (
               <article
+                id={`project-${p.slug}`}
+                style={{
+                  background: `linear-gradient(135deg, ${p.accentVar} 0%, color-mix(in oklab, ${p.accentVar} 70%, black) 100%)`,
+                  scrollMarginTop: "120px",
+                }}
                 className={
                   "relative rounded-3xl overflow-hidden border border-white/10 transition-all duration-500 " +
                   (p.comingSoon ? "" : "group-hover:-translate-y-1 group-hover:border-white/20")
                 }
-                style={{
-                  background: `linear-gradient(135deg, ${p.accentVar} 0%, color-mix(in oklab, ${p.accentVar} 70%, black) 100%)`,
-                }}
               >
                 <div
                   aria-hidden
