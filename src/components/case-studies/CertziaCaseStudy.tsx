@@ -466,7 +466,7 @@ export function CertziaCaseStudy({ project }: Props) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           <SectionHeader index="09" title={t("Aprendizajes", "Learnings")} />
           <div className="lg:col-span-8">
-            <ul className="space-y-2 list-disc pl-5">
+            <ol className="divide-y divide-hairline">
               {[
                 t(
                   "Diseñar para lo físico cambia completamente el UX.",
@@ -484,15 +484,20 @@ export function CertziaCaseStudy({ project }: Props) {
                   "Un buen sistema de estados vale tanto como el flujo principal.",
                   "A solid state system is as valuable as the main flow."
                 ),
-              ].map((item) => (
+              ].map((item, i) => (
                 <li
                   key={item}
-                  className="font-semibold text-foreground text-base md:text-lg"
+                  className="flex gap-6 md:gap-10 py-8 md:py-12 first:pt-0 last:pb-0"
                 >
-                  {item}
+                  <span className="font-mono text-xs md:text-sm text-muted-foreground pt-3 shrink-0 w-10">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p className="font-display text-2xl md:text-4xl font-medium tracking-tight leading-[1.15] text-foreground/95 text-pretty max-w-[22ch]">
+                    {item}
+                  </p>
                 </li>
               ))}
-            </ul>
+            </ol>
           </div>
         </div>
 
