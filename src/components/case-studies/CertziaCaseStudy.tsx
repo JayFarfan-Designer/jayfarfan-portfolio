@@ -249,12 +249,6 @@ export function CertziaCaseStudy({ project }: Props) {
                 "- The user had to enter the PIN while holding the ID → scanning was interrupted\n- Generic messages (\"error\", \"try again\") without recovery capacity\n- Too many steps + UI without its own system (Android library)"
               )}
             </p>
-            <p>
-              {t(
-                "Resultado: una experiencia confusa, frágil y poco confiable.",
-                "Result: a confusing, fragile and unreliable experience."
-              )}
-            </p>
           </div>
         </div>
 
