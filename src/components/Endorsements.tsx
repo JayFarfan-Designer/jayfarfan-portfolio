@@ -13,8 +13,8 @@ const cards = [
     image: solangieImg,
   },
   {
-    es: "Destaco su habilidad para conectar diseño, negocio y tecnología, entendiendo profundamente las necesidades de los usuarios para proponer soluciones claras y valiosas.",
-    en: "I highlight his ability to connect design, business and technology, deeply understanding user needs to propose clear and valuable solutions.",
+    es: "“Destaco su habilidad para conectar diseño, negocio y tecnología, entendiendo profundamente las necesidades de los usuarios para proponer soluciones claras y valiosas.”",
+    en: "“I highlight his ability to connect design, business and technology, deeply understanding user needs to propose clear and valuable solutions.”",
     author: "Willington Jesús Ortiz Maurtua",
     role_es: "Software Engineer · Inetum",
     role_en: "Software Engineer · Inetum",
