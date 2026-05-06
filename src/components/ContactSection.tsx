@@ -1,12 +1,13 @@
 import { useLanguage } from "@/lib/language";
 
 export function ContactSection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const cvHref = lang === "es" ? "/CV_JayFarfan_ESP.pdf" : "/CV_JayFarfan_ENG.pdf";
 
   const links = [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/jayfarfan/" },
     { label: "Email", href: "mailto:josem4n@gmail.com" },
-    { label: t("Descargar CV", "Download CV"), href: "#" },
+    { label: t("Descargar CV", "Download CV"), href: cvHref, download: true },
   ];
 
   return (
@@ -49,6 +50,7 @@ export function ContactSection() {
                   href={l.href}
                   target={l.href.startsWith("http") ? "_blank" : undefined}
                   rel={l.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  download={l.download ? true : undefined}
                   className="btn-base btn-tertiary justify-between !py-4 !px-5 group"
                 >
                   <span className="font-display text-base md:text-lg font-medium">

@@ -23,7 +23,9 @@ export const Route = createFileRoute("/about")({
 });
 
 function AboutPage() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const cvHref = lang === "es" ? "/CV_JayFarfan_ESP.pdf" : "/CV_JayFarfan_ENG.pdf";
+  const cvFile = lang === "es" ? "CV_JayFarfan_ESP.pdf" : "CV_JayFarfan_ENG.pdf";
 
   const blocks = [
     {
@@ -126,7 +128,7 @@ function AboutPage() {
             LinkedIn
             <span className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
           </a>
-          <a href="#" onClick={(e) => e.preventDefault()} className="btn-base btn-secondary group">
+          <a href={cvHref} download={cvFile} className="btn-base btn-secondary group">
             {t("Descargar CV", "Download CV")}
             <span className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
           </a>

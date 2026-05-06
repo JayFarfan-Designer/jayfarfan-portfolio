@@ -2,7 +2,9 @@ import { useLanguage } from "@/lib/language";
 import { NodeNetwork } from "./NodeNetwork";
 
 export function Hero() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const cvHref = lang === "es" ? "/CV_JayFarfan_ESP.pdf" : "/CV_JayFarfan_ENG.pdf";
+  const cvFile = lang === "es" ? "CV_JayFarfan_ESP.pdf" : "CV_JayFarfan_ENG.pdf";
   return (
     <section className="relative min-h-[92vh] flex items-center overflow-hidden border-b border-hairline">
       <NodeNetwork className="opacity-100" />
@@ -52,8 +54,8 @@ export function Hero() {
                 <span className="inline-block transition-transform group-hover:translate-y-0.5">↓</span>
               </a>
               <a
-                href="#"
-                onClick={(e) => e.preventDefault()}
+                href={cvHref}
+                download={cvFile}
                 className="btn-base btn-secondary group text-xl"
               >
                 {t("Descargar CV", "Download CV")}

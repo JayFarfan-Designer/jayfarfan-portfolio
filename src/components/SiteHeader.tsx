@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 
 export function SiteHeader() {
   const { lang, setLang, t } = useLanguage();
+  const cvHref = lang === "es" ? "/CV_JayFarfan_ESP.pdf" : "/CV_JayFarfan_ENG.pdf";
+  const cvFile = lang === "es" ? "CV_JayFarfan_ESP.pdf" : "CV_JayFarfan_ENG.pdf";
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -50,8 +52,8 @@ export function SiteHeader() {
             </a>
           ))}
           <a
-            href="#"
-            onClick={(e) => e.preventDefault()}
+            href={cvHref}
+            download={cvFile}
             className="text-sm text-foreground/75 hover:text-foreground transition-colors link-underline"
           >
             {t("Descargar CV", "Download CV")}
@@ -87,7 +89,7 @@ export function SiteHeader() {
               {item.label}
             </a>
           ))}
-          <a href="#" onClick={(e) => e.preventDefault()} className="font-display text-2xl font-medium">
+          <a href={cvHref} download={cvFile} onClick={() => setOpen(false)} className="font-display text-2xl font-medium">
             {t("Descargar CV", "Download CV")}
           </a>
           <div className="pt-4">
