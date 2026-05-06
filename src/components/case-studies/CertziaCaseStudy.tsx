@@ -55,37 +55,31 @@ export function CertziaCaseStudy({ project }: Props) {
 
   const decisions = [
     {
-      title: t(
-        "Reordenar el flujo para reducir fricción",
-        "Reordering the flow to reduce friction"
+      title: t("Reordenar el flujo", "Reorder the flow"),
+      body: t(
+        "Se solicitan todos los datos antes del escaneo NFC.",
+        "All data is requested before the NFC scan."
       ),
+    },
+    {
+      title: t("Simplificar el proceso", "Simplify the process"),
+      body: t(
+        "Reducción de pasos y decisiones innecesarias.",
+        "Reduction of unnecessary steps and decisions."
+      ),
+    },
+    {
+      title: t("Diseñar estados del sistema", "Design system states"),
+      body: t(
+        "Errores, advertencias y feedback claros y accionables.",
+        "Clear and actionable errors, warnings and feedback."
+      ),
+    },
+    {
+      title: t("Guiar al usuario", "Guide the user"),
       body: t(
         "Onboarding contextual y ayudas en momentos críticos.",
         "Contextual onboarding and help in critical moments."
-      ),
-    },
-    {
-      title: t("Diseñar errores más útiles", "Designing more useful errors"),
-      body: t(
-        "Reemplacé mensajes genéricos por estados más claros, errores accionables y advertencias progresivas. El objetivo fue ayudar al usuario a entender qué falló y cómo continuar.",
-        "I replaced generic messages with clearer system states, actionable errors and progressive warnings. The goal was to help users understand what failed and how to continue."
-      ),
-    },
-    {
-      title: t("Guiar al usuario", "Guiding the user"),
-      body: t(
-        "Incorporé microcopy, mensajes de primera vez y bottom sheets para explicar conceptos como PIN, CAN, NFC y tipo de DNIe en el momento correcto, sin sobrecargar la experiencia.",
-        "I introduced microcopy, first-time messages and bottom sheets to explain concepts such as PIN, CAN, NFC and ID type at the right moment, without overloading the experience."
-      ),
-    },
-    {
-      title: t(
-        "Construir una base visual escalable",
-        "Building a scalable visual foundation"
-      ),
-      body: t(
-        "Diseñé la UI final y un design system para unificar la identidad del producto, mejorar consistencia y facilitar futuras iteraciones.",
-        "I designed the final UI and a design system to unify the product identity, improve consistency and support future iterations."
       ),
     },
   ];
@@ -349,7 +343,7 @@ export function CertziaCaseStudy({ project }: Props) {
 
         {/* Design decisions */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-          <SectionHeader index="05" title={t("Decisiones de diseño", "Design decisions")} />
+          <SectionHeader index="05" title={t("Decisiones de Diseño", "Design Decisions")} />
           <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {decisions.map((d, i) => (
               <div
