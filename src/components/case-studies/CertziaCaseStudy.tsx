@@ -386,7 +386,7 @@ export function CertziaCaseStudy({ project }: Props) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           <SectionHeader index="07" title={t("Prototipo + Testing", "Prototype + Testing")} />
           <div className="lg:col-span-8 space-y-8">
-            <p className="text-muted-foreground text-base md:text-lg max-w-2xl text-pretty whitespace-pre-line">
+            <p className="text-muted-foreground text-base md:text-lg max-w-2xl text-pretty whitespace-pre-line font-semibold">
               {t(
                 "Construí un prototipo interactivo completo del flujo crítico de Certezia.\nCon este, validé el nuevo flujo con usuarios reales:",
                 "I built a complete interactive prototype of the Certezia critical flow.\nWith this, I validated the new flow with real users:"
