@@ -1,12 +1,13 @@
 import { useLanguage } from "@/lib/language";
 
 export function ContactSection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const cvHref = lang === "es" ? "/CV_JayFarfan_ESP.pdf" : "/CV_JayFarfan_ENG.pdf";
 
   const links = [
     { label: "LinkedIn", href: "https://www.linkedin.com/in/jayfarfan/" },
     { label: "Email", href: "mailto:josem4n@gmail.com" },
-    { label: t("Descargar CV", "Download CV"), href: "#" },
+    { label: t("Descargar CV", "Download CV"), href: cvHref, download: true },
   ];
 
   return (
