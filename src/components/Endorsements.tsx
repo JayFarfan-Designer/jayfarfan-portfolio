@@ -2,8 +2,8 @@ import { useLanguage } from "@/lib/language";
 
 const cards = [
   {
-    es: "Jay trabaja con foco real en el cliente, entendiendo necesidades complejas y convirtiéndolas en flujos simples, claros y delicados.",
-    en: "Jay works with a real focus on the client, understanding complex needs and turning them into simple, clear and thoughtful flows.",
+    es: "Destaco su habilidad para conectar diseño, negocio y tecnología, entendiendo profundamente las necesidades de los usuarios para proponer soluciones claras y valiosas.",
+    en: "I highlight his ability to connect design, business and technology, deeply understanding user needs to propose clear and valuable solutions.",
     author: "Solangie Chiucca de la Cruz",
     role_es: "Colega",
     role_en: "Colleague",
