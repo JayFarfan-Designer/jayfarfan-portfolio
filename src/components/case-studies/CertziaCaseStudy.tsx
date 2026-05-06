@@ -253,7 +253,7 @@ export function CertziaCaseStudy({ project }: Props) {
               </p>
             </div>
 
-            <figure className="rounded-2xl bg-surface/60 border border-hairline px-5 py-6 md:px-8 md:py-8 space-y-6">
+            <figure className="rounded-2xl bg-surface/60 border border-hairline px-5 py-6 md:px-8 md:py-8 space-y-6 bg-slate-800">
               <img
                 src={certeziaProblema}
                 alt={t(
