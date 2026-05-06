@@ -20,19 +20,19 @@ export function CertziaCaseStudy({ project }: Props) {
   const metrics = [
     {
       value: "40%",
-      label: t("Menos pasos en flujo crítico de firma ", "Fewer steps in critical signing flow "),
+      label: t("Mesos pasos en flujo crítico de firma.", "Fewer steps in critical signing flow."),
     },
     {
       value: "User Testing",
-      label: t("Validado con usuarios reales", "Validated with real users"),
+      label: t("Validado con prototipo y ususarios reales.", "Validated with prototype and real users."),
     },
     {
       value: "8/10",
-      label: t("NPs en pruebas con usuarios", "NPs in user testing"),
+      label: t("NPS en pruebas con usuarios.", "NPS in user testing."),
     },
     {
       value: "Certezia UI Kit ",
-      label: t("NPS en pruebas con usuarios.", "NPS in user testing."),
+      label: t("Base visual propia, lista para escalar.", "Own visual base, ready to scale."),
     },
   ];
 
