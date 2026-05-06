@@ -584,7 +584,16 @@ export function CertziaCaseStudy({ project }: Props) {
                   }}
                 >
                   <div className="aspect-[4/3] flex items-center justify-center bg-black/10">
-                    <ProjectVisual project={p} imageSrc={p.media?.hero} className="p-6" />
+                    <ProjectVisual
+                      project={p}
+                      imageSrc={p.media?.hero}
+                      className="p-6"
+                      imageClassName={
+                        p.slug === "komu-ai"
+                          ? "h-[82%] w-auto max-w-[82%] object-contain translate-x-2"
+                          : undefined
+                      }
+                    />
                   </div>
                   <div className="p-6 text-white">
                     <div className="font-mono tracking-[0.2em] uppercase text-xs text-white/90 mb-2 drop-shadow-sm">
