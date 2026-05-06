@@ -72,31 +72,44 @@ function AboutPage() {
           <div className="lg:col-span-5">
             <AboutMark />
           </div>
-          <div className="lg:col-span-7 space-y-6 text-base md:text-lg leading-relaxed text-muted-foreground text-pretty max-w-2xl">
-            <p>
-              {t(
-                "Soy SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER con una base poco tradicional: vengo de la ingeniería civil, y eso marcó mi forma de diseñar. Antes de pensar en pantallas, necesito entender el sistema: qué problema estamos resolviendo, qué restricciones existen, qué necesita el usuario y qué tiene sentido para el negocio.",
-                "I'm a SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER with a non-traditional foundation: I come from civil engineering, and that shaped the way I design. Before thinking about screens, I need to understand the system: what problem we are solving, what constraints exist, what the user needs and what makes sense for the business."
-              )}
-            </p>
-            <p>
-              {t(
-                "Me gusta trabajar en productos desde cero y en rediseños donde UX y UI tienen que encontrarse con estrategia, tecnología y ejecución real. Disfruto ordenar problemas complejos, convertir información dispersa en decisiones claras y diseñar soluciones simples, útiles y escalables.",
-                "I enjoy working on products from scratch and on redesigns where UX and UI need to meet strategy, technology and real execution. I like organizing complex problems, turning scattered information into clear decisions and designing simple, useful and scalable solutions."
-              )}
-            </p>
-            <p>
-              {t(
-                "Uso herramientas de inteligencia artificial como ChatGPT, Claude y Lovable para acelerar exploración, síntesis, wireframes, contenido y prototipado. Pero no las uso para reemplazar criterio: las uso para pensar mejor, probar más rápido y llegar con más claridad a soluciones que puedan implementarse.",
-                "I use artificial intelligence tools like ChatGPT, Claude and Lovable to accelerate exploration, synthesis, wireframes, content and prototyping. But I don't use them to replace judgment: I use them to think better, test faster and reach clearer solutions that can actually be implemented."
-              )}
-            </p>
-            <p>
-              {t(
-                "También me gusta liderar desde la práctica: facilitar talleres, compartir conocimiento y ayudar a equipos multidisciplinarios a tomar mejores decisiones desde el diseño.",
-                "I also enjoy leading through practice: facilitating workshops, sharing knowledge and helping multidisciplinary teams make better decisions through design."
-              )}
-            </p>
+          <div className="lg:col-span-7 space-y-7 text-base md:text-lg leading-relaxed text-muted-foreground text-pretty max-w-2xl">
+            {lang === "es" ? (
+              <>
+                <p>
+                  Soy <span className="text-foreground">Jay</span>, Product Designer con una base poco tradicional: vengo de la ingeniería civil, y eso marcó mi forma de diseñar.
+                </p>
+                <p>
+                  Antes de pensar en pantallas, necesito <span className="text-foreground">entender el sistema</span>: qué problema estamos resolviendo, qué necesita el usuario y qué tiene sentido para el negocio.
+                </p>
+                <p>
+                  Me gusta trabajar en <span className="text-foreground">productos desde cero</span> y en rediseños donde UX y UI se cruzan con estrategia, tecnología y ejecución real. Disfruto ordenar problemas complejos y convertir información dispersa en <span className="text-foreground">soluciones simples, útiles y escalables</span>.
+                </p>
+                <p>
+                  Uso herramientas de inteligencia artificial como ChatGPT, Claude y Lovable para acelerar exploración, síntesis, wireframes, contenido y prototipado. Pero <span className="text-foreground">no las uso para reemplazar criterio</span>: las uso para pensar mejor, iterar más rápido y llegar con mayor claridad a soluciones implementables.
+                </p>
+                <p>
+                  También disfruto <span className="text-foreground">liderar desde la práctica</span>: facilitar talleres, compartir conocimiento y ayudar a equipos multidisciplinarios a tomar mejores decisiones desde diseño.
+                </p>
+              </>
+            ) : (
+              <>
+                <p>
+                  I'm <span className="text-foreground">Jay</span>, a Product Designer with a non-traditional foundation: I come from civil engineering, and that shaped the way I design.
+                </p>
+                <p>
+                  Before thinking about screens, I need to <span className="text-foreground">understand the system</span>: what problem we are solving, what the user needs and what makes sense for the business.
+                </p>
+                <p>
+                  I enjoy working on <span className="text-foreground">products from scratch</span> and on redesigns where UX and UI meet strategy, technology and real execution. I like organizing complex problems and turning scattered information into <span className="text-foreground">simple, useful and scalable solutions</span>.
+                </p>
+                <p>
+                  I use AI tools like ChatGPT, Claude and Lovable to accelerate exploration, synthesis, wireframes, content and prototyping. But <span className="text-foreground">I don't use them to replace judgment</span>: I use them to think better, iterate faster and reach implementable solutions with more clarity.
+                </p>
+                <p>
+                  I also enjoy <span className="text-foreground">leading through practice</span>: facilitating workshops, sharing knowledge and helping multidisciplinary teams make better decisions through design.
+                </p>
+              </>
+            )}
           </div>
         </div>
       </section>
