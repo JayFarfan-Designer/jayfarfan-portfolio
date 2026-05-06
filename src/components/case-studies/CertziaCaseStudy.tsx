@@ -245,8 +245,8 @@ export function CertziaCaseStudy({ project }: Props) {
             </p>
             <p className="whitespace-pre-line">
               {t(
-                "El usuario debía ingresar el PIN mientras sostenía el DNI → se interrumpía el escaneo\nMensajes genéricos (“error”, “intentar nuevamente”) sin capacidad de recuperación\nDemasiados pasos + UI sin sistema propio (librería Android)",
-                "The user had to enter the PIN while holding the ID → scanning was interrupted\nGeneric messages (\"error\", \"try again\") without recovery capacity\nToo many steps + UI without its own system (Android library)"
+                "- El usuario debía ingresar el PIN mientras sostenía el DNI → se interrumpía el escaneo\n- Mensajes genéricos (“error”, “intentar nuevamente”) sin capacidad de recuperación\n- Demasiados pasos + UI sin sistema propio (librería Android)",
+                "- The user had to enter the PIN while holding the ID → scanning was interrupted\n- Generic messages (\"error\", \"try again\") without recovery capacity\n- Too many steps + UI without its own system (Android library)"
               )}
             </p>
             <p>
