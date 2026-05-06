@@ -364,25 +364,32 @@ export function CertziaCaseStudy({ project }: Props) {
         {/* Validation */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           <SectionHeader index="06" title={t("Rediseño", "Redesign")} />
-          <div className="lg:col-span-8 space-y-5 text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
-            <p>
-              {t(
-                "Rediseñé el flujo completo con un principio clave:",
-                "I redesigned the complete flow with a key principle:"
-              )}
-            </p>
-            <p className="font-semibold text-foreground">
-              {t(
-                "- Separar carga cognitiva de la interacción física.",
-                "Separating cognitive load from physical interaction."
-              )}
-            </p>
-            <p>
-              {t(
-                "\n",
-                "\n"
-              )}
-            </p>
+          <div className="lg:col-span-8 space-y-8">
+            <div className="space-y-5 text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
+              <p>
+                {t(
+                  "Rediseñé el flujo completo con un principio clave:",
+                  "I redesigned the complete flow with a key principle:"
+                )}
+              </p>
+              <p className="font-semibold text-foreground">
+                {t(
+                  "- Separar carga cognitiva de la interacción física.",
+                  "Separating cognitive load from physical interaction."
+                )}
+              </p>
+            </div>
+            <figure className="rounded-2xl overflow-hidden border border-hairline bg-surface/60">
+              <img
+                src={certeziaFlujoRedisenado}
+                alt={t(
+                  "Diagrama del flujo rediseñado de Certezia mostrando todas las pantallas y conexiones del proceso de firma",
+                  "Diagram of the redesigned Certezia flow showing all screens and connections of the signing process"
+                )}
+                className="w-full h-auto block"
+                loading="lazy"
+              />
+            </figure>
           </div>
         </div>
 
