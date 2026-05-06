@@ -172,13 +172,17 @@ export function CertziaCaseStudy({ project }: Props) {
           </div>
         </div>
 
-        {/* Hero visual slot — replace with PNG later */}
-        <div className="container-editorial pb-16 md:pb-20 relative">
+        {/* Hero visual */}
+        <div className="container-editorial pb-8 md:pb-10 relative">
           <div
-            className="rounded-2xl overflow-hidden border border-white/15 bg-black/20 aspect-[16/9] flex items-center justify-center"
+            className="rounded-2xl overflow-hidden border border-white/15 bg-black/20 flex items-center justify-center px-6 py-6 md:px-10 md:py-8"
             data-media-slot="hero"
           >
-            <ProjectVisual project={project} className="p-10" />
+            <img
+              src={project.media?.hero}
+              alt={c.title}
+              className="w-full h-auto max-h-[420px] md:max-h-[460px] object-contain"
+            />
           </div>
         </div>
       </header>
