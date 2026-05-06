@@ -64,7 +64,7 @@ export const projects: Project[] = [
       description:
         "Co-founded and Re-designed Pablo, an AI financial assistant on WhatsApp, designing its conversational experience, Dashboard and Landing page.\nFrom deep Research, I transformed user needs into a complete digital system.\nThe result was a clearer, more useful and closer experience, with direct improvements in product adoption and conversion.",
     },
-    tags: ["Fintech", "AI Product", "WhatsApp UX", "Product Strategy", "MVP"],
+    tags: ["Fintech", "AI Product", "MVP Design", "Product Strategy", "MVP"],
   },
   {
     slug: "karway",
