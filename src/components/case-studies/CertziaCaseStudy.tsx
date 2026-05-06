@@ -253,48 +253,45 @@ export function CertziaCaseStudy({ project }: Props) {
               </p>
             </div>
 
-            <figure className="space-y-8">
+            <figure className="rounded-2xl bg-surface/60 border border-hairline px-5 py-6 md:px-8 md:py-8 space-y-6">
               <img
                 src={certeziaProblema}
                 alt={t(
                   "Tres pantallas móviles que muestran los problemas de UX del flujo original de Certezia",
                   "Three mobile screens showing the UX issues in the original Certezia flow"
                 )}
-                className="w-full h-auto mx-auto"
+                className="w-full h-auto max-w-3xl mx-auto"
                 loading="lazy"
               />
-              <figcaption className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              <figcaption className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 max-w-3xl mx-auto">
                 {[
                   {
-                    title: t("Guía visual confusa", "Confusing visual guidance"),
+                    title: t("Guía visual confusa", "Confusing guidance"),
                     body: t(
-                      "Indicaba una forma de colocar el DNIe que dificultaba la lectura correcta del NFC.",
-                      "Suggested a way to position the DNIe that made NFC reading unreliable."
+                      "La posición sugerida dificultaba la lectura NFC.",
+                      "The suggested position made NFC reading unreliable."
                     ),
                   },
                   {
-                    title: t("PIN solicitado durante el escaneo", "PIN requested during scanning"),
+                    title: t("PIN durante el escaneo", "PIN during scanning"),
                     body: t(
-                      "Obligaba al usuario a interactuar con la pantalla mientras sostenía el DNIe, interrumpiendo la conexión.",
-                      "Forced the user to interact with the screen while holding the DNIe, interrupting the connection."
+                      "Interrumpía la conexión entre el DNIe y el teléfono.",
+                      "Interrupted the connection between the DNIe and the phone."
                     ),
                   },
                   {
-                    title: t("Errores sin contexto", "Contextless errors"),
+                    title: t("Error genérico", "Generic error"),
                     body: t(
-                      "Mensajes genéricos que no explicaban el problema ni ofrecían una forma de recuperarse.",
-                      "Generic messages that didn’t explain the issue or how to recover."
+                      "No explicaba el problema ni cómo recuperarse.",
+                      "Didn’t explain the issue or recovery path."
                     ),
                   },
                 ].map((item, i) => (
-                  <div key={i} className="space-y-2">
-                    <div className="font-mono text-muted-foreground text-xs">
-                      {String(i + 1).padStart(2, "0")}
-                    </div>
-                    <h3 className="font-display text-base md:text-lg font-medium leading-snug tracking-tight text-foreground text-balance">
+                  <div key={i} className="space-y-1.5">
+                    <h3 className="font-display text-sm md:text-base font-medium leading-snug tracking-tight text-foreground">
                       {item.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed text-pretty">
+                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed text-pretty">
                       {item.body}
                     </p>
                   </div>
