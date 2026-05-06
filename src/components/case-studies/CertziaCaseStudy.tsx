@@ -327,23 +327,6 @@ export function CertziaCaseStudy({ project }: Props) {
             <p className="text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
               {t("El flujo completo incluía:", "The full flow included:")}
             </p>
-            <div className="rounded-2xl border border-hairline bg-surface p-5 md:p-6 overflow-x-auto">
-              <ol className="flex flex-wrap items-center gap-x-2 gap-y-3 min-w-max md:min-w-0">
-                {flowSteps.map((step, i) => (
-                  <li key={step} className="flex items-center gap-2">
-                    <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-hairline text-xs md:text-sm text-foreground/90 whitespace-nowrap text-base">
-                      <span className="font-mono text-muted-foreground w-6 text-base">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      {step}
-                    </span>
-                    {i < flowSteps.length - 1 && (
-                      <ArrowRight className="w-3.5 h-3.5 text-muted-foreground/60 shrink-0" />
-                    )}
-                  </li>
-                ))}
-              </ol>
-            </div>
             <p className="text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
               {t(
                 "El punto más delicado era el escaneo NFC, porque mezclaba una acción física precisa, validación técnica y carga cognitiva. Mi trabajo se centró en reducir esa carga y reorganizar el flujo para que el usuario llegara mejor preparado a ese momento.",
