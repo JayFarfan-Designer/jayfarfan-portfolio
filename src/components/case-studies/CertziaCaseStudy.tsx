@@ -320,17 +320,28 @@ export function CertziaCaseStudy({ project }: Props) {
           </div>
         </div>
 
-        {/* Critical flow */}
+        {/* Insights clave */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-          <SectionHeader index="04" title={t("Flujo crítico", "Critical flow")} />
-          <div className="lg:col-span-8 space-y-8">
-            <p className="text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
-              {t("El flujo completo incluía:", "The full flow included:")}
-            </p>
-            <p className="text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
+          <SectionHeader index="04" title={t("Insights clave", "Key insights")} />
+          <div className="lg:col-span-8 space-y-5 text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
+            <p>
               {t(
-                "El punto más delicado era el escaneo NFC, porque mezclaba una acción física precisa, validación técnica y carga cognitiva. Mi trabajo se centró en reducir esa carga y reorganizar el flujo para que el usuario llegara mejor preparado a ese momento.",
-                "The most delicate point was the NFC scan because it combined a precise physical action, technical validation and cognitive load. My work focused on reducing that load and reorganizing the flow so users reached that moment better prepared."
+                "El mayor problema no era técnico, era de diseño:",
+                "The biggest problem wasn't technical, it was design:"
+              )}
+            </p>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>
+                {t(
+                  "El sistema pedía información en el peor momento posible: durante la interacción física con el DNIe.",
+                  "The system requested information at the worst possible time: during physical interaction with the ID card."
+                )}
+              </li>
+            </ul>
+            <p>
+              {t(
+                "El rediseño debía basarse en separar la carga cognitiva de la interacción física.",
+                "The redesign had to be based on separating cognitive load from physical interaction."
               )}
             </p>
           </div>
