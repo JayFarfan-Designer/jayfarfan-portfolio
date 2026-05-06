@@ -69,8 +69,28 @@ export const projects: Project[] = [
     tags: ["Fintech", "AI Product", "MVP Design", "Product Strategy", "MVP"],
   },
   {
-    slug: "karway",
+    slug: "minsa",
     number: "03",
+    client: "MINSA / Digital Humans",
+    accentClass: "bg-project-minsa",
+    accentVar: "var(--project-minsa)",
+    illustration: "publicservice",
+    comingSoon: true,
+    es: {
+      title: "Rediseñando una experiencia pública usada por millones de ciudadanos",
+      description:
+        "Participación en el rediseño de la app del Ministerio de Salud del Perú para visualizar información de vacunación COVID-19 y generar certificados digitales.",
+    },
+    en: {
+      title: "Redesigning a public experience used by millions of citizens",
+      description:
+        "Participated in the redesign of Peru's Ministry of Health app, used to view COVID-19 vaccination information and generate digital certificates.",
+    },
+    tags: ["GovTech", "UX/UI", "Information Architecture", "Accessibility", "High-impact Product"],
+  },
+  {
+    slug: "karway",
+    number: "04",
     client: "Karway",
     accentClass: "bg-project-karway",
     accentVar: "var(--project-karway)",
