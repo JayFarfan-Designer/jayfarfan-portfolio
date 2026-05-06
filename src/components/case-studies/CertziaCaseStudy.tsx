@@ -23,7 +23,7 @@ export function CertziaCaseStudy({ project }: Props) {
     },
     {
       value: "UI KIT",
-      valueSuffix: t("usuarios testeados", "users tested"),
+      valueSuffix: "\n",
       label: t(
         "Pruebas de usabilidad con usuarios reales.",
         "Usability testing with real users."
