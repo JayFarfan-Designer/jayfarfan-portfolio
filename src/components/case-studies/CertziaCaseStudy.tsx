@@ -15,7 +15,7 @@ export function CertziaCaseStudy({ project }: Props) {
   const metrics = [
     {
       value: t("40%", "40%"),
-      valueSuffix: t("menos clics", "fewer clicks"),
+      valueSuffix: t("Menos fricción en la experiencia de firma.", "Fewer friction points in the signing experience."),
       label: t(
         "Reducción del flujo crítico frente a la versión inicial recibida.",
         "Reduction in the critical flow compared to the initial version received."
@@ -90,7 +90,7 @@ export function CertziaCaseStudy({ project }: Props) {
   ];
 
   const results = [
-    t("40% menos clics frente al flujo inicial recibido.", "40% fewer clicks compared to the initial flow received."),
+    t("Menos fricción en la experiencia de firma frente al flujo inicial recibido.", "Fewer friction points in the signing experience compared to the initial flow received."),
     t("NPS 8/10 en pruebas de usabilidad.", "8/10 NPS in usability testing."),
     t("Flujo de escaneo NFC más claro y guiado.", "Clearer and more guided NFC scanning flow."),
     t("Errores más específicos y recuperables.", "More specific and recoverable errors."),
