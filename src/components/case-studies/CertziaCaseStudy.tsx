@@ -327,7 +327,7 @@ export function CertziaCaseStudy({ project }: Props) {
             <ul className="list-disc pl-5 space-y-2">
               <li>
                 {t(
-                  "El sistema pedía información en el peor momento posible: durante la interacción física con el DNIe.",
+                  "El sistema pedía información en el peor momento posible: durante la interacción física con el DNI.",
                   "The system requested information at the worst possible time: during physical interaction with the ID card."
                 )}
               </li>
@@ -370,20 +370,20 @@ export function CertziaCaseStudy({ project }: Props) {
           <div className="lg:col-span-8 space-y-5 text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
             <p>
               {t(
-                "Realicé pruebas de usabilidad con 5 usuarios reales, utilizando Lookback para observar el comportamiento durante sesiones en vivo.",
-                "I conducted usability tests with 5 real users, using Lookback to observe behavior during live sessions."
+                "Rediseñé el flujo completo con un principio clave:",
+                "I redesigned the complete flow with a key principle:"
               )}
             </p>
             <p>
               {t(
-                "Las pruebas validaron si el nuevo flujo ayudaba a los usuarios a comprender mejor el proceso, completar la firma y recuperarse con mayor claridad cuando algo fallaba.",
-                "The tests validated whether the new flow helped users better understand the process, complete the signature and recover more clearly when something failed."
+                "Separar carga cognitiva de la interacción física.",
+                "Separating cognitive load from physical interaction."
               )}
             </p>
             <p>
               {t(
-                "También utilicé herramientas de IA durante el proceso para acelerar exploración, síntesis de hallazgos, documentación y generación de alternativas de diseño. Las decisiones finales se tomaron combinando estos insumos con análisis manual, criterio de producto y validación con usuarios.",
-                "I also used AI tools throughout the process to accelerate exploration, synthesis of findings, documentation and generation of design alternatives. Final decisions were made by combining these inputs with manual analysis, product judgment and user validation."
+                "\n",
+                "\n"
               )}
             </p>
           </div>
