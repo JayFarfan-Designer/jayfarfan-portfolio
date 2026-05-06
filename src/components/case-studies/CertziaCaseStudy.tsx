@@ -389,6 +389,12 @@ export function CertziaCaseStudy({ project }: Props) {
                 className="w-full h-auto block"
                 loading="lazy"
               />
+              <figcaption className="px-5 py-4 text-xs md:text-sm text-muted-foreground leading-relaxed">
+                {t(
+                  "Nuevo flujo Certezia: Happy path de 4 pasos, Alternative Path, Errores y advertencias.",
+                  "New Certezia flow: 4-step Happy path, Alternative path, Errors and warnings."
+                )}
+              </figcaption>
             </figure>
           </div>
         </div>
