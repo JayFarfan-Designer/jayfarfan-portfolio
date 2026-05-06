@@ -268,7 +268,7 @@ export function CertziaCaseStudy({ project }: Props) {
                   {
                     title: t("Guía visual confusa", "Confusing guidance"),
                     body: t(
-                      "La posición sugerida dificultaba la lectura NFC.",
+                      "La posición en la animación dificultaba la lectura NFC.",
                       "The suggested position made NFC reading unreliable."
                     ),
                   },
