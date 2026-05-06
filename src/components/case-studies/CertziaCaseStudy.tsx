@@ -8,6 +8,7 @@ import certeziaProblema from "@/assets/certezia-problema.webp";
 import certeziaFlujoRedisenado from "@/assets/certezia-flujo-rediseñado.webp";
 import certeziaVistaPrototipo from "@/assets/certezia-vista-prototipo.webp";
 import certeziaVistaTesting from "@/assets/certezia-vista-testing.webp";
+import certeziaFlujoFinal from "@/assets/certezia-flujo-final.png";
 
 type Props = { project: Project };
 
@@ -506,9 +507,22 @@ export function CertziaCaseStudy({ project }: Props) {
           </div>
         </div>
 
+        {/* Flujo final */}
+        <div className="space-y-8">
+          <SectionHeader index="10" title={t("Flujo final", "Final flow")} />
+          <div className="w-full">
+            <img
+              src={certeziaFlujoFinal}
+              alt={t("Flujo final del producto Certezia", "Certezia final product flow")}
+              className="w-full h-auto rounded-2xl border border-hairline"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
         {/* IA en el proceso */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-          <SectionHeader index="10" title={t("IA en el proceso", "AI in the process")} />
+          <SectionHeader index="11" title={t("IA en el proceso", "AI in the process")} />
           <div className="lg:col-span-8 space-y-6">
             <p className="text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
               {t(
