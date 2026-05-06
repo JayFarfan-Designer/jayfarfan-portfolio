@@ -255,12 +255,6 @@ export function CertziaCaseStudy({ project }: Props) {
                 "Result: a confusing, fragile and unreliable experience."
               )}
             </p>
-            <p>
-              {t(
-                "una experiencia confusa, frágil y poco confiable.",
-                "a confusing, fragile and unreliable experience."
-              )}
-            </p>
           </div>
         </div>
 
