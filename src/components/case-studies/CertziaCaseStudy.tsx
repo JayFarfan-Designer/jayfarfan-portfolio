@@ -31,8 +31,8 @@ export function CertziaCaseStudy({ project }: Props) {
       label: t("NPs en pruebas con usuarios", "NPs in user testing"),
     },
     {
-      value: "UI Kit",
-      label: t("Base visual lista para escalar", "Visual base ready to scale"),
+      value: "Certezia UI Kit ",
+      label: t("NPS en pruebas con usuarios.", "NPS in user testing."),
     },
   ];
 
