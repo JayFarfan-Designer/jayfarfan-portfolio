@@ -60,8 +60,8 @@ export function CertziaCaseStudy({ project }: Props) {
         "Reordering the flow to reduce friction"
       ),
       body: t(
-        "Moví la carga de ingreso de datos fuera del momento físico más delicado. Así, el usuario no tenía que sostener el DNIe junto al teléfono mientras completaba información sensible.",
-        "I moved the data-entry load away from the most physically delicate moment. This prevented users from having to hold the ID close to the phone while completing sensitive information."
+        "Onboarding contextual y ayudas en momentos críticos.",
+        "Contextual onboarding and help in critical moments."
       ),
     },
     {
@@ -72,7 +72,7 @@ export function CertziaCaseStudy({ project }: Props) {
       ),
     },
     {
-      title: t("Agregar ayuda contextual", "Adding contextual help"),
+      title: t("Guiar al usuario", "Guiding the user"),
       body: t(
         "Incorporé microcopy, mensajes de primera vez y bottom sheets para explicar conceptos como PIN, CAN, NFC y tipo de DNIe en el momento correcto, sin sobrecargar la experiencia.",
         "I introduced microcopy, first-time messages and bottom sheets to explain concepts such as PIN, CAN, NFC and ID type at the right moment, without overloading the experience."
