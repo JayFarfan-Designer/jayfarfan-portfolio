@@ -15,7 +15,7 @@ export function CertziaCaseStudy({ project }: Props) {
   const metrics = [
     {
       value: t("40%", "40%"),
-      valueSuffix: t("Menos fricción en la experiencia de firma.", "Fewer friction points in the signing experience."),
+      valueSuffix: "\n",
       label: t(
         "Base visual lista para escalar",
         "Reduction in the critical flow compared to the initial version received."
