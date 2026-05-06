@@ -90,7 +90,7 @@ export function CertziaCaseStudy({ project }: Props) {
   ];
 
   const results = [
-    t("40% menos clics frente al flujo inicial recibido.", "40% fewer clicks compared to the initial flow received."),
+    t("Menos fricción en la experiencia de firma frente al flujo inicial recibido.", "Fewer friction points in the signing experience compared to the initial flow received."),
     t("NPS 8/10 en pruebas de usabilidad.", "8/10 NPS in usability testing."),
     t("Flujo de escaneo NFC más claro y guiado.", "Clearer and more guided NFC scanning flow."),
     t("Errores más específicos y recuperables.", "More specific and recoverable errors."),
