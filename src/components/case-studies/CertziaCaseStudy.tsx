@@ -85,13 +85,9 @@ export function CertziaCaseStudy({ project }: Props) {
   ];
 
   const results = [
-    t("\n", "\n"),
-    t("NPS 8/10 en pruebas de usabilidad.", "8/10 NPS in usability testing."),
-    t("Flujo de escaneo NFC más claro y guiado.", "Clearer and more guided NFC scanning flow."),
-    t("Errores más específicos y recuperables.", "More specific and recoverable errors."),
-    t("UI final consistente.", "Consistent final UI."),
-    t("Design system listo para escalar el producto.", "Design system ready to scale the product."),
-    t("Handoff y documentación para desarrollo.", "Handoff and documentation for development."),
+    t("Mayor claridad en el proceso", "Greater clarity in the process"),
+    t("Menor fricción en escaneo NFC", "Less friction in NFC scanning"),
+    t("Mejor percepción de control", "Better sense of control"),
   ];
 
   const deliverables = [
@@ -399,14 +395,10 @@ export function CertziaCaseStudy({ project }: Props) {
                 "I built a complete interactive prototype of the Certezia critical flow.\n\nWith this, I validated the new flow with real users:"
               )}
             </p>
-            <ul className="space-y-3">
+            <ul className="space-y-2 list-disc pl-5">
               {results.map((r) => (
-                <li
-                  key={r}
-                  className="flex items-start gap-3 py-2 border-b border-hairline last:border-b-0"
-                >
-                  <Check className="w-4 h-4 mt-1 shrink-0 text-foreground/70" />
-                  <span className="text-foreground/90 text-base md:text-lg">{r}</span>
+                <li key={r} className="font-semibold text-foreground text-base md:text-lg">
+                  {r}
                 </li>
               ))}
             </ul>
