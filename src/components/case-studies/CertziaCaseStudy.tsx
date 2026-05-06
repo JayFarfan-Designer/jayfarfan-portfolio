@@ -230,12 +230,6 @@ export function CertziaCaseStudy({ project }: Props) {
                 "The challenge: making a technical, physical and sensitive process work for non-expert users."
               )}
             </p>
-            <p>
-              {t(
-                "Mi rol fue rediseñar la experiencia de firma de punta a punta, desde la arquitectura del flujo hasta la UI final y el design system.",
-                "My role was to redesign the signing experience end to end, from flow architecture to final UI and design system."
-              )}
-            </p>
           </div>
         </div>
 
