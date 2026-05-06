@@ -510,14 +510,20 @@ export function CertziaCaseStudy({ project }: Props) {
         {/* Flujo final */}
         <div className="space-y-8">
           <SectionHeader index="10" title={t("Flujo final", "Final flow")} />
-          <div className="w-full rounded-2xl bg-zinc-900 p-3 md:p-4 border border-hairline">
+          <figure className="w-full rounded-2xl bg-zinc-900 border border-hairline overflow-hidden">
             <img
               src={certeziaFlujoFinal}
               alt={t("Flujo final del producto Certezia", "Certezia final product flow")}
-              className="w-full h-auto rounded-lg block"
+              className="w-full h-auto block p-3 md:p-4"
               loading="lazy"
             />
-          </div>
+            <figcaption className="px-5 py-4 text-xs md:text-sm text-muted-foreground leading-relaxed border-t border-hairline">
+              {t(
+                "Flujo final Certezia con Dashboard, 4 pasos, animación guía mejorada y pantalla de confirmación. También dos etapas diferenciadas: Fase Cognitiva y Fase Física.",
+                "Final Certezia flow with Dashboard, 4 steps, improved guide animation and confirmation screen. Also two differentiated stages: Cognitive Phase and Physical Phase."
+              )}
+            </figcaption>
+          </figure>
         </div>
 
         {/* IA en el proceso */}
