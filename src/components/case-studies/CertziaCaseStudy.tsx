@@ -19,36 +19,20 @@ export function CertziaCaseStudy({ project }: Props) {
 
   const metrics = [
     {
-      value: t("40%", "40%"),
-      valueSuffix: "\n",
-      label: t(
-        "Base visual lista para escalar",
-        "Reduction in the critical flow compared to the initial version received."
-      ),
+      value: "40%",
+      label: t("Menos pasos en flujo crítico", "Fewer steps in critical flow"),
     },
     {
-      value: "UI KIT",
-      valueSuffix: "\n",
-      label: t(
-        "Pruebas de usabilidad con usuarios reales.",
-        "Usability testing with real users."
-      ),
+      value: "User Testing",
+      label: t("Validado con usuarios reales", "Validated with real users"),
     },
     {
       value: "8/10",
-      valueSuffix: "NPS",
-      label: t(
-        "Validación formal del nuevo flujo en sesiones de prueba.",
-        "Formal validation of the new flow in testing sessions."
-      ),
+      label: t("NPs en pruebas con usuarios", "NPs in user testing"),
     },
     {
-      value: t("Entregado", "Delivered"),
-      valueSuffix: t("proyecto", "project"),
-      label: t(
-        "UI final, design system, documentación y handoff.",
-        "Final UI, design system, documentation and handoff."
-      ),
+      value: "UI Kit",
+      label: t("Base visual lista para escalar", "Visual base ready to scale"),
     },
   ];
 
@@ -166,20 +150,17 @@ export function CertziaCaseStudy({ project }: Props) {
       {/* KEY METRICS */}
       <section className="border-b border-hairline">
         <div className="container-editorial py-16 md:py-20">
-          <div className="eyebrow text-lg mb-8">{"\n"}</div>
+          <div className="eyebrow text-lg mb-8">— {t("DATOS CLAVE", "KEY DATA")}</div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {metrics.map((m, i) => (
               <div
                 key={i}
-                className="rounded-2xl border border-hairline bg-surface p-6 md:p-8 flex flex-col justify-between min-h-[180px]"
+                className="rounded-2xl border border-hairline bg-surface p-6 md:p-8 flex flex-col gap-4"
               >
-                <div>
-                  <div className="font-display font-medium tracking-tight leading-none text-2xl md:text-3xl">
-                    {m.value}
-                  </div>
-                  <div className="mt-2 text-foreground/80 text-sm">{m.valueSuffix}</div>
+                <div className="font-display font-medium tracking-tight leading-none text-2xl md:text-3xl">
+                  {m.value}
                 </div>
-                <p className="mt-6 text-xs text-muted-foreground leading-relaxed md:text-base">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                   {m.label}
                 </p>
               </div>
