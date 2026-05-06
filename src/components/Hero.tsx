@@ -5,12 +5,12 @@ export function Hero() {
   const { t } = useLanguage();
   return (
     <section className="relative min-h-[92vh] flex items-center overflow-hidden border-b border-hairline">
-      <NodeNetwork className="opacity-50" />
+      <NodeNetwork className="opacity-100" />
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at 60% 50%, transparent 0%, var(--color-background) 78%)",
+            "radial-gradient(ellipse at 65% 45%, transparent 0%, transparent 35%, var(--color-background) 92%)",
         }}
       />
       <div className="container-editorial relative w-full pt-28 pb-20 md:pt-32 md:pb-24">
