@@ -21,8 +21,8 @@ const cards = [
     image: willingtonImg,
   },
   {
-    es: "Tiene una gran habilidad para comunicarse con equipos de negocio, tecnología y diseño, proponiendo soluciones de valor para los usuarios.",
-    en: "He has a strong ability to communicate with business, technology and design teams, proposing valuable solutions for users.",
+    es: "“Destaco su habilidad para conectar diseño, negocio y tecnología, entendiendo profundamente las necesidades de los usuarios para proponer soluciones claras y valiosas.”",
+    en: "“I highlight his ability to connect design, business and technology, deeply understanding user needs to propose clear and valuable solutions.”",
     author: "Eliana Campos del Valle",
     role_es: "Design Lead · Produbanco",
     role_en: "Design Lead · Produbanco",
