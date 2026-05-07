@@ -63,7 +63,7 @@ export function SiteHeader() {
 
         <button
           onClick={() => setOpen((o) => !o)}
-          className="md:hidden flex flex-col gap-1.5 p-2 -mr-2"
+          className="md:hidden flex flex-col gap-1.5 p-2 relative z-[60]"
           aria-label="Menu"
         >
           <span className={"w-5 h-px bg-foreground transition-transform " + (open ? "translate-y-[3px] rotate-45" : "")} />
@@ -74,11 +74,11 @@ export function SiteHeader() {
 
       <div
         className={
-          "md:hidden overflow-hidden transition-[max-height,opacity] duration-500 border-t border-hairline " +
-          (open ? "max-h-96 opacity-100" : "max-h-0 opacity-0")
+          "md:hidden overflow-hidden transition-[max-height,opacity] duration-500 border-t border-hairline bg-background/95 backdrop-blur-xl " +
+          (open ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0")
         }
       >
-        <div className="container-editorial py-6 flex flex-col gap-4">
+        <div className="container-editorial py-6 flex flex-col gap-4 items-end text-right">
           {navItems.map((item) => (
             <a
               key={item.label}
