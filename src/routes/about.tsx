@@ -122,8 +122,8 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="container-editorial py-20 md:py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-14 md:mb-20">
+      <section className="container-editorial py-12 md:py-28">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 mb-8 md:mb-20">
           <div className="lg:col-span-4">
             <div className="eyebrow text-lg mb-4">— {t("Principios", "Principles")}</div>
             <h2 className="headline-lg text-balance max-w-[14ch]">
