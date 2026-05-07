@@ -155,12 +155,12 @@ export function CertziaCaseStudy({ project }: Props) {
             {metrics.map((m, i) => (
               <div
                 key={i}
-                className="rounded-2xl border border-hairline bg-surface p-6 md:p-8 flex flex-col gap-4"
+                className="rounded-2xl border border-hairline bg-surface p-4 md:p-8 flex flex-col gap-3 md:gap-4"
               >
-                <div className="font-display font-medium tracking-tight leading-none text-2xl md:text-3xl">
+                <div className="font-display font-medium tracking-tight leading-none text-xl md:text-3xl">
                   {m.value}
                 </div>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                <p className="text-xs md:text-base text-muted-foreground leading-relaxed">
                   {m.label}
                 </p>
               </div>
