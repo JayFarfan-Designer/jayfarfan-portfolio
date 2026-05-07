@@ -33,9 +33,9 @@ const cards = [
 export function Endorsements() {
   const { t, lang } = useLanguage();
   return (
-    <section className="py-24 md:py-32 border-t border-hairline">
+    <section className="py-16 md:py-32 border-t border-hairline">
       <div className="container-editorial">
-        <div className="mb-16 md:mb-24 max-w-3xl">
+        <div className="mb-10 md:mb-24 max-w-3xl">
           <div className="eyebrow mb-4 text-lg">— {t("RECOMENDACIONES", "ENDORSEMENTS")}</div>
           <h2 className="headline-lg text-balance">
             {t(
