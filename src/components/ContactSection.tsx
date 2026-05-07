@@ -13,7 +13,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative py-28 md:py-40 border-t border-hairline overflow-hidden"
+      className="relative py-16 md:py-40 border-t border-hairline overflow-hidden"
     >
       <div
         aria-hidden
