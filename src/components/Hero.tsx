@@ -6,7 +6,7 @@ export function Hero() {
   const cvHref = lang === "es" ? "/CV_JayFarfan_ESP.pdf" : "/CV_JayFarfan_ENG.pdf";
   const cvFile = lang === "es" ? "CV_JayFarfan_ESP.pdf" : "CV_JayFarfan_ENG.pdf";
   return (
-    <section className="relative min-h-[92vh] flex items-center overflow-hidden border-b border-hairline">
+    <section className="relative min-h-[88vh] md:min-h-[92vh] flex items-center overflow-hidden border-b border-hairline">
       <NodeNetwork className="opacity-100" />
       <div
         className="absolute inset-0 pointer-events-none"
