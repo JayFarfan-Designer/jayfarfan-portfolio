@@ -144,7 +144,7 @@ function AboutPage() {
           {blocks.map((b, i) => (
             <li
               key={i}
-              className="group border-b border-hairline py-8 md:py-10 grid grid-cols-12 gap-6 md:gap-10 items-baseline"
+              className="group border-b border-hairline py-6 md:py-10 grid grid-cols-12 gap-3 md:gap-10 items-baseline"
             >
               <div className="col-span-12 md:col-span-3 flex items-center gap-4">
                 <span className="font-mono text-muted-foreground tabular-nums text-xs">
@@ -152,7 +152,7 @@ function AboutPage() {
                 </span>
                 <span className="eyebrow text-xs md:text-sm">{b.label}</span>
               </div>
-              <div className="col-span-12 md:col-span-9 font-display text-2xl md:text-3xl leading-[1.15] tracking-tight font-medium text-foreground/95 text-pretty">
+              <div className="col-span-12 md:col-span-9 font-display text-xl md:text-3xl leading-[1.15] tracking-tight font-medium text-foreground/95 text-pretty">
                 {b.body}
               </div>
             </li>
