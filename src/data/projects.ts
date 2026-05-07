@@ -31,7 +31,7 @@ export const projects: Project[] = [
   {
     slug: "certezia",
     number: "01",
-    client: "Certezia",
+    client: "CERTEZIA - SR PRODUCT DESIGNER",
     accentClass: "bg-project-certezia",
     accentVar: "var(--project-certezia)",
     illustration: "phone",
