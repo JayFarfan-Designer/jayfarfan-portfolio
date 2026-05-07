@@ -49,7 +49,7 @@ export function Endorsements() {
           {cards.map((c, i) => (
             <figure
               key={i}
-              className="group relative rounded-2xl border border-hairline bg-surface/40 p-9 md:p-10 flex flex-col transition-all duration-300 hover:border-foreground/20 hover:bg-surface/70"
+              className="group relative rounded-2xl border border-hairline bg-surface/40 p-7 md:p-10 flex flex-col transition-all duration-300 hover:border-foreground/20 hover:bg-surface/70"
             >
               <div
                 aria-hidden
