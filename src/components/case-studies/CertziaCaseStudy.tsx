@@ -543,7 +543,7 @@ export function CertziaCaseStudy({ project }: Props) {
       </section>
 
       {/* Browse other projects */}
-      <section className="border-t border-hairline py-20 md:py-28">
+      <section className="border-t border-hairline py-12 md:py-28">
         <div className="container-editorial">
           <div className="flex items-end justify-between mb-10">
             <h2 className="headline-md">
