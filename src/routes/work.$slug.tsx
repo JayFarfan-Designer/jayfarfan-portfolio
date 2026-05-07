@@ -137,17 +137,17 @@ function ProjectDetail() {
       </header>
 
       {/* Meta */}
-      <section className="container-editorial py-16 md:py-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-hairline">
+      <section className="container-editorial py-10 md:py-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 border-b border-hairline">
         {meta.map((m) => (
           <div key={m.label}>
-            <div className="eyebrow text-lg mb-2">{m.label}</div>
-            <div className="font-display text-xl">{m.value}</div>
+            <div className="eyebrow text-base md:text-lg mb-2">{m.label}</div>
+            <div className="font-display text-lg md:text-xl">{m.value}</div>
           </div>
         ))}
       </section>
 
       {/* Case study sections */}
-      <section className="container-editorial py-20 md:py-28 space-y-20 md:space-y-28">
+      <section className="container-editorial py-12 md:py-28 space-y-12 md:space-y-28">
         {caseSections.map((s, i) => (
           <div key={s.title} className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
             <div className="lg:col-span-4">
