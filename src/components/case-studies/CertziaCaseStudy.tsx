@@ -101,7 +101,7 @@ export function CertziaCaseStudy({ project }: Props) {
               "radial-gradient(circle at 80% 20%, rgba(255,255,255,0.18), transparent 55%)",
           }}
         />
-        <div className="container-editorial relative pt-16 pb-20 md:pt-24 md:pb-28 text-white">
+        <div className="container-editorial relative pt-12 pb-12 md:pt-24 md:pb-28 text-white">
           <Link to="/" className="eyebrow text-lg link-underline mb-12 inline-block !text-white">
             ← {t("Volver al inicio", "Back to home")}
           </Link>
