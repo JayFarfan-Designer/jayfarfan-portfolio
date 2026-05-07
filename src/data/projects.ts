@@ -88,7 +88,7 @@ export const projects: Project[] = [
       description:
         "Participated in the redesign of Peru's Ministry of Health app, used to view COVID-19 vaccination information and generate digital certificates.",
     },
-    tags: ["GovTech", "UX/UI", "Information Architecture", "Accessibility", "High-impact Product"],
+    tags: ["GovTech", "UX/UI", "Information Architecture", "Accessibility", "Design System"],
   },
   {
     slug: "karway",
