@@ -60,10 +60,10 @@ function AboutPage() {
     <>
       <section className="container-editorial pt-16 md:pt-24 pb-20 md:pb-28">
         <div className="eyebrow text-lg mb-6">— About</div>
-        <h1 className="headline-xl max-w-[16ch] text-balance">
+        <h1 className="headline-xl max-w-[16ch] text-balance whitespace-pre-line">
           {t(
-            "Diseñador de producto. Pensamiento de ingeniero. Criterio humano.",
-            "Product designer. Engineer's mindset. Human judgment."
+            "Diseñador de producto.\nPensamiento de ingeniero.\nCriterio humano.",
+            "Product designer.\nEngineer's mindset.\nHuman judgment."
           )}
         </h1>
       </section>
