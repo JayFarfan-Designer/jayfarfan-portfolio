@@ -60,7 +60,7 @@ export function Endorsements() {
               <blockquote className="text-foreground/90 text-base md:text-[1.05rem] leading-[1.75] text-pretty flex-1 font-light">
                 {lang === "es" ? c.es : c.en}
               </blockquote>
-              <figcaption className="mt-10 pt-6 border-t border-hairline flex items-center gap-4">
+              <figcaption className="mt-8 pt-5 md:mt-10 md:pt-6 border-t border-hairline flex items-center gap-4">
                 <img
                   src={c.image}
                   alt={c.author}
