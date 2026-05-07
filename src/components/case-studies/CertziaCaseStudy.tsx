@@ -102,20 +102,20 @@ export function CertziaCaseStudy({ project }: Props) {
           }}
         />
         <div className="container-editorial relative pt-12 pb-12 md:pt-24 md:pb-28 text-white">
-          <Link to="/" className="eyebrow text-lg link-underline mb-12 inline-block !text-white">
+          <Link to="/" className="eyebrow text-sm md:text-lg link-underline mb-8 md:mb-12 inline-block !text-white">
             ← {t("Volver al inicio", "Back to home")}
           </Link>
-          <div className="flex items-center gap-3 mb-6 text-lg">
-            <span className="font-mono tracking-[0.2em] opacity-80 text-base">
+          <div className="flex items-center gap-3 mb-4 md:mb-6 text-lg">
+            <span className="font-mono tracking-[0.2em] opacity-80 text-xs md:text-base">
               {project.number}
             </span>
             <span className="block w-8 h-px bg-white/60 text-base" />
-            <span className="eyebrow text-base !text-white">
+            <span className="eyebrow text-xs md:text-base !text-white">
               {project.client}
             </span>
           </div>
-          <h1 className="headline-xl text-white max-w-[20ch] text-balance">{c.title}</h1>
-          <p className="mt-8 text-white/90 max-w-2xl text-base text-pretty md:text-lg">
+          <h1 className="headline-xl text-white max-w-[20ch] text-balance text-4xl md:text-7xl">{c.title}</h1>
+          <p className="mt-5 md:mt-8 text-white/90 max-w-2xl text-base text-pretty md:text-lg">
             {c.description}
           </p>
           <div className="mt-10 flex flex-wrap gap-2">
