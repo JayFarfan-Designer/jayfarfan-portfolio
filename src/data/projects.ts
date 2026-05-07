@@ -37,7 +37,7 @@ export const projects: Project[] = [
     illustration: "phone",
     media: { hero: certeziaHero },
     es: {
-      title: "Rediseñando un flujo de firma digital con alta fricción",
+      title: "Rediseñando un flujo de firma digital de alta fricción",
       description:
         "Optimicé el flujo principal de Certezia, reduciendo la fricción en su momento más crítico: la interacción entre el teléfono y un documento físico.\nValidado con usuarios, el resultado fue una experiencia más clara, confiable y fácil de completar.",
     },
