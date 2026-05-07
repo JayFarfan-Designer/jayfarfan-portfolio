@@ -79,7 +79,7 @@ export const projects: Project[] = [
     comingSoon: true,
     media: { hero: minsaHero },
     es: {
-      title: "Rediseñé la app Covid-19 del Ministerio de Salud del Perú, mejorando accesibilidad, claridad y usabilidad para ciudadanos con distintos contextos digitales y dispositivos móviles.",
+      title: "Rediseñando una experiencia pública para millones de ciudadanos",
       description:
         "Participación en el rediseño de la app del Ministerio de Salud del Perú para visualizar información de vacunación COVID-19 y generar certificados digitales.",
     },
