@@ -6,7 +6,7 @@ export function Hero() {
   const cvHref = lang === "es" ? "/CV_JayFarfan_ESP.pdf" : "/CV_JayFarfan_ENG.pdf";
   const cvFile = lang === "es" ? "CV_JayFarfan_ESP.pdf" : "CV_JayFarfan_ENG.pdf";
   return (
-    <section className="relative min-h-[92vh] flex items-center overflow-hidden border-b border-hairline">
+    <section className="relative min-h-[88vh] md:min-h-[92vh] flex items-center overflow-hidden border-b border-hairline">
       <NodeNetwork className="opacity-100" />
       <div
         className="absolute inset-0 pointer-events-none"
@@ -15,16 +15,16 @@ export function Hero() {
             "radial-gradient(ellipse at 65% 45%, transparent 0%, transparent 35%, var(--color-background) 92%)",
         }}
       />
-      <div className="container-editorial relative w-full pt-28 pb-20 md:pt-32 md:pb-24">
+      <div className="container-editorial relative w-full pt-24 pb-14 md:pt-32 md:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-end">
           <div className="lg:col-span-12 xl:col-span-12 max-w-[1400px]">
-            <div className="flex items-center gap-3 mb-10 animate-fade-up text-lg">
+            <div className="flex items-center gap-3 mb-6 md:mb-10 animate-fade-up text-lg">
               <span className="block w-8 h-px bg-foreground/60" />
-              <span className="eyebrow text-base">SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER</span>
+              <span className="eyebrow text-[0.7rem] md:text-base">SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER</span>
             </div>
 
             <h1
-              className="headline-xl text-balance max-w-[22ch] animate-fade-up text-7xl"
+              className="headline-xl text-balance max-w-[22ch] animate-fade-up text-4xl md:text-7xl"
               style={{ animationDelay: "100ms" }}
             >
               {t(
@@ -34,10 +34,10 @@ export function Hero() {
             </h1>
 
             <div
-              className="mt-12 animate-fade-up"
+              className="mt-8 md:mt-12 animate-fade-up"
               style={{ animationDelay: "260ms" }}
             >
-              <div className="eyebrow text-lg text-foreground/70 leading-relaxed whitespace-nowrap overflow-x-auto">
+              <div className="eyebrow text-xs md:text-lg text-foreground/70 leading-relaxed whitespace-nowrap overflow-x-auto">
                 Product Design <span className="text-muted-foreground/50 mx-1.5">·</span>
                 UX Strategy <span className="text-muted-foreground/50 mx-1.5">·</span>
                 Product Thinking <span className="text-muted-foreground/50 mx-1.5">·</span>
@@ -46,17 +46,17 @@ export function Hero() {
             </div>
 
             <div
-              className="mt-14 flex flex-wrap items-center gap-4 animate-fade-up"
+              className="mt-10 md:mt-14 flex flex-wrap items-center gap-3 md:gap-4 animate-fade-up"
               style={{ animationDelay: "320ms" }}
             >
-              <a href="#work" className="btn-base btn-primary group text-xl">
+              <a href="#work" className="btn-base btn-primary group text-base md:text-xl">
                 {t("Ver proyectos", "View work")}
                 <span className="inline-block transition-transform group-hover:translate-y-0.5">↓</span>
               </a>
               <a
                 href={cvHref}
                 download={cvFile}
-                className="btn-base btn-secondary group text-xl"
+                className="btn-base btn-secondary group text-base md:text-xl"
               >
                 {t("Descargar CV", "Download CV")}
                 <span className="inline-block transition-transform group-hover:translate-x-0.5">↗</span>

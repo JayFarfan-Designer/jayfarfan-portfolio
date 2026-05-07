@@ -101,24 +101,24 @@ export function CertziaCaseStudy({ project }: Props) {
               "radial-gradient(circle at 80% 20%, rgba(255,255,255,0.18), transparent 55%)",
           }}
         />
-        <div className="container-editorial relative pt-16 pb-20 md:pt-24 md:pb-28 text-white">
-          <Link to="/" className="eyebrow text-lg link-underline mb-12 inline-block !text-white">
+        <div className="container-editorial relative pt-12 pb-12 md:pt-24 md:pb-28 text-white">
+          <Link to="/" className="eyebrow text-sm md:text-lg link-underline mb-8 md:mb-12 inline-block !text-white">
             ← {t("Volver al inicio", "Back to home")}
           </Link>
-          <div className="flex items-center gap-3 mb-6 text-lg">
-            <span className="font-mono tracking-[0.2em] opacity-80 text-base">
+          <div className="flex items-center gap-3 mb-4 md:mb-6 text-lg">
+            <span className="font-mono tracking-[0.2em] opacity-80 text-xs md:text-base">
               {project.number}
             </span>
             <span className="block w-8 h-px bg-white/60 text-base" />
-            <span className="eyebrow text-base !text-white">
+            <span className="eyebrow text-xs md:text-base !text-white">
               {project.client}
             </span>
           </div>
-          <h1 className="headline-xl text-white max-w-[20ch] text-balance">{c.title}</h1>
-          <p className="mt-8 text-white/90 max-w-2xl text-base text-pretty md:text-lg">
+          <h1 className="headline-xl text-white max-w-[20ch] text-balance text-4xl md:text-7xl">{c.title}</h1>
+          <p className="mt-5 md:mt-8 text-white/90 max-w-2xl text-base text-pretty md:text-lg">
             {c.description}
           </p>
-          <div className="mt-10 flex flex-wrap gap-2">
+          <div className="mt-6 md:mt-10 flex flex-wrap gap-2">
             {["Flow Optimization", "NFC Interaction", "Prototyping", "Design System", "AI-assisted Design"].map(
               (tag) => (
                 <span
@@ -149,18 +149,18 @@ export function CertziaCaseStudy({ project }: Props) {
 
       {/* KEY METRICS */}
       <section className="border-b border-hairline">
-        <div className="container-editorial py-16 md:py-20">
-          <div className="eyebrow text-lg mb-8">— {t("DATOS CLAVE", "KEY DATA")}</div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="container-editorial py-12 md:py-20">
+          <div className="eyebrow text-base md:text-lg mb-6 md:mb-8">— {t("DATOS CLAVE", "KEY DATA")}</div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
             {metrics.map((m, i) => (
               <div
                 key={i}
-                className="rounded-2xl border border-hairline bg-surface p-6 md:p-8 flex flex-col gap-4"
+                className="rounded-2xl border border-hairline bg-surface p-4 md:p-8 flex flex-col gap-3 md:gap-4"
               >
-                <div className="font-display font-medium tracking-tight leading-none text-2xl md:text-3xl">
+                <div className="font-display font-medium tracking-tight leading-none text-xl md:text-3xl">
                   {m.value}
                 </div>
-                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                <p className="text-xs md:text-base text-muted-foreground leading-relaxed">
                   {m.label}
                 </p>
               </div>
@@ -170,7 +170,7 @@ export function CertziaCaseStudy({ project }: Props) {
       </section>
 
       {/* CONTENT SECTIONS */}
-      <section className="container-editorial py-20 md:py-28 space-y-20 md:space-y-28">
+      <section className="container-editorial py-12 md:py-28 space-y-12 md:space-y-28">
         {/* Overview */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           <SectionHeader index="01" title={t("Contexto", "Contexto")} />
@@ -543,7 +543,7 @@ export function CertziaCaseStudy({ project }: Props) {
       </section>
 
       {/* Browse other projects */}
-      <section className="border-t border-hairline py-20 md:py-28">
+      <section className="border-t border-hairline py-12 md:py-28">
         <div className="container-editorial">
           <div className="flex items-end justify-between mb-10">
             <h2 className="headline-md">

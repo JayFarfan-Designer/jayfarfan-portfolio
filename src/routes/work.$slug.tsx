@@ -99,7 +99,7 @@ function ProjectDetail() {
               "radial-gradient(circle at 80% 20%, rgba(255,255,255,0.18), transparent 55%)",
           }}
         />
-        <div className="container-editorial relative pt-16 pb-20 md:pt-24 md:pb-28 text-white">
+        <div className="container-editorial relative pt-12 pb-12 md:pt-24 md:pb-28 text-white">
           <Link to="/" className="eyebrow text-lg link-underline mb-12 inline-block text-slate-100">
             ← {t("Volver al inicio", "Back home")}
           </Link>
@@ -137,17 +137,17 @@ function ProjectDetail() {
       </header>
 
       {/* Meta */}
-      <section className="container-editorial py-16 md:py-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-hairline">
+      <section className="container-editorial py-10 md:py-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 border-b border-hairline">
         {meta.map((m) => (
           <div key={m.label}>
-            <div className="eyebrow text-lg mb-2">{m.label}</div>
-            <div className="font-display text-xl">{m.value}</div>
+            <div className="eyebrow text-base md:text-lg mb-2">{m.label}</div>
+            <div className="font-display text-lg md:text-xl">{m.value}</div>
           </div>
         ))}
       </section>
 
       {/* Case study sections */}
-      <section className="container-editorial py-20 md:py-28 space-y-20 md:space-y-28">
+      <section className="container-editorial py-12 md:py-28 space-y-12 md:space-y-28">
         {caseSections.map((s, i) => (
           <div key={s.title} className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
             <div className="lg:col-span-4">
@@ -226,7 +226,7 @@ function ProjectDetail() {
       </section>
 
       {/* Browse other projects */}
-      <section className="border-t border-hairline py-20 md:py-28">
+      <section className="border-t border-hairline py-12 md:py-28">
         <div className="container-editorial">
           <div className="flex items-end justify-between mb-10">
             <h2 className="headline-md">{t("Explorar otros proyectos", "Browse other projects")}</h2>

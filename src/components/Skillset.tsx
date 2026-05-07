@@ -83,16 +83,16 @@ export function Skillset() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="py-24 md:py-32 border-t border-hairline">
+    <section className="py-16 md:py-32 border-t border-hairline">
       <div className="container-editorial">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-14 md:mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 mb-10 md:mb-20">
           <div className="lg:col-span-5">
             <div className="eyebrow mb-4 text-lg">— Skillset</div>
             <h2 className="headline-lg text-balance">
               {t("Lo que sé hacer", "What I do.")}
             </h2>
           </div>
-          <div className="lg:col-span-7 lg:pt-14">
+          <div className="lg:col-span-7 lg:pt-14 -mt-2 lg:mt-0">
             <p className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-xl text-pretty">
               {t(
                 "\nCombino Metodología, Diseño, Research, IA y trabajo en equipo para llevar ideas complejas hacia soluciones implementables.",
@@ -136,7 +136,7 @@ export function Skillset() {
                   }
                 >
                   <div className="overflow-hidden">
-                    <div className="pb-8 md:pb-10 pl-12 md:pl-20 pr-4 max-w-3xl lg:max-w-none flex flex-wrap gap-2">
+                    <div className="pb-6 md:pb-10 pl-10 md:pl-20 pr-4 max-w-3xl lg:max-w-none flex flex-wrap gap-2">
                       {b.skills.map((s, j) => (
                         <span
                           key={j}

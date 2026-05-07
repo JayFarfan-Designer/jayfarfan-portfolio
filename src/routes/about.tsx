@@ -58,9 +58,9 @@ function AboutPage() {
 
   return (
     <>
-      <section className="container-editorial pt-16 md:pt-24 pb-20 md:pb-28">
-        <div className="eyebrow text-lg mb-6">— About</div>
-        <h1 className="headline-xl max-w-[16ch] text-balance whitespace-pre-line">
+      <section className="container-editorial pt-12 md:pt-24 pb-12 md:pb-28">
+        <div className="eyebrow text-base md:text-lg mb-4 md:mb-6">— About</div>
+        <h1 className="headline-xl max-w-[16ch] text-balance whitespace-pre-line text-4xl md:text-7xl">
           {t(
             "Diseñador de producto.\nPensamiento de ingeniero.\nCriterio humano.",
             "Product designer.\nEngineer's mindset.\nHuman judgment."
@@ -69,7 +69,7 @@ function AboutPage() {
       </section>
 
       <section className="border-y border-hairline">
-        <div className="container-editorial py-20 md:py-28 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+        <div className="container-editorial py-12 md:py-28 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           <div className="lg:col-span-5">
             <div className="relative overflow-hidden rounded-2xl border border-hairline bg-surface/40 aspect-[3/4] max-w-sm">
               <img
@@ -122,8 +122,8 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="container-editorial py-20 md:py-28">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-14 md:mb-20">
+      <section className="container-editorial py-12 md:py-28">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 mb-8 md:mb-20">
           <div className="lg:col-span-4">
             <div className="eyebrow text-lg mb-4">— {t("Principios", "Principles")}</div>
             <h2 className="headline-lg text-balance max-w-[14ch]">
@@ -144,7 +144,7 @@ function AboutPage() {
           {blocks.map((b, i) => (
             <li
               key={i}
-              className="group border-b border-hairline py-8 md:py-10 grid grid-cols-12 gap-6 md:gap-10 items-baseline"
+              className="group border-b border-hairline py-6 md:py-10 grid grid-cols-12 gap-3 md:gap-10 items-baseline"
             >
               <div className="col-span-12 md:col-span-3 flex items-center gap-4">
                 <span className="font-mono text-muted-foreground tabular-nums text-xs">
@@ -152,7 +152,7 @@ function AboutPage() {
                 </span>
                 <span className="eyebrow text-xs md:text-sm">{b.label}</span>
               </div>
-              <div className="col-span-12 md:col-span-9 font-display text-2xl md:text-3xl leading-[1.15] tracking-tight font-medium text-foreground/95 text-pretty">
+              <div className="col-span-12 md:col-span-9 font-display text-xl md:text-3xl leading-[1.15] tracking-tight font-medium text-foreground/95 text-pretty">
                 {b.body}
               </div>
             </li>
@@ -162,8 +162,8 @@ function AboutPage() {
       </section>
 
       <section className="border-t border-hairline">
-        <div className="container-editorial py-20 md:py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+        <div className="container-editorial py-12 md:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
             <div className="lg:col-span-7">
               <div className="eyebrow text-sm mb-5">— {t("Contacto", "Contact")}</div>
               <h2 className="font-display text-3xl md:text-4xl tracking-tight leading-[1.1] font-medium text-foreground/95 max-w-[20ch] text-balance">

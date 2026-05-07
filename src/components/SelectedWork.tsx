@@ -7,9 +7,9 @@ export function SelectedWork() {
   const { t, lang } = useLanguage();
 
   return (
-    <section id="work" className="py-24 md:py-32">
+    <section id="work" className="py-16 md:py-32">
       <div className="container-editorial">
-        <div className="flex items-end justify-between mb-12 md:mb-20 gap-6">
+        <div className="flex items-end justify-between mb-10 md:mb-20 gap-6">
           <div>
             <div className="eyebrow mb-4 text-lg">
               — {t("DEL PROBLEMA A LA SOLUCIÓN", "FROM PROBLEM TO SOLUTION")}
@@ -51,27 +51,27 @@ export function SelectedWork() {
                   }}
                 />
                 <div className="relative grid grid-cols-1 md:grid-cols-12 gap-0">
-                  <div className="md:col-span-6 p-8 md:p-12 lg:p-14 flex flex-col text-white">
-                    <div className="flex items-center justify-between mb-10 md:mb-14">
+                  <div className="md:col-span-6 p-6 md:p-12 lg:p-14 flex flex-col text-white">
+                    <div className="flex items-center justify-between mb-6 md:mb-14">
                       <div className="flex items-center gap-3 text-lg">
-                        <span className="font-mono tracking-[0.2em] opacity-80 text-lg">
+                        <span className="font-mono tracking-[0.2em] opacity-80 text-xs md:text-lg">
                           {p.number}
                         </span>
                         <span className="block w-6 h-px bg-white/50" />
-                        <span className="font-mono tracking-[0.2em] opacity-80 uppercase text-lg">
+                        <span className="font-mono tracking-[0.2em] opacity-80 uppercase text-xs md:text-lg">
                           {p.client}
                         </span>
                       </div>
                     </div>
 
-                    <h3 className="font-display md:text-3xl lg:text-[2rem] leading-[1.1] font-medium tracking-tight text-white max-w-[22ch] mb-6 text-balance md:text-5xl font-medium tracking-tight leading-none text-4xl">
+                    <h3 className="font-display leading-[1.1] font-medium tracking-tight text-white max-w-[22ch] mb-4 md:mb-6 text-balance text-2xl md:text-5xl">
                       {content.title}
                     </h3>
-                    <p className="text-white/85 text-base md:text-[1.05rem] leading-relaxed max-w-md text-pretty">
+                    <p className="text-white/85 text-sm md:text-[1.05rem] leading-relaxed max-w-md text-pretty">
                       {content.description}
                     </p>
 
-                    <div className="mt-8 flex flex-wrap gap-2">
+                    <div className="mt-6 md:mt-8 flex flex-wrap gap-2">
                       {p.tags.slice(0, 4).map((tag) => (
                         <span
                           key={tag}
@@ -82,13 +82,13 @@ export function SelectedWork() {
                       ))}
                     </div>
 
-                    <div className="mt-10 md:mt-12">
+                    <div className="mt-8 md:mt-12">
                       {p.comingSoon ? (
                         <span className="font-mono tracking-[0.2em] uppercase text-sm text-white/80">
                           {t("Próximamente", "Coming soon")}
                         </span>
                       ) : (
-                        <span className="btn-base btn-secondary group/btn">
+                        <span className="btn-base btn-secondary group/btn text-sm md:text-base">
                           {t("Ver proyecto", "View project")}
                           <span className="inline-block transition-transform group-hover/btn:translate-x-1">
                             →

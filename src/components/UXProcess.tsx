@@ -30,9 +30,9 @@ export function UXProcess() {
   ];
 
   return (
-    <section className="py-24 md:py-32 border-t border-hairline">
+    <section className="py-16 md:py-32 border-t border-hairline">
       <div className="container-editorial">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20 items-start">
           <div className="lg:col-span-5">
             <div className="eyebrow mb-4 text-lg">— {t("Proceso UX", "UX Process")}</div>
             <h2 className="headline-lg text-balance">
@@ -43,7 +43,7 @@ export function UXProcess() {
             </h2>
           </div>
 
-          <div className="lg:col-span-7 lg:pt-14">
+          <div className="lg:col-span-7 lg:pt-14 -mt-2 lg:mt-0">
             <p className="text-base md:text-lg leading-relaxed text-muted-foreground text-pretty max-w-xl">
               {t(
                 "\nTrabajo con una mentalidad centrada en el usuario, combinando pensamiento sistémico, estrategia de producto, UX/UI e IA aplicada con criterio. \nMi proceso busca entender el contexto, definirproblemas y convertir decisiones complejas en soluciones digitales claras, útiles y viables.",
@@ -54,10 +54,10 @@ export function UXProcess() {
         </div>
 
         {/* Chaos → clarity illustration */}
-        <div className="mt-16 md:mt-20 rounded-3xl border border-hairline bg-gradient-to-b from-surface to-background p-8 md:p-14 overflow-hidden">
+        <div className="mt-12 md:mt-20 rounded-3xl border border-hairline bg-gradient-to-b from-surface to-background p-6 md:p-14 overflow-hidden">
           <ChaosToClarity />
 
-          <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-4 gap-px bg-hairline border border-hairline rounded-2xl overflow-hidden">
+          <div className="mt-10 md:mt-16 grid grid-cols-1 md:grid-cols-4 gap-px bg-hairline border border-hairline rounded-2xl overflow-hidden">
             {steps.map((s, i) => (
               <div
                 key={i}

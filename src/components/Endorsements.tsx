@@ -33,9 +33,9 @@ const cards = [
 export function Endorsements() {
   const { t, lang } = useLanguage();
   return (
-    <section className="py-24 md:py-32 border-t border-hairline">
+    <section className="py-16 md:py-32 border-t border-hairline">
       <div className="container-editorial">
-        <div className="mb-16 md:mb-24 max-w-3xl">
+        <div className="mb-10 md:mb-24 max-w-3xl">
           <div className="eyebrow mb-4 text-lg">— {t("RECOMENDACIONES", "ENDORSEMENTS")}</div>
           <h2 className="headline-lg text-balance">
             {t(
@@ -49,7 +49,7 @@ export function Endorsements() {
           {cards.map((c, i) => (
             <figure
               key={i}
-              className="group relative rounded-2xl border border-hairline bg-surface/40 p-9 md:p-10 flex flex-col transition-all duration-300 hover:border-foreground/20 hover:bg-surface/70"
+              className="group relative rounded-2xl border border-hairline bg-surface/40 p-7 md:p-10 flex flex-col transition-all duration-300 hover:border-foreground/20 hover:bg-surface/70"
             >
               <div
                 aria-hidden
@@ -60,7 +60,7 @@ export function Endorsements() {
               <blockquote className="text-foreground/90 text-base md:text-[1.05rem] leading-[1.75] text-pretty flex-1 font-light">
                 {lang === "es" ? c.es : c.en}
               </blockquote>
-              <figcaption className="mt-10 pt-6 border-t border-hairline flex items-center gap-4">
+              <figcaption className="mt-8 pt-5 md:mt-10 md:pt-6 border-t border-hairline flex items-center gap-4">
                 <img
                   src={c.image}
                   alt={c.author}
