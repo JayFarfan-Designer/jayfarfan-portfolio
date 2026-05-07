@@ -84,7 +84,7 @@ export const projects: Project[] = [
         "Rediseñé la app Covid-19 del Ministerio de Salud del Perú, mejorando accesibilidad, claridad y usabilidad para ciudadanos con distintos contextos sociales y digitales.",
     },
     en: {
-      title: "Redesigned Peru’s Ministry of Health COVID-19 app, improving accessibility, clarity and usability for citizens across different social and digital contexts.",
+      title: "Redesigning a public experience for millions of citizens.",
       description:
         "Redesigned Peru’s Ministry of Health COVID-19 app, improving accessibility, clarity and usability for citizens across different social and digital contexts.",
     },
