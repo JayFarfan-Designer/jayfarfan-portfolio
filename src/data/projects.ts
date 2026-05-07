@@ -49,8 +49,28 @@ export const projects: Project[] = [
     tags: ["Flow Optimization", "NFC Interaction", "Prototyping", "AI-assisted Design"],
   },
   {
-    slug: "komu-ai",
+    slug: "minsa",
     number: "02",
+    client: "MINSA / Digital Humans",
+    accentClass: "bg-project-minsa",
+    accentVar: "var(--project-minsa)",
+    illustration: "publicservice",
+    media: { hero: minsaHero },
+    es: {
+      title: "Rediseñando una experiencia pública para millones de ciudadanos",
+      description:
+        "Rediseñé la app Covid-19 del Ministerio de Salud del Perú, mejorando accesibilidad, claridad y usabilidad para ciudadanos con distintos contextos sociales y digitales.",
+    },
+    en: {
+      title: "Redesigning a public experience for millions of citizens.",
+      description:
+        "Redesigned Peru’s Ministry of Health COVID-19 app, improving accessibility, clarity and usability for citizens across different social and digital contexts.",
+    },
+    tags: ["GovTech", "UX/UI", "Information Architecture", "Accessibility", "Design System"],
+  },
+  {
+    slug: "komu-ai",
+    number: "03",
     client: "Pablo / Komu AI",
     accentClass: "bg-project-komu",
     accentVar: "var(--project-komu)",
@@ -68,26 +88,6 @@ export const projects: Project[] = [
         "Co-founded and Re-designed Pablo, an AI financial assistant on WhatsApp, designing its conversational experience, Dashboard and Landing page.\nFrom deep Research, I transformed user needs into a complete digital system.\nThe result was a clearer, more useful and closer experience, with direct improvements in product adoption and conversion.",
     },
     tags: ["Fintech", "AI Product", "MVP Design", "Product Strategy", "MVP"],
-  },
-  {
-    slug: "minsa",
-    number: "03",
-    client: "MINSA / Digital Humans",
-    accentClass: "bg-project-minsa",
-    accentVar: "var(--project-minsa)",
-    illustration: "publicservice",
-    media: { hero: minsaHero },
-    es: {
-      title: "Rediseñando una experiencia pública para millones de ciudadanos",
-      description:
-        "Rediseñé la app Covid-19 del Ministerio de Salud del Perú, mejorando accesibilidad, claridad y usabilidad para ciudadanos con distintos contextos sociales y digitales.",
-    },
-    en: {
-      title: "Redesigning a public experience for millions of citizens.",
-      description:
-        "Redesigned Peru’s Ministry of Health COVID-19 app, improving accessibility, clarity and usability for citizens across different social and digital contexts.",
-    },
-    tags: ["GovTech", "UX/UI", "Information Architecture", "Accessibility", "Design System"],
   },
   {
     slug: "karway",
