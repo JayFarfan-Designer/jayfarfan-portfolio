@@ -57,7 +57,7 @@ export function UXProcess() {
         <div className="mt-12 md:mt-20 rounded-3xl border border-hairline bg-gradient-to-b from-surface to-background p-6 md:p-14 overflow-hidden">
           <ChaosToClarity />
 
-          <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-4 gap-px bg-hairline border border-hairline rounded-2xl overflow-hidden">
+          <div className="mt-10 md:mt-16 grid grid-cols-1 md:grid-cols-4 gap-px bg-hairline border border-hairline rounded-2xl overflow-hidden">
             {steps.map((s, i) => (
               <div
                 key={i}
