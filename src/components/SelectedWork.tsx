@@ -9,7 +9,7 @@ export function SelectedWork() {
   return (
     <section id="work" className="py-16 md:py-32">
       <div className="container-editorial">
-        <div className="flex items-end justify-between mb-12 md:mb-20 gap-6">
+        <div className="flex items-end justify-between mb-10 md:mb-20 gap-6">
           <div>
             <div className="eyebrow mb-4 text-lg">
               — {t("DEL PROBLEMA A LA SOLUCIÓN", "FROM PROBLEM TO SOLUTION")}
