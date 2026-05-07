@@ -76,7 +76,6 @@ export const projects: Project[] = [
     accentClass: "bg-project-minsa",
     accentVar: "var(--project-minsa)",
     illustration: "publicservice",
-    comingSoon: true,
     media: { hero: minsaHero },
     es: {
       title: "Rediseñando una experiencia pública para millones de ciudadanos",

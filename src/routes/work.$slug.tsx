@@ -4,6 +4,7 @@ import { getProject, projects } from "@/data/projects";
 import { ProjectVisual } from "@/components/ProjectVisual";
 import { SiteFooter } from "@/components/SiteFooter";
 import { CertziaCaseStudy } from "@/components/case-studies/CertziaCaseStudy";
+import { MinsaCaseStudy } from "@/components/case-studies/MinsaCaseStudy";
 
 export const Route = createFileRoute("/work/$slug")({
   component: ProjectDetail,
@@ -44,6 +45,9 @@ function ProjectDetail() {
 
   if (project.slug === "certezia") {
     return <CertziaCaseStudy project={project} />;
+  }
+  if (project.slug === "minsa") {
+    return <MinsaCaseStudy project={project} />;
   }
 
   const c = lang === "es" ? project.es : project.en;
