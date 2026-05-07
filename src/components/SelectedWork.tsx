@@ -7,7 +7,7 @@ export function SelectedWork() {
   const { t, lang } = useLanguage();
 
   return (
-    <section id="work" className="py-24 md:py-32">
+    <section id="work" className="py-16 md:py-32">
       <div className="container-editorial">
         <div className="flex items-end justify-between mb-12 md:mb-20 gap-6">
           <div>
