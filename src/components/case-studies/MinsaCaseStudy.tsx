@@ -54,23 +54,33 @@ export function MinsaCaseStudy({ project }: Props) {
     </div>
   );
 
+  // Editorial figure — minimal container, subtle hairline, optional caption
   const Figure = ({
     src,
     alt,
-    aspect = "aspect-[16/10]",
+    caption,
+    aspect,
     fit = "object-contain",
-    bg = "bg-surface",
   }: {
     src: string;
     alt: string;
+    caption?: string;
     aspect?: string;
     fit?: string;
-    bg?: string;
   }) => (
-    <figure className={`rounded-2xl overflow-hidden border border-hairline ${bg}`}>
-      <div className={`${aspect} w-full overflow-hidden flex items-center justify-center`}>
-        <img src={src} alt={alt} className={`w-full h-full ${fit}`} loading="lazy" />
-      </div>
+    <figure className="space-y-3">
+      {aspect ? (
+        <div className={`${aspect} w-full overflow-hidden flex items-center justify-center`}>
+          <img src={src} alt={alt} className={`w-full h-full ${fit}`} loading="lazy" />
+        </div>
+      ) : (
+        <img src={src} alt={alt} className="w-full h-auto block" loading="lazy" />
+      )}
+      {caption && (
+        <figcaption className="text-xs md:text-sm text-muted-foreground leading-relaxed max-w-2xl">
+          {caption}
+        </figcaption>
+      )}
     </figure>
   );
 
@@ -127,14 +137,12 @@ export function MinsaCaseStudy({ project }: Props) {
               </div>
             </div>
 
-            <div className="lg:col-span-6">
-              <div className="rounded-2xl overflow-hidden border border-white/15 bg-black/20 flex items-center justify-center px-4 py-6 md:px-8 md:py-10">
-                <img
-                  src={minsaHero}
-                  alt={c.title}
-                  className="w-full h-auto max-h-[460px] object-contain"
-                />
-              </div>
+            <div className="lg:col-span-6 flex items-center justify-center">
+              <img
+                src={minsaHero}
+                alt={c.title}
+                className="w-full h-auto max-h-[620px] object-contain"
+              />
             </div>
           </div>
         </div>
@@ -185,8 +193,10 @@ export function MinsaCaseStudy({ project }: Props) {
             <Figure
               src={minsaOldApp}
               alt={t("App MINSA original en Play Store", "Original MINSA app on Play Store")}
-              aspect="aspect-[16/10]"
-              bg="bg-white"
+              caption={t(
+                "Experiencia original del sistema utilizado durante la pandemia.",
+                "Original experience of the system used during the pandemic."
+              )}
             />
           </div>
         </div>
@@ -208,8 +218,10 @@ export function MinsaCaseStudy({ project }: Props) {
             <Figure
               src={minsaOldUi}
               alt={t("Interfaz original con problemas de jerarquía y consistencia", "Original UI with hierarchy and consistency issues")}
-              aspect="aspect-[16/9]"
-              bg="bg-white"
+              caption={t(
+                "Problemas de jerarquía visual y accesibilidad detectados.",
+                "Visual hierarchy and accessibility issues identified."
+              )}
             />
           </div>
         </div>
@@ -235,8 +247,10 @@ export function MinsaCaseStudy({ project }: Props) {
             <Figure
               src={minsaDeviceResearch}
               alt={t("Investigación de dispositivos y resoluciones en Perú", "Device and resolution research in Peru")}
-              aspect="aspect-[16/10]"
-              bg="bg-white"
+              caption={t(
+                "Análisis de dispositivos y contextos digitales reales en Perú.",
+                "Analysis of devices and real digital contexts in Peru."
+              )}
             />
           </div>
         </div>
@@ -251,18 +265,22 @@ export function MinsaCaseStudy({ project }: Props) {
                 "The redesign evolved iteratively from architecture and taskflows to wireframes, visuals and interactive prototypes."
               )}
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
               <Figure
                 src={minsaProcess}
                 alt={t("Notas y diagramas del proceso", "Process notes and diagrams")}
-                aspect="aspect-[4/3]"
-                bg="bg-white"
+                caption={t(
+                  "Arquitectura y flujo inicial del producto.",
+                  "Initial product architecture and flow."
+                )}
               />
               <Figure
                 src={minsaTaskflow}
                 alt={t("Taskflow del Carnet de Vacunación", "Vaccination Card task flow")}
-                aspect="aspect-[4/3]"
-                bg="bg-white"
+                caption={t(
+                  "Mapeo de navegación y taskflows principales.",
+                  "Navigation mapping and main task flows."
+                )}
               />
             </div>
           </div>
@@ -281,8 +299,10 @@ export function MinsaCaseStudy({ project }: Props) {
             <Figure
               src={minsaWireframes}
               alt={t("Wireframes mobile y desktop", "Mobile and desktop wireframes")}
-              aspect="aspect-[16/9]"
-              bg="bg-white"
+              caption={t(
+                "Exploraciones mobile-first priorizando claridad y simplicidad.",
+                "Mobile-first explorations prioritizing clarity and simplicity."
+              )}
             />
           </div>
         </div>
@@ -297,18 +317,22 @@ export function MinsaCaseStudy({ project }: Props) {
                 "A scalable visual system was built to ensure consistency, accessibility and future product evolution."
               )}
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
               <Figure
                 src={minsaDesignSystem}
                 alt={t("Tokens y guidelines del sistema MINSA", "MINSA system tokens and guidelines")}
-                aspect="aspect-[3/4]"
-                bg="bg-[#cfd6dc]"
+                caption={t(
+                  "Construcción del sistema visual y estilos base.",
+                  "Building the visual system and base styles."
+                )}
               />
               <Figure
                 src={minsaComponents}
                 alt={t("Componentes y organismos del sistema", "Components and organisms of the system")}
-                aspect="aspect-[3/4]"
-                bg="bg-[#cfd6dc]"
+                caption={t(
+                  "Componentes reutilizables para escalabilidad y consistencia.",
+                  "Reusable components for scalability and consistency."
+                )}
               />
             </div>
           </div>
@@ -317,7 +341,7 @@ export function MinsaCaseStudy({ project }: Props) {
         {/* 09 REDISEÑO FINAL */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           <SectionHeader index="09" title={t("Rediseño final", "Final redesign")} />
-          <div className="lg:col-span-8 space-y-6">
+          <div className="lg:col-span-8 space-y-10">
             <p className="text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
               {t(
                 "El nuevo flujo priorizó claridad visual, reducción de fricción y mejor comprensión de la información crítica.",
@@ -327,14 +351,18 @@ export function MinsaCaseStudy({ project }: Props) {
             <Figure
               src={minsaBeforeAfter}
               alt={t("Antes y después: del carné físico al carné digital", "Before and after: from paper card to digital card")}
-              aspect="aspect-[16/10]"
-              bg="bg-white"
+              caption={t(
+                "Comparación entre experiencia original y rediseño final.",
+                "Comparison between the original experience and final redesign."
+              )}
             />
             <Figure
               src={minsaFinalFlow}
               alt={t("Flujo final del Carnet de Vacunación", "Final Vaccination Card flow")}
-              aspect="aspect-[16/9]"
-              bg="bg-white"
+              caption={t(
+                "Nuevo flujo optimizado para comprensión y accesibilidad.",
+                "New flow optimized for understanding and accessibility."
+              )}
             />
           </div>
         </div>
@@ -352,9 +380,10 @@ export function MinsaCaseStudy({ project }: Props) {
             <Figure
               src={minsaPrototype}
               alt={t("Prototipos navegables en Figma — versiones iterativas", "Interactive prototypes in Figma — iterative versions")}
-              aspect="aspect-[16/10]"
-              bg="bg-[#e5e7eb]"
-              fit="object-cover"
+              caption={t(
+                "Prototipos navegables utilizados para validación y desarrollo.",
+                "Interactive prototypes used for validation and development."
+              )}
             />
           </div>
         </div>
@@ -376,8 +405,10 @@ export function MinsaCaseStudy({ project }: Props) {
             <Figure
               src={minsaRealWorld}
               alt={t("El producto en uso real, cubierto por medios", "The product in real-world use, covered by media")}
-              aspect="aspect-[16/10]"
-              bg="bg-white"
+              caption={t(
+                "Implementación real utilizada por millones de ciudadanos.",
+                "Real implementation used by millions of citizens."
+              )}
             />
           </div>
         </div>
@@ -401,33 +432,29 @@ export function MinsaCaseStudy({ project }: Props) {
             ))}
           </div>
         </div>
-
-        {/* 13 CIERRE VISUAL */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-          <SectionHeader index="13" title={t("Cierre visual", "Visual closing")} />
-          <div className="lg:col-span-8 space-y-6">
-            <p className="text-muted-foreground text-base md:text-lg max-w-2xl text-pretty">
-              {t(
-                "El proyecto permitió construir una experiencia más clara, accesible y preparada para millones de ciudadanos en distintos contextos digitales.",
-                "The project helped create a clearer, more accessible experience designed for millions of citizens across different digital contexts."
-              )}
-            </p>
-          </div>
-        </div>
       </section>
 
-      {/* Full-bleed final mockups */}
-      <section
-        className="border-t border-hairline"
-        style={{ backgroundColor: project.accentVar }}
-      >
-        <div className="container-editorial py-12 md:py-20">
-          <img
-            src={minsaFinalMockups}
-            alt={t("Mockups finales del Carnet de Vacunación", "Final Vaccination Card mockups")}
-            className="w-full h-auto max-h-[760px] object-contain mx-auto"
-            loading="lazy"
-          />
+      {/* 13 CIERRE VISUAL — cinematic editorial closing */}
+      <section className="border-t border-hairline">
+        <div className="container-editorial py-20 md:py-32">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            <div className="lg:col-span-5 space-y-6">
+              <p className="font-display text-2xl md:text-3xl lg:text-4xl leading-tight tracking-tight text-balance">
+                {t(
+                  "El proyecto permitió construir una experiencia más clara, accesible y preparada para millones de ciudadanos en distintos contextos digitales.",
+                  "The project helped create a clearer, more accessible experience designed for millions of citizens across different digital contexts."
+                )}
+              </p>
+            </div>
+            <div className="lg:col-span-7 flex items-center justify-center">
+              <img
+                src={minsaFinalMockups}
+                alt={t("Mockups finales del Carnet de Vacunación", "Final Vaccination Card mockups")}
+                className="w-full h-auto max-h-[620px] object-contain"
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
