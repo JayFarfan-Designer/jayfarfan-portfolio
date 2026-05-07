@@ -42,7 +42,7 @@ export const projects: Project[] = [
         "Optimicé el flujo principal de Certezia, reduciendo la fricción en su momento más crítico: la interacción entre el teléfono y un documento físico.\nValidado con usuarios, el resultado fue una experiencia más clara, confiable y fácil de completar.",
     },
     en: {
-      title: "Redesigning the digital signature in a high-friction flow",
+      title: "Redesigning a high-friction digital signing flow",
       description:
         "I optimized Certezia's core flow, reducing friction at its most critical moment: the interaction between the phone and a physical document.\nValidated with users, the result was a clearer, more reliable, and easier-to-complete experience.",
     },
