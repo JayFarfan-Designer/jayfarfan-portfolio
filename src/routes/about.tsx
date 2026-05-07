@@ -58,9 +58,9 @@ function AboutPage() {
 
   return (
     <>
-      <section className="container-editorial pt-16 md:pt-24 pb-20 md:pb-28">
-        <div className="eyebrow text-lg mb-6">— About</div>
-        <h1 className="headline-xl max-w-[16ch] text-balance whitespace-pre-line">
+      <section className="container-editorial pt-12 md:pt-24 pb-12 md:pb-28">
+        <div className="eyebrow text-base md:text-lg mb-4 md:mb-6">— About</div>
+        <h1 className="headline-xl max-w-[16ch] text-balance whitespace-pre-line text-4xl md:text-7xl">
           {t(
             "Diseñador de producto.\nPensamiento de ingeniero.\nCriterio humano.",
             "Product designer.\nEngineer's mindset.\nHuman judgment."
@@ -69,7 +69,7 @@ function AboutPage() {
       </section>
 
       <section className="border-y border-hairline">
-        <div className="container-editorial py-20 md:py-28 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+        <div className="container-editorial py-12 md:py-28 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           <div className="lg:col-span-5">
             <div className="relative overflow-hidden rounded-2xl border border-hairline bg-surface/40 aspect-[3/4] max-w-sm">
               <img
