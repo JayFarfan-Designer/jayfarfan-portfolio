@@ -170,7 +170,7 @@ export function CertziaCaseStudy({ project }: Props) {
       </section>
 
       {/* CONTENT SECTIONS */}
-      <section className="container-editorial py-20 md:py-28 space-y-20 md:space-y-28">
+      <section className="container-editorial py-12 md:py-28 space-y-12 md:space-y-28">
         {/* Overview */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           <SectionHeader index="01" title={t("Contexto", "Contexto")} />
