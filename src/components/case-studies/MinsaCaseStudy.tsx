@@ -28,7 +28,7 @@ export function MinsaCaseStudy({ project }: Props) {
   const keyData = [
     { value: t("+10M", "+10M"), label: t("usuarios", "users") },
     { value: t("Producto estatal", "Government product"), label: t("Ministerio de Salud del Perú", "Peru's Ministry of Health") },
-    { value: "Mobile-first", label: t("Diseño priorizando dispositivos limitados", "Designed prioritizing low-end devices") },
+    { value: "Contextos", label: t("Distintos contextos sociales, económicos y digitales", "Social, economic and digital contexts") },
     { value: t("Accesibilidad nacional", "Nationwide accessibility"), label: t("Distintos contextos sociales y digitales", "Different social and digital contexts") },
   ];
 
