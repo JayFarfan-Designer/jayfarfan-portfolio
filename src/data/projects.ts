@@ -29,7 +29,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "certezia",
+    slug: "minsa",
     number: "01",
     client: "CERTEZIA",
     accentClass: "bg-project-certezia",
