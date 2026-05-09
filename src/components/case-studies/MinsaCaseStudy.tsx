@@ -27,7 +27,7 @@ export function MinsaCaseStudy({ project }: Props) {
 
   const keyData = [
     { value: t("+10 Millones", "+10 Million"), label: t("usuarios en todas las regiones del país", "users in all regions of the country") },
-    { value: t("Govtech", "Govtech"), label: t("+10 Millones", "+10 Million") },
+    { value: t("Govtech", "Govtech"), label: t("Producto digital del Ministerio de Salud del Perú", "Peru's Ministry of Health digital product") },
     { value: t("All-mobile friendly", "All-mobile friendly"), label: t("Diseño que prioriza dispositivos limitados en el contexto peruano", "Design prioritizing limited devices in the Peruvian context") },
     { value: t("Accesibilidad nacional", "Nationwide accessibility"), label: t("Distintos contextos sociales, económicos y digitales", "Different social, economic and digital contexts") },
   ];
