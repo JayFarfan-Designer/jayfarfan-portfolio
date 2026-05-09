@@ -119,8 +119,8 @@ export function CertziaCaseStudy({ project }: Props) {
             {c.description}
           </p>
           <div className="mt-6 md:mt-8 text-sm md:text-base text-white/80">
-            <span className="eyebrow !text-white/70 mr-2">{t("Rol", "Role")}:</span>
-            Senior Product Designer
+            <span className="eyebrow !text-white/70 mr-2">{t("ROL", "ROLE")}:</span>
+            UX/UI Designer
           </div>
           <div className="mt-6 md:mt-10 flex flex-wrap gap-2">
             {["Flow Optimization", "NFC Interaction", "Prototyping", "Design System", "AI-assisted Design"].map(

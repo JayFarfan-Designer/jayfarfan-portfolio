@@ -122,8 +122,8 @@ export function MinsaCaseStudy({ project }: Props) {
                 {c.description}
               </p>
               <div className="mt-6 md:mt-8 text-sm md:text-base text-white/80">
-                <span className="eyebrow !text-white/70 mr-2">{t("Rol", "Role")}:</span>
-                Product Designer
+                <span className="eyebrow !text-white/70 mr-2">{t("ROL", "ROLE")}:</span>
+                UX/UI Designer
               </div>
               <div className="mt-6 md:mt-8 flex flex-wrap gap-2">
                 {project.tags.map((tag) => (
