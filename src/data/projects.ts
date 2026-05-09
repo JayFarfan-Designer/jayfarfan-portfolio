@@ -29,28 +29,8 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "certezia",
-    number: "01",
-    client: "CERTEZIA",
-    accentClass: "bg-project-certezia",
-    accentVar: "var(--project-certezia)",
-    illustration: "phone",
-    media: { hero: certeziaHero },
-    es: {
-      title: "Rediseñando un flujo de firma digital de alta fricción",
-      description:
-        "Optimicé el flujo principal de Certezia, reduciendo la fricción en su momento más crítico: la interacción entre el teléfono y un documento físico.\nValidado con usuarios, el resultado fue una experiencia más clara, confiable y fácil de completar.",
-    },
-    en: {
-      title: "Redesigning a high-friction digital signing flow",
-      description:
-        "I optimized Certezia's core flow, reducing friction at its most critical moment: the interaction between the phone and a physical document.\nValidated with users, the result was a clearer, more reliable, and easier-to-complete experience.",
-    },
-    tags: ["Flow Optimization", "NFC Interaction", "Prototyping", "AI-assisted Design"],
-  },
-  {
     slug: "minsa",
-    number: "02",
+    number: "01",
     client: "MINSA / Digital Humans",
     accentClass: "bg-project-minsa",
     accentVar: "var(--project-minsa)",
@@ -67,6 +47,26 @@ export const projects: Project[] = [
         "Redesigned Peru’s Ministry of Health COVID-19 app, improving accessibility, clarity and usability for citizens across different social and digital contexts.",
     },
     tags: ["GovTech", "UX/UI", "Information Architecture", "Accessibility", "Design System"],
+  },
+  {
+    slug: "certezia",
+    number: "02",
+    client: "CERTEZIA",
+    accentClass: "bg-project-certezia",
+    accentVar: "var(--project-certezia)",
+    illustration: "phone",
+    media: { hero: certeziaHero },
+    es: {
+      title: "Rediseñando un flujo de firma digital de alta fricción",
+      description:
+        "Optimicé el flujo principal de Certezia, reduciendo la fricción en su momento más crítico: la interacción entre el teléfono y un documento físico.\nValidado con usuarios, el resultado fue una experiencia más clara, confiable y fácil de completar.",
+    },
+    en: {
+      title: "Redesigning a high-friction digital signing flow",
+      description:
+        "I optimized Certezia's core flow, reducing friction at its most critical moment: the interaction between the phone and a physical document.\nValidated with users, the result was a clearer, more reliable, and easier-to-complete experience.",
+    },
+    tags: ["Flow Optimization", "NFC Interaction", "Prototyping", "AI-assisted Design"],
   },
   {
     slug: "komu-ai",
