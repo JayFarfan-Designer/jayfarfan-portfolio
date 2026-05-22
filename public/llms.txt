@@ -1,0 +1,16 @@
+# Jay Farfan
+
+> Portfolio of Jay Farfan, Senior Product Designer & UX/UI Designer combining strategy, human judgment and AI to craft simple, scalable digital products.
+
+## Pages
+
+- [Home](/): Selected work, process, skillset and contact.
+- [About](/about): Background, principles and how Jay works.
+
+## Case studies
+
+- [MINSA / Digital Humans](/work/minsa): Redesign of Peru's Ministry of Health COVID-19 app for accessibility and clarity.
+- [Certezia](/work/certezia): Optimizing a high-friction digital signing flow with NFC interaction.
+- [Komu AI](/work/komu-ai): Designing a WhatsApp AI financial assistant and its product ecosystem.
+- [Karway](/work/karway): Product vision for an automotive marketplace.
+- [KindBerry](/work/kindberry): Premium children's clothing e-commerce experience.
