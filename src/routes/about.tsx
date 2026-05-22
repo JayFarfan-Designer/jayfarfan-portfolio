@@ -11,16 +11,19 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Jay Farfan, SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER with a background in civil engineering. Strategy, UX/UI and AI-assisted design.",
+          "Jay Farfan, Senior Product Designer with a background in civil engineering. Strategy, UX/UI and AI-assisted design.",
       },
       { property: "og:title", content: "About — Jay Farfan" },
       {
         property: "og:description",
         content:
-          "SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER focused on systems, strategy and responsible AI-assisted design.",
+          "Senior Product Designer focused on systems, strategy and responsible AI-assisted design.",
       },
+      { property: "og:url", content: "https://jayfarfan.com/about" },
     ],
+    links: [{ rel: "canonical", href: "https://jayfarfan.com/about" }],
   }),
+
 });
 
 function AboutPage() {
