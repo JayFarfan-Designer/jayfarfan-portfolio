@@ -11,14 +11,17 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Jay Farfan — SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER" },
+      { title: "Jay Farfan — Senior Product Designer & UX/UI Designer" },
       {
         name: "description",
         content:
-          "Portfolio of Jay Farfan, SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER combining strategy, human judgment and AI to craft simple, scalable digital products.",
+          "Portfolio of Jay Farfan, Senior Product Designer combining strategy, human judgment and AI to craft simple, scalable digital products.",
       },
+      { property: "og:url", content: "https://jayfarfan.com/" },
     ],
+    links: [{ rel: "canonical", href: "https://jayfarfan.com/" }],
   }),
+
 });
 
 function Index() {

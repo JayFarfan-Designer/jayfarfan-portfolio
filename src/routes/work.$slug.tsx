@@ -11,16 +11,38 @@ export const Route = createFileRoute("/work/$slug")({
   head: ({ params }) => {
     const project = getProject(params.slug);
     const title = project ? `${project.client} — Jay Farfan` : "Case Study — Jay Farfan";
-    const description = project?.en.description ?? "Case study by Jay Farfan, SENIOR PRODUCT DESIGNER - SENIOR UX/UI DESIGNER.";
+    const description = project?.en.description ?? "Case study by Jay Farfan, Senior Product Designer.";
+    const url = `https://jayfarfan.com/work/${params.slug}`;
     return {
       meta: [
         { title },
         { name: "description", content: description },
         { property: "og:title", content: title },
         { property: "og:description", content: description },
+        { property: "og:url", content: url },
+        { property: "og:type", content: "article" },
       ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: project
+        ? [
+            {
+              type: "application/ld+json",
+              children: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "CreativeWork",
+                name: project.en.title,
+                description: project.en.description,
+                creator: { "@type": "Person", name: "Jay Farfan" },
+                about: project.client,
+                keywords: project.tags.join(", "),
+                url,
+              }),
+            },
+          ]
+        : [],
     };
   },
+
   notFoundComponent: () => (
     <div className="container-editorial py-32 text-center">
       <h1 className="headline-lg">Project not found</h1>
