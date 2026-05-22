@@ -55,6 +55,7 @@ export const Route = createRootRoute({
       },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bd774091-0bab-4bbf-8af5-e6813f49f986/id-preview-fac245e5--8ca99ae5-3c08-412c-9909-e41139f83529.lovable.app-1777668932827.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bd774091-0bab-4bbf-8af5-e6813f49f986/id-preview-fac245e5--8ca99ae5-3c08-412c-9909-e41139f83529.lovable.app-1777668932827.png" },
+      { name: "google-site-verification", content: "7pI76bHu-5652vK2mFbyxtROZr5CqZZKPdcpNGsopEA" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
