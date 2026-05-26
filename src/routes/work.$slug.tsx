@@ -22,7 +22,12 @@ export const Route = createFileRoute("/work/$slug")({
         { property: "og:url", content: url },
         { property: "og:type", content: "article" },
       ],
-      links: [{ rel: "canonical", href: url }],
+      links: [
+        { rel: "canonical", href: url },
+        { rel: "alternate", hrefLang: "es", href: url },
+        { rel: "alternate", hrefLang: "en", href: url },
+        { rel: "alternate", hrefLang: "x-default", href: url },
+      ],
       scripts: project
         ? [
             {
