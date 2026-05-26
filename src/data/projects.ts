@@ -64,7 +64,7 @@ export const projects: Project[] = [
     en: {
       title: "Redesigning a high-friction digital signing flow",
       description:
-        "I optimized Certezia's core flow, reducing friction at its most critical moment: the interaction between the phone and a physical document.\nValidated with users, the result was a clearer, more reliable, and easier-to-complete experience.",
+        "Optimized Certezia's NFC signing flow, reducing friction between phone and physical document for a clearer, more reliable signing experience.",
     },
     tags: ["Flow Optimization", "NFC Interaction", "Prototyping", "AI-assisted Design"],
   },
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     en: {
       title: "Building the complete digital environment for a WhatsApp financial assistant",
       description:
-        "Co-founded and Re-designed Pablo, an AI financial assistant on WhatsApp, designing its conversational experience, Dashboard and Landing page.\nFrom deep Research, I transformed user needs into a complete digital system.\nThe result was a clearer, more useful and closer experience, with direct improvements in product adoption and conversion.",
+        "Co-founded and redesigned Pablo, an AI financial assistant on WhatsApp, shaping its chat experience, dashboard and landing page from user research.",
     },
     tags: ["Fintech", "AI Product", "MVP Design", "Product Strategy", "MVP"],
   },
