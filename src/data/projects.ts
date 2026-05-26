@@ -85,7 +85,7 @@ export const projects: Project[] = [
     en: {
       title: "Building the complete digital environment for a WhatsApp financial assistant",
       description:
-        "Co-founded and Re-designed Pablo, an AI financial assistant on WhatsApp, designing its conversational experience, Dashboard and Landing page.\nFrom deep Research, I transformed user needs into a complete digital system.\nThe result was a clearer, more useful and closer experience, with direct improvements in product adoption and conversion.",
+        "Co-founded and redesigned Pablo, an AI financial assistant on WhatsApp, shaping its chat experience, dashboard and landing page from user research.",
     },
     tags: ["Fintech", "AI Product", "MVP Design", "Product Strategy", "MVP"],
   },
