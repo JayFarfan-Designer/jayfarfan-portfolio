@@ -21,7 +21,12 @@ export const Route = createFileRoute("/about")({
       },
       { property: "og:url", content: "https://jayfarfan.com/about" },
     ],
-    links: [{ rel: "canonical", href: "https://jayfarfan.com/about" }],
+    links: [
+      { rel: "canonical", href: "https://jayfarfan.com/about" },
+      { rel: "alternate", hrefLang: "es", href: "https://jayfarfan.com/about" },
+      { rel: "alternate", hrefLang: "en", href: "https://jayfarfan.com/about" },
+      { rel: "alternate", hrefLang: "x-default", href: "https://jayfarfan.com/about" },
+    ],
   }),
 
 });
