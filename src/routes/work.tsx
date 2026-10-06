@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, Outlet, useRouterState } from "@tanstack/react-router";
 import { latestCases } from "@/data/latestCases";
 import { latestImages, latestImageBackgrounds } from "@/data/latestAssets";
 import { useLanguage } from "@/lib/language";
@@ -12,6 +12,15 @@ function pick(v: any, lang: "es" | "en") {
 }
 function WorkPage() {
   const { lang } = useLanguage();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+
+  // TanStack's file-route generator may nest work.$slug under /work.
+  // When a case-study child route is active, render it here instead of
+  // keeping the experience listing on screen.
+  if (pathname !== "/work" && pathname !== "/work/") {
+    return <Outlet />;
+  }
+
   return (
     <>
       <main className="latest-work-page">
