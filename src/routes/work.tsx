@@ -37,7 +37,7 @@ function WorkPage() {
               const img=(latestImages as any)[key];
               const bg=(latestImageBackgrounds as any)[key] || "#1b1f28";
               const body=<>
-                <div className="latest-thumb" style={{background:bg}}>{img&&<img src={img} alt="" loading="lazy"/>}{c.comingSoon&&<span className="latest-coming">{lang==="es"?"Próximamente":"Coming soon"}</span>}</div>
+                <div className="latest-thumb" style={{background:bg}}>{img&&<img src={img} alt="" loading="lazy" decoding="async"/>}{c.comingSoon&&<span className="latest-coming">{lang==="es"?"Próximamente":"Coming soon"}</span>}</div>
                 <div className="latest-card-body">
                   <div className="latest-card-meta">{c.num} · {pick(c.client,lang)}</div>
                   <h3>{pick(c.short,lang)}</h3>
