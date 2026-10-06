@@ -438,3 +438,13 @@ body{background:var(--latest-bg);color:var(--latest-fg)}
 .latest-contact-options strong{font-weight:500;min-width:0;overflow-wrap:anywhere}
 .latest-contact-options b{font-size:1.1rem}
 @media(min-width:960px){.latest-contact-page-grid{grid-template-columns:5fr 7fr;gap:5rem}.latest-contact-copy{padding-top:2.5rem}}
+
+/* Latest Work export: finished covers and Kindberry evidence */
+.latest-thumb img[src*="-cover"]{padding:0;object-fit:contain;object-position:center}
+.lc-frame.hero img[src*="-cover"]{padding:0;max-height:none;width:100%;object-fit:contain;object-position:center}
+.lc-frame.evidence-kindberry img{max-height:460px;object-fit:contain;object-position:center;padding:clamp(1rem,3vw,2rem)}
+.lc-frame.evidence-kindberry-mockup{max-width:820px;margin-inline:auto}
+.lc-frame.evidence-kindberry-mockup img{padding:0;max-height:none;width:100%;object-fit:contain;object-position:center}
+.lc-frame.evidence-kindberry-ds{max-width:680px;margin-inline:auto}
+.lc-frame.evidence-kindberry-ds img{padding:clamp(.75rem,2vw,1.25rem);max-height:300px;object-fit:contain}
+@media(max-width:600px){.lc-frame.evidence-kindberry img{max-height:360px;padding:1rem}}
