@@ -33,7 +33,7 @@ function WorkPage() {
           </div>
           <div className="latest-all-projects">
             {(latestCases as readonly any[]).map((c:any)=>{
-              const key=c.thumb;
+              const key=c.slug==="diners" ? "diners_cover" : c.thumb;
               const img=(latestImages as any)[key];
               const bg=(latestImageBackgrounds as any)[key] || "#1b1f28";
               const body=<>
