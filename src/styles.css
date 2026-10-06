@@ -424,3 +424,17 @@ body{background:var(--latest-bg);color:var(--latest-fg)}
 .latest-about-copy p+p{margin-top:1rem}
 .latest-outside{display:grid;gap:1.5rem}
 @media(min-width:1024px){.latest-outside{grid-template-columns:5fr 7fr;gap:4rem}.latest-outside>:last-child{padding-top:2.3rem}}
+
+
+/* Dedicated contact */
+.latest-contact-page{background:var(--latest-bg);color:var(--latest-fg);min-height:70vh}
+.latest-contact-page-grid{display:grid;gap:2rem;align-items:start}
+.latest-contact-page h1{margin-top:1rem;max-width:18ch;font-family:"Inter Tight","Inter",sans-serif;font-weight:500;line-height:1.04;letter-spacing:-.03em;font-size:clamp(2.4rem,5vw,4.5rem);text-wrap:balance}
+.latest-contact-copy>p{max-width:56ch;color:var(--latest-muted);font-size:clamp(1.05rem,1.5vw,1.25rem);line-height:1.6}
+.latest-contact-options{display:grid;gap:.8rem;margin-top:2rem}
+.latest-contact-options a{display:grid;grid-template-columns:auto 1fr auto;gap:1rem;align-items:center;padding:1rem 1.1rem;border:1px solid var(--latest-hair);border-radius:.9rem;background:#10141d}
+.latest-contact-options a:hover{border-color:rgba(255,255,255,.4)}
+.latest-contact-options span{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--latest-muted2)}
+.latest-contact-options strong{font-weight:500;min-width:0;overflow-wrap:anywhere}
+.latest-contact-options b{font-size:1.1rem}
+@media(min-width:960px){.latest-contact-page-grid{grid-template-columns:5fr 7fr;gap:5rem}.latest-contact-copy{padding-top:2.5rem}}
