@@ -14,8 +14,8 @@ export function SiteHeader() {
         </Link>
         <button className="latest-menu" aria-expanded={open} onClick={()=>setOpen(v=>!v)}>☰</button>
         <nav className={open ? "latest-nav open" : "latest-nav"}>
-          <a href="/#work" onClick={()=>setOpen(false)}>{t("Experiencia","Experience")}</a>
-          <Link to="/about" onClick={()=>setOpen(false)}>{t("Proceso","Process")}</Link>
+          <Link to="/work" onClick={()=>setOpen(false)}>{t("Experiencia","Experience")}</Link>
+          <Link to="/process" onClick={()=>setOpen(false)}>{t("Proceso","Process")}</Link>
           <Link to="/about" onClick={()=>setOpen(false)}>{t("Sobre mí","About")}</Link>
           <a href="/#contact" onClick={()=>setOpen(false)}>{t("Contacto","Contact")}</a>
           <div className="latest-lang">
