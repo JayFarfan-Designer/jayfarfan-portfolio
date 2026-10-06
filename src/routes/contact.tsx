@@ -35,23 +35,10 @@ function ContactPage() {
                   "I’m based in Quito, Ecuador, and open to Product Designer / UX/UI Designer opportunities and freelance projects. I collaborate remotely with teams anywhere in the world."
                 )}
               </p>
-
-              <div className="latest-contact-options">
-                <a href="mailto:josem4n@gmail.com">
-                  <span>Email</span>
-                  <strong>josem4n@gmail.com</strong>
-                  <b>↗</b>
-                </a>
-                <a href="https://www.linkedin.com/in/jayfarfan/" target="_blank" rel="noreferrer">
-                  <span>LinkedIn</span>
-                  <strong>linkedin.com/in/jayfarfan</strong>
-                  <b>↗</b>
-                </a>
-              </div>
-
               <div className="latest-actions">
-                <a className="latest-btn primary" href="mailto:josem4n@gmail.com">{t("Conversemos","Let’s talk")} ↗</a>
+                <a className="latest-btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=josem4n@gmail.com" target="_blank" rel="noreferrer">{t("Conversemos","Let’s talk")} ↗</a>
                 <a className="latest-btn secondary" href={cv} download>{t("Descargar CV","Download CV")} ↓</a>
+                <a className="latest-btn secondary" href="https://www.linkedin.com/in/jayfarfan/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
               </div>
             </div>
           </div>
