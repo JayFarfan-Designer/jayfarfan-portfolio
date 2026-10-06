@@ -58,6 +58,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
   '/process': typeof ProcessRoute
   '/work': typeof WorkRoute
   '/work/$slug': typeof WorkSlugRoute
@@ -66,6 +67,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
   '/process': typeof ProcessRoute
   '/work': typeof WorkRoute
   '/work/$slug': typeof WorkSlugRoute
