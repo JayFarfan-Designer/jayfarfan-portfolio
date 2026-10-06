@@ -260,14 +260,14 @@ export function LatestHome() {
           <h2>{t("Proyectos destacados","Featured projects")}</h2>
           <p className="latest-lead">{t("He trabajado en productos de fintech, govtech y marketplaces, como parte de equipos de diseño y liderando proyectos. Mi base en Ingeniería Civil se refleja en cómo conecto sistemas, trabajo con restricciones y considero el uso real de cada producto.","I’ve worked on fintech, govtech and marketplace products, as part of design teams and leading projects. My Civil Engineering background shapes how I connect systems, work within constraints and consider how people actually use each product.")}</p>
           <div className="latest-projects">{projects.map(p=><ProjectCard key={p.slug} p={p} lang={lang}/>)}</div>
-          <div className="latest-actions"><Link className="latest-btn primary" to="/">{t("Ver toda mi experiencia","See all my experience")} →</Link></div>
+          <div className="latest-actions"><Link className="latest-btn primary" to="/work">{t("Ver toda mi experiencia","See all my experience")} →</Link></div>
         </div>
       </section>
 
       <section className="latest-section latest-band">
         <div className="latest-wrap latest-band-grid">
           <div><div className="latest-eyebrow">{t("Proceso + IA","Process + AI")}</div><h3>{t("Cómo trabajo y dónde uso IA","How I work and where I use AI")}</h3></div>
-          <div className="latest-band-copy"><p>{t("Uso Claude y ChatGPT para research y exploración, y Claude Design y ChatGPT Sites para prototipos funcionales y sitios.","I use Claude and ChatGPT for research and exploration, and Claude Design and ChatGPT Sites for functional prototypes and websites.")}</p><p>{t("Las decisiones de diseño las tomo con usuarios, métricas y necesidades de negocio.","I make design decisions based on users, metrics and business needs.")}</p><Link to="/about" className="latest-inline-link">{t("Ver mi proceso","See my process")} →</Link></div>
+          <div className="latest-band-copy"><p>{t("Uso Claude y ChatGPT para research y exploración, y Claude Design y ChatGPT Sites para prototipos funcionales y sitios.","I use Claude and ChatGPT for research and exploration, and Claude Design and ChatGPT Sites for functional prototypes and websites.")}</p><p>{t("Las decisiones de diseño las tomo con usuarios, métricas y necesidades de negocio.","I make design decisions based on users, metrics and business needs.")}</p><Link to="/process" className="latest-inline-link">{t("Ver mi proceso","See my process")} →</Link></div>
         </div>
       </section>
 
