@@ -4,8 +4,8 @@ export const latestCases = [
     "slug": "minsa",
     "num": "01",
     "accent": "oklch(0.45 0.07 220)",
-    "thumb": "minsa_before-after",
-    "hero": "minsa_before-after",
+    "thumb": "minsa_cover",
+    "hero": "minsa_cover",
     "final": true,
     "eyebrow": {
       "es": "MINSA PERÚ · GOVTECH",
@@ -525,7 +525,7 @@ export const latestCases = [
     "slug": "certezia",
     "num": "02",
     "accent": "oklch(0.55 0.16 255)",
-    "thumb": "certezia_hero",
+    "thumb": "certezia_cover",
     "client": {
       "es": "Certezia · DIGITAL-HUMANS",
       "en": "Certezia · DIGITAL-HUMANS"
@@ -1206,7 +1206,7 @@ export const latestCases = [
     "slug": "pablo",
     "num": "03",
     "accent": "oklch(0.55 0.17 300)",
-    "thumb": "pablo_hero",
+    "thumb": "pablo_cover",
     "final": true,
     "client": {
       "es": "Pablo (Komu AI) · usapablo.com",
@@ -1950,7 +1950,7 @@ export const latestCases = [
     "comingSoon": true,
     "num": "05",
     "accent": "oklch(0.56 0.11 65)",
-    "thumb": "karway_hero",
+    "thumb": "karway_cover",
     "final": true,
     "client": {
       "es": "Karway · Marketplace automotriz",
@@ -2445,34 +2445,33 @@ export const latestCases = [
   },
   {
     "slug": "kindberry",
-    "comingSoon": true,
     "num": "06",
     "accent": "oklch(0.58 0.09 320)",
-    "thumb": "kindberry_hero",
+    "thumb": "kindberry_cover",
     "client": {
-      "es": "KindBerry · E-commerce premium",
-      "en": "KindBerry · Premium e-commerce"
+      "es": "Kindberry · Ropa infantil y comunidad",
+      "en": "Kindberry · Children’s clothing and community"
     },
     "title": {
-      "es": "Diseñando un e-commerce premium desde el research hasta el UI",
-      "en": "Designing a premium e-commerce from research to UI"
+      "es": "Comprar ropa, pertenecer a una comunidad y seguir eligiendo con libertad",
+      "en": "Shopping for clothes, joining a community and keeping the freedom to choose"
     },
     "short": {
-      "es": "E-commerce de ropa infantil, del research al UI",
-      "en": "Children’s clothing e-commerce, from research to UI"
+      "es": "Kindberry: compra, membresía y comunidad",
+      "en": "Kindberry: shopping, membership and community"
     },
     "outcome": {
-      "es": "[[Benchmark, arquetipos y sistema de UI para una marca premium]]",
-      "en": "[[Benchmark, archetypes and UI system for a premium brand]]"
+      "es": "Research y UX/UI para conectar catálogo, membresía y comunidad",
+      "en": "Research and UX/UI connecting the catalogue, membership and community"
     },
     "summary": {
-      "es": "Diseño de producto digital para una marca premium de ropa infantil, combinando research, benchmark, arquetipos y objetivos de negocio.",
-      "en": "Digital product design for a premium children’s clothing brand, combining research, benchmarking, archetypes and business goals."
+      "es": "Diseñé una experiencia de e-commerce de ropa infantil que conecta la compra con una membresía y una comunidad. El research ayudó a equilibrar confianza, tiempo y libertad de elección con los objetivos del negocio.",
+      "en": "I designed a children’s clothing e-commerce experience connecting shopping with membership and community. Research helped balance trust, time and freedom of choice with business goals."
     },
     "tags": [
       "E-commerce",
       "UX Research",
-      "UI Design"
+      "UX/UI"
     ],
     "meta": [
       [
@@ -2487,12 +2486,12 @@ export const latestCases = [
       ],
       [
         {
-          "es": "Año",
-          "en": "Year"
+          "es": "Periodo del material",
+          "en": "Material timeframe"
         },
         {
-          "es": "2024 – 2025",
-          "en": "2024 – 2025"
+          "es": "2023 – 2024",
+          "en": "2023 – 2024"
         }
       ],
       [
@@ -2501,18 +2500,8 @@ export const latestCases = [
           "en": "Context"
         },
         {
-          "es": "[[Proyecto de DIGITAL-HUMANS]]",
-          "en": "[[DIGITAL-HUMANS project]]"
-        }
-      ],
-      [
-        {
-          "es": "Equipo",
-          "en": "Team"
-        },
-        {
-          "es": "[[Marca, diseño y desarrollo]]",
-          "en": "[[Brand, design and engineering]]"
+          "es": "Proyecto de DIGITAL-HUMANS",
+          "en": "DIGITAL-HUMANS project"
         }
       ],
       [
@@ -2521,8 +2510,8 @@ export const latestCases = [
           "en": "Tools"
         },
         {
-          "es": "[[Figma, FigJam]]",
-          "en": "[[Figma, FigJam]]"
+          "es": "Figma, FigJam",
+          "en": "Figma, FigJam"
         }
       ],
       [
@@ -2531,52 +2520,52 @@ export const latestCases = [
           "en": "Scope"
         },
         {
-          "es": "Research, benchmark, arquetipos, objetivos de negocio y UX/UI",
-          "en": "Research, benchmark, archetypes, business goals and UX/UI"
+          "es": "Research, benchmark, arquetipos, journeys, modelo de negocio, flujos y UX/UI",
+          "en": "Research, benchmarking, archetypes, journeys, business model, flows and UX/UI"
         }
       ]
     ],
     "tldr": {
       "problem": {
-        "es": "[[La marca necesitaba una tienda online que se sintiera tan cuidada como sus prendas y que ayudara a los padres a decidir rápido.]]",
-        "en": "[[The brand needed an online store as carefully made as its clothes, one that helped parents decide quickly.]]"
+        "es": "Las familias necesitan elegir prendas con confianza y poco tiempo. La comunidad y la membresía debían aportar valor sin imponer compras innecesarias.",
+        "en": "Families need to choose clothes confidently with limited time. Community and membership needed to offer value without imposing unnecessary purchases."
       },
       "role": {
-        "es": "Research, benchmark, arquetipos, objetivos de negocio y diseño UX/UI de punta a punta.",
-        "en": "Research, benchmark, archetypes, business goals and end-to-end UX/UI design."
+        "es": "Conecté la síntesis del research, los objetivos de negocio y las historias de usuario con los flujos y las propuestas de interfaz para web y mobile.",
+        "en": "I connected research synthesis, business goals and user stories with flows and interface proposals for web and mobile."
       },
       "result": {
-        "es": "[[Una experiencia de compra premium con un sistema de UI listo para escalar.]]",
-        "en": "[[A premium shopping experience with a UI system ready to scale.]]"
+        "es": "Una propuesta que articula catálogo, detalle de producto, carrito, membresía y gestión de beneficios. La evidencia presentada corresponde al proceso y al diseño, no a resultados de conversión.",
+        "en": "A proposal connecting the catalogue, product details, cart, membership and benefit management. The evidence shown documents the process and design, rather than conversion results."
       }
     },
     "metrics": [
       [
-        "[[5]]",
+        "2",
         {
-          "es": "[[referentes de e-commerce premium analizados]]",
-          "en": "[[premium e-commerce references analysed]]"
+          "es": "arquetipos documentados: Alejandra y Lucía",
+          "en": "documented archetypes: Alejandra and Lucía"
         }
       ],
       [
-        "[[3]]",
+        "3",
         {
-          "es": "[[arquetipos de comprador definidos]]",
-          "en": "[[buyer archetypes defined]]"
+          "es": "épicas: compra, membresía y comunidad",
+          "en": "epics: shopping, membership and community"
         }
       ],
       [
-        "[[1]]",
+        "26",
         {
-          "es": "[[sistema de UI para catálogo, ficha y checkout]]",
-          "en": "[[UI system for catalogue, product page and checkout]]"
+          "es": "historias de usuario en el backlog",
+          "en": "user stories in the backlog"
         }
       ],
       [
-        "[[−25%]]",
+        "Web + mobile",
         {
-          "es": "[[pasos hasta el pago en el checkout]]",
-          "en": "[[steps to payment in checkout]]"
+          "es": "propuestas de interfaz",
+          "en": "interface proposals"
         }
       ]
     ],
@@ -2584,47 +2573,202 @@ export const latestCases = [
       {
         "t": "text",
         "h": {
-          "es": "Contexto y problema",
-          "en": "Context and problem"
+          "es": "Más que una tienda de ropa",
+          "en": "More than a clothing store"
         },
         "p": [
           {
-            "es": "[[KindBerry vende ropa infantil premium a padres que compran con cuidado y poco tiempo. El reto era trasladar esa sensación cuidada a la tienda online sin volverla lenta.]]",
-            "en": "[[KindBerry sells premium children’s clothing to parents who buy carefully and with little time. The challenge was carrying that careful feel into the online store without making it slow.]]"
+            "es": "Kindberry combina ropa infantil con una propuesta de comunidad: beneficios, créditos para comprar y actividades relacionadas con la circularidad de las prendas. El reto era hacer comprensible esa relación sin distraer de la tarea principal: encontrar ropa adecuada.",
+            "en": "Kindberry combines children’s clothing with a community proposition: benefits, shopping credits and activities connected to clothing circularity. The challenge was making that relationship understandable without distracting from the main task: finding suitable clothes."
+          },
+          {
+            "es": "Trabajé la experiencia como un sistema: descubrir productos, decidir una compra, conocer la membresía y gestionar sus beneficios debían conectarse, conservando un propósito claro en cada etapa.",
+            "en": "I approached the experience as a system: discovering products, making a purchase, exploring membership and managing benefits needed to connect while keeping a clear purpose at each stage."
           }
         ],
         "img": {
-          "key": "kindberry_hero",
+          "key": "kindberry_home_responsive",
           "cap": {
-            "es": "Home de KindBerry.",
-            "en": "KindBerry home."
+            "es": "Home de Kindberry: composición de las propuestas web y mobile.",
+            "en": "Kindberry Home: composition of the web and mobile proposals."
           },
-          "pad": true
+          "evidence": "kindberry-mockup"
         }
       },
       {
         "t": "text",
         "h": {
-          "es": "Research, benchmark y arquetipos",
-          "en": "Research, benchmark and archetypes"
+          "es": "Entender cómo compran las familias",
+          "en": "Understanding how families shop"
         },
         "p": [
           {
-            "es": "Combiné research, benchmark de referentes y arquetipos de comprador con los objetivos de negocio de la marca. [[Los arquetipos separan al padre que compra para un evento del que repone básicos.]]",
-            "en": "I combined research, benchmarking of references and buyer archetypes with the brand’s business goals. [[The archetypes separate the parent buying for an event from the one restocking basics.]]"
+            "es": "El mapa de empatía y los arquetipos ayudaron a ordenar motivaciones y fricciones. Alejandra prioriza tiempo, calidad y acompañamiento después de comprar. Lucía incorpora presupuesto, sostenibilidad, reutilización y confianza en lo que la marca promete.",
+            "en": "The empathy map and archetypes helped organise motivations and friction. Alejandra prioritises time, quality and support after purchase. Lucía also considers budget, sustainability, reuse and trust in the brand’s promises."
+          },
+          {
+            "es": "Ambas perspectivas apuntan a una necesidad compartida: información clara para decidir y flexibilidad para comprar cuando hace falta. Una relación recurrente con la marca no equivale a una obligación de renovar ropa cada mes.",
+            "en": "Both perspectives point to a shared need: clear information for decisions and flexibility to shop when needed. An ongoing relationship with the brand does not mean an obligation to replace clothes every month."
           }
         ],
         "imgs": [
           {
-            "ph": {
-              "es": "Tabla de benchmark: 5 tiendas premium × criterios (catálogo, ficha, checkout, contenido).",
-              "en": "Benchmark table: 5 premium stores × criteria (catalogue, product page, checkout, content)."
+            "key": "kb_empathy",
+            "wide": true,
+            "evidence": "kindberry",
+            "cap": {
+              "es": "Extracto del mapa de empatía: preocupaciones y motivaciones de compra.",
+              "en": "Empathy map excerpt: shopping concerns and motivations."
             }
           },
           {
-            "ph": {
-              "es": "Los arquetipos de comprador en tarjetas, con motivación y contexto de compra.",
-              "en": "Buyer archetypes as cards, with motivation and purchase context."
+            "key": "kb_alejandra",
+            "evidence": "kindberry",
+            "cap": {
+              "es": "Principios derivados del arquetipo Alejandra: tiempo, transparencia y relación a largo plazo.",
+              "en": "Principles from the Alejandra archetype: time, transparency and an ongoing relationship."
+            }
+          },
+          {
+            "key": "kb_lucia",
+            "evidence": "kindberry",
+            "cap": {
+              "es": "Principios derivados del arquetipo Lucía: claridad, opciones y comunidad.",
+              "en": "Principles from the Lucía archetype: clarity, choice and community."
+            }
+          }
+        ]
+      },
+      {
+        "t": "text",
+        "h": {
+          "es": "La experiencia continúa después del pago",
+          "en": "The experience continues after payment"
+        },
+        "p": [
+          {
+            "es": "Los Customer Journey Maps recorren la necesidad, la búsqueda, la compra y lo que ocurre después. Hacen visibles dudas sobre talla y calidad, problemas de entrega y la necesidad de resolver cambios o dar una segunda vida a las prendas.",
+            "en": "The Customer Journey Maps cover the need, search, purchase and what happens afterwards. They make sizing and quality concerns, delivery issues and the need for exchanges or a second life for clothes visible."
+          },
+          {
+            "es": "Eso llevó a considerar información de producto, ayuda y seguimiento como parte de la experiencia de compra. La circularidad también necesita un recorrido comprensible, no solo una promesa de marca.",
+            "en": "This led to treating product information, help and tracking as part of the shopping experience. Circularity also needs an understandable journey, beyond a brand promise."
+          }
+        ],
+        "imgs": [
+          {
+            "key": "kb_journey_alejandra",
+            "wide": true,
+            "evidence": "kindberry",
+            "cap": {
+              "es": "Journey de Alejandra: de la necesidad de ropa al acompañamiento posterior.",
+              "en": "Alejandra’s journey: from needing clothes to post-purchase support."
+            }
+          },
+          {
+            "key": "kb_journey_lucia",
+            "wide": true,
+            "evidence": "kindberry",
+            "cap": {
+              "es": "Journey de Lucía: decisión de compra, confianza y reutilización.",
+              "en": "Lucía’s journey: purchase decisions, trust and reuse."
+            }
+          }
+        ]
+      },
+      {
+        "t": "text",
+        "h": {
+          "es": "Benchmark con preguntas concretas",
+          "en": "Benchmarking with specific questions"
+        },
+        "p": [
+          {
+            "es": "Revisé referentes como Red Caribou, Nudnik y Liewood para observar navegación, catálogo, información de producto y comunicación de valor. Anoté aciertos y fricciones para convertir referencias visuales en criterios de diseño.",
+            "en": "I reviewed references including Red Caribou, Nudnik and Liewood to examine navigation, catalogues, product information and value communication. I annotated strengths and friction to turn visual references into design criteria."
+          },
+          {
+            "es": "La guía de tallas es un ejemplo: el benchmark contrasta una consulta contextual con tablas extensas dentro del layout. El criterio para Kindberry era ayudar a resolver la duda sin sobrecargar la ficha ni perder el contexto del producto.",
+            "en": "The size guide is one example: the benchmark contrasts contextual guidance with extensive tables embedded in the layout. For Kindberry, the criterion was to resolve uncertainty without overwhelming the page or losing product context."
+          }
+        ],
+        "imgs": [
+          {
+            "key": "kb_benchmark",
+            "evidence": "kindberry",
+            "cap": {
+              "es": "Vista general del benchmark y sus anotaciones.",
+              "en": "Overview of the benchmark and annotations."
+            }
+          },
+          {
+            "key": "kb_size_benchmark",
+            "evidence": "kindberry",
+            "cap": {
+              "es": "Referencia analizada: consulta de tallas en Red Caribou.",
+              "en": "Analysed reference: size guidance at Red Caribou."
+            }
+          }
+        ]
+      },
+      {
+        "t": "text",
+        "h": {
+          "es": "Alinear membresía y modelo de negocio",
+          "en": "Aligning membership and the business model"
+        },
+        "p": [
+          {
+            "es": "El Business Model Canvas conecta venta de prendas, membresía, beneficios y comunidad. El backlog recoge una decisión importante: la membresía no debe obligar a comprar con una periodicidad determinada.",
+            "en": "The Business Model Canvas connects clothing sales, membership, benefits and community. The backlog captures an important decision: membership should not force purchases on a fixed schedule."
+          },
+          {
+            "es": "En las propuestas de interfaz, el aporte mensual se convierte en créditos para compras y da acceso a beneficios. La comunicación debe explicar ese intercambio, la recurrencia y las condiciones. Los importes y beneficios mostrados pertenecen a la propuesta de diseño.",
+            "en": "In the interface proposals, a monthly contribution becomes shopping credits and provides access to benefits. Communication needs to explain that exchange, recurrence and terms. The amounts and benefits shown belong to the design proposal."
+          }
+        ],
+        "img": {
+          "key": "kb_bmc",
+          "evidence": "kindberry",
+          "cap": {
+            "es": "Business Model Canvas: relación entre propuesta de valor, comunidad y fuentes de ingreso.",
+            "en": "Business Model Canvas: relationships between the value proposition, community and revenue streams."
+          }
+        }
+      },
+      {
+        "t": "text",
+        "h": {
+          "es": "Del research a flujos y alcance",
+          "en": "From research to flows and scope"
+        },
+        "p": [
+          {
+            "es": "Organicé el backlog en tres épicas y 26 historias: compra de ropa, membresía y engagement social. Allí conviven necesidades de navegación, tallas, carrito y ayuda con gestión de créditos, beneficios y participación en la comunidad.",
+            "en": "I organised the backlog into three epics and 26 stories: clothing purchases, membership and social engagement. Navigation, sizing, cart and help needs sit alongside credit management, benefits and community participation."
+          },
+          {
+            "es": "Los flujos de unirse a la comunidad y consultar beneficios aterrizan esa estructura en recorridos concretos. El backlog también conserva preguntas de negocio y opciones por definir; no todas las historias representan funcionalidades implementadas.",
+            "en": "Joining the community and viewing benefits flows translate that structure into concrete journeys. The backlog also retains business questions and options to define; not every story represents an implemented feature."
+          }
+        ],
+        "imgs": [
+          {
+            "key": "kb_membership_flow",
+            "wide": true,
+            "evidence": "kindberry",
+            "cap": {
+              "es": "Wireframes del recorrido para unirse a la comunidad.",
+              "en": "Wireframes of the journey to join the community."
+            }
+          },
+          {
+            "key": "kb_benefits_flow",
+            "wide": true,
+            "evidence": "kindberry",
+            "cap": {
+              "es": "Wireframes para explorar y acceder a beneficios.",
+              "en": "Wireframes for exploring and accessing benefits."
             }
           }
         ]
@@ -2632,50 +2776,50 @@ export const latestCases = [
       {
         "t": "decisions",
         "h": {
-          "es": "Decisiones de diseño",
-          "en": "Design decisions"
+          "es": "Decisiones que conectan el sistema",
+          "en": "Decisions connecting the system"
         },
         "items": [
           {
             "h": {
-              "es": "[[Fotografía primero, texto después]]",
-              "en": "[[Photography first, copy second]]"
+              "es": "Encontrar primero, profundizar después",
+              "en": "Find first, explore details next"
             },
             "p": {
-              "es": "[[El catálogo deja que la imagen lleve la decisión; el texto aparece al pasar a la ficha.]]",
-              "en": "[[The catalogue lets imagery carry the decision; copy appears on the product page.]]"
+              "es": "El catálogo incorpora filtros de categoría, talla y precio, opciones de orden y variantes de color. La ficha reúne selección de talla, cantidad y detalles para continuar hacia el carrito.",
+              "en": "The catalogue includes category, size and price filters, sorting and colour variants. The product page brings size selection, quantity and details together before moving to the cart."
             },
             "w": {
-              "es": "[[Trade-off: exige fotografía consistente en todo el catálogo.]]",
-              "en": "[[Trade-off: it demands consistent photography across the catalogue.]]"
+              "es": "Separar exploración y detalle ayuda a mantener el catálogo ligero sin quitar información necesaria para decidir.",
+              "en": "Separating browsing from detail helps keep the catalogue light without removing information needed for a decision."
             }
           },
           {
             "h": {
-              "es": "[[Guía de tallas visible sin salir de la ficha]]",
-              "en": "[[Size guide visible without leaving the page]]"
+              "es": "Conectar comunidad y compra sin confundirlas",
+              "en": "Connect community and shopping without conflating them"
             },
             "p": {
-              "es": "[[La talla es la duda principal de los padres, así que se resuelve en un panel lateral.]]",
-              "en": "[[Size is parents’ main doubt, so it’s solved in a side panel.]]"
+              "es": "La comunidad tiene una explicación propia de aporte, créditos y beneficios. En el catálogo aparecen puntos de entrada y señales de beneficios para miembros.",
+              "en": "The community has its own explanation of contributions, credits and benefits. The catalogue includes entry points and indications of member benefits."
             },
             "w": {
-              "es": "[[Trade-off: un componente más que mantener en el sistema.]]",
-              "en": "[[Trade-off: one more component to maintain in the system.]]"
+              "es": "Los precios y beneficios necesitan distinguirse con claridad para miembros y compradores ocasionales.",
+              "en": "Prices and benefits need to be clearly distinguished for members and occasional shoppers."
             }
           },
           {
             "h": {
-              "es": "[[Checkout corto]]",
-              "en": "[[Short checkout]]"
+              "es": "Hacer visible lo que ocurre después de unirse",
+              "en": "Make what happens after joining visible"
             },
             "p": {
-              "es": "[[Un solo paso para dirección y pago, con invitado como opción por defecto.]]",
-              "en": "[[A single step for address and payment, with guest checkout as the default.]]"
+              "es": "El área de comunidad reúne accesos a cuenta, créditos, beneficios y notificaciones. Los diseños contemplan estados de confirmación y error para la gestión de créditos.",
+              "en": "The community area brings together account, credits, benefits and notifications. The designs include confirmation and error states for credit management."
             },
             "w": {
-              "es": "[[Trade-off: menos captura de cuentas al inicio.]]",
-              "en": "[[Trade-off: fewer accounts captured up front.]]"
+              "es": "Una propuesta de relación a largo plazo necesita acompañamiento y estados comprensibles, además de una landing atractiva.",
+              "en": "An ongoing relationship proposition needs support and understandable states alongside an appealing landing page."
             }
           }
         ]
@@ -2683,26 +2827,50 @@ export const latestCases = [
       {
         "t": "text",
         "h": {
-          "es": "Sistema de UI",
-          "en": "UI system"
+          "es": "La propuesta en web y mobile",
+          "en": "The proposal on web and mobile"
         },
         "p": [
           {
-            "es": "[[Definí tipografía, color y componentes para que catálogo, ficha y checkout se sintieran parte de la misma marca.]]",
-            "en": "[[I defined typography, colour and components so catalogue, product page and checkout felt like part of the same brand.]]"
+            "es": "La interfaz combina la identidad cálida de la marca con controles de compra reconocibles. El catálogo, la explicación de comunidad y las vistas móviles muestran cómo se conectan las distintas tareas.",
+            "en": "The interface combines the brand’s warm identity with familiar shopping controls. The catalogue, community explanation and mobile views show how the different tasks connect."
+          },
+          {
+            "es": "Se exploraron alternativas para explicar la membresía. Muestro aquí una propuesta con beneficios agrupados; no la presento como ganadora de un test comparativo.",
+            "en": "Alternatives were explored for explaining membership. I show a proposal with grouped benefits here; it is not presented as the winner of a comparative test."
           }
         ],
         "imgs": [
           {
-            "ph": {
-              "es": "Ficha de producto en móvil con la guía de tallas abierta.",
-              "en": "Product page on mobile with the size guide open."
+            "key": "kb_catalog",
+            "evidence": "kindberry",
+            "cap": {
+              "es": "Extracto del catálogo: filtros, variantes y relación con la comunidad.",
+              "en": "Catalogue excerpt: filters, variants and the community connection."
             }
           },
           {
-            "ph": {
-              "es": "Checkout de un paso, estado de error y confirmación.",
-              "en": "One-step checkout, error state and confirmation."
+            "key": "kb_community",
+            "evidence": "kindberry",
+            "cap": {
+              "es": "Propuesta para explicar la membresía y sus beneficios.",
+              "en": "Proposal explaining membership and its benefits."
+            }
+          },
+          {
+            "key": "kb_mobile",
+            "evidence": "kindberry",
+            "cap": {
+              "es": "Extractos de catálogo, ficha y carrito en mobile.",
+              "en": "Excerpts of the catalogue, product page and cart on mobile."
+            }
+          },
+          {
+            "key": "kb_dashboard",
+            "evidence": "kindberry",
+            "cap": {
+              "es": "Área de comunidad con accesos a beneficios y gestión de créditos.",
+              "en": "Community area with access to benefits and credit management."
             }
           }
         ]
@@ -2710,45 +2878,38 @@ export const latestCases = [
       {
         "t": "text",
         "h": {
-          "es": "Resultado",
-          "en": "Outcome"
+          "es": "Un sistema visual compartido",
+          "en": "A shared visual system"
         },
         "p": [
           {
-            "es": "[[La tienda quedó lista para desarrollo con un sistema de UI documentado. Aún no hay métricas de conversión publicadas.]]",
-            "en": "[[The store was ready for development with a documented UI system. No conversion metrics published yet.]]"
-          }
-        ]
-      },
-      {
-        "t": "ai",
-        "h": {
-          "es": "IA en el proceso",
-          "en": "AI in the process"
-        },
-        "used": [
-          {
-            "es": "[[<strong>ChatGPT y Claude:</strong> comparar referentes y ordenar hallazgos del benchmark.]]",
-            "en": "[[<strong>ChatGPT and Claude:</strong> comparing references and ordering benchmark findings.]]"
+            "es": "Documenté tipografía, paleta, sombras, iconografía y estados de botones y campos. Estas bases conectan catálogo, compra y comunidad con un lenguaje visual consistente en web y mobile.",
+            "en": "I documented typography, palette, shadows, iconography, and button and input states. These foundations connect the catalogue, shopping and community through a consistent visual language across web and mobile."
           }
         ],
-        "mine": [
-          {
-            "es": "[[Qué referentes importan, los arquetipos y todas las decisiones de UI.]]",
-            "en": "[[Which references matter, the archetypes and every UI decision.]]"
+        "img": {
+          "key": "kindberry_design_system",
+          "evidence": "kindberry-ds",
+          "cap": {
+            "es": "Vista general del Design System de Kindberry: fundamentos, componentes y estructura de pantalla.",
+            "en": "Overview of Kindberry’s Design System: foundations, components and screen structure."
           }
-        ]
+        }
       },
       {
-        "t": "list",
+        "t": "text",
         "h": {
-          "es": "Aprendizajes",
-          "en": "Learnings"
+          "es": "Resultado y aprendizajes",
+          "en": "Outcome and learnings"
         },
-        "items": [
+        "p": [
           {
-            "es": "[[En e-commerce premium, la confianza visual pesa tanto como la usabilidad.]]",
-            "en": "[[In premium e-commerce, visual trust weighs as much as usability.]]"
+            "es": "El proceso produjo arquetipos, journeys, modelo de negocio, historias de usuario, flujos y propuestas de interfaz que relacionan compra y comunidad. No cuento con métricas de conversión ni evidencia de lanzamiento para atribuirle un impacto comercial.",
+            "en": "The process produced archetypes, journeys, a business model, user stories, flows and interface proposals connecting shopping and community. I do not have conversion metrics or launch evidence to attribute commercial impact."
+          },
+          {
+            "es": "El aprendizaje principal fue que la recurrencia del negocio debe convivir con el ritmo real de las familias. Diseñar esa relación requiere claridad en las condiciones, libertad de elección y una experiencia que siga siendo útil después del pago.",
+            "en": "The main learning was that business recurrence needs to coexist with families’ actual purchasing rhythms. Designing that relationship requires clear terms, freedom of choice and an experience that remains useful after payment."
           }
         ]
       }
