@@ -56,6 +56,7 @@ export const Route = createRootRoute({
       { name: "google-site-verification", content: "7pI76bHu-5652vK2mFbyxtROZr5CqZZKPdcpNGsopEA" },
     ],
     links: [
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
