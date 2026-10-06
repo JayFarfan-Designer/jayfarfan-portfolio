@@ -10,42 +10,186 @@ import willington from "@/assets/willington.jpg";
 
 function HeroMotion() {
   const ref = useRef<HTMLCanvasElement>(null);
+
   useEffect(() => {
     const canvas = ref.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
-    let raf = 0, t = 0, w = 0, h = 0;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const rnd = (i:number) => { const n = Math.sin(i * 127.1 + 31.7) * 43758.5453; return n - Math.floor(n); };
-    const resize = () => {
-      const r = canvas.getBoundingClientRect();
-      w = r.width; h = r.height;
-      const d = Math.min(window.devicePixelRatio || 1, 2);
-      canvas.width = Math.round(w*d); canvas.height = Math.round(h*d);
-      ctx.setTransform(d,0,0,d,0,0);
+
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let width = 0;
+    let height = 0;
+    let time = 0;
+    let frame: number | null = null;
+    let last = 0;
+    let visible = true;
+    let alive = true;
+
+    const random = (i: number) => {
+      const n = Math.sin(i * 127.1 + 31.7) * 43758.5453;
+      return n - Math.floor(n);
     };
+    const smooth = (x: number) => x * x * (3 - 2 * x);
+
     const draw = () => {
-      if (!w || !h) return;
-      const cols = w < 600 ? 3 : 4, rows = w < 600 ? 5 : 7;
-      const points = Array.from({length: cols*rows},(_,i)=>({
-        x:w*.43+(w*.52)*(rnd(i+1)*.55+(i%cols)/(cols-1)*.45)+Math.sin(t*.45+i)*2,
-        y:34+(h-80)*(rnd(i+50)*.55+Math.floor(i/cols)/(rows-1)*.45)+Math.cos(t*.4+i)*2
+      if (!width || !height) return;
+
+      const cycle = time % 15;
+      const amount = media.matches
+        ? 1
+        : cycle < 2
+          ? 0
+          : cycle < 7
+            ? smooth((cycle - 2) / 5)
+            : cycle < 12
+              ? 1
+              : 1 - smooth((cycle - 12) / 3);
+
+      const mobile = width < 600;
+      const columns = mobile ? 3 : 4;
+      const rows = mobile ? 5 : 7;
+      const startX = width * (mobile ? 0.37 : 0.43);
+      const spanX = width - startX - 30;
+      const startY = 36;
+      const spanY = Math.max(1, height - 82);
+
+      const points = Array.from({ length: columns * rows }, (_, i) => ({
+        x:
+          startX +
+          spanX *
+            (random(i + 1) * (1 - amount) +
+              ((i % columns) / (columns - 1)) * amount) +
+          Math.sin(time * 0.8 + i) * 2.5,
+        y:
+          startY +
+          spanY *
+            (random(i + 50) * (1 - amount) +
+              (Math.floor(i / columns) / (rows - 1)) * amount) +
+          Math.cos(time * 0.7 + i) * 2.5,
       }));
-      ctx.clearRect(0,0,w,h);
-      for(let i=0;i<points.length;i++) for(let j=i+1;j<points.length;j++){
-        const a=points[i],b=points[j], neighbor=(j===i+1&&Math.floor(i/cols)===Math.floor(j/cols))||j===i+cols;
-        if(!neighbor && Math.hypot(a.x-b.x,a.y-b.y)>90) continue;
-        ctx.strokeStyle="rgba(200,208,216,.18)";ctx.lineWidth=.75;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
+
+      ctx.clearRect(0, 0, width, height);
+
+      for (let i = 0; i < points.length; i++) {
+        for (let j = i + 1; j < points.length; j++) {
+          const a = points[i];
+          const b = points[j];
+          const neighbor =
+            (j === i + 1 &&
+              Math.floor(i / columns) === Math.floor(j / columns)) ||
+            j === i + columns;
+
+          if (
+            !neighbor &&
+            !(amount < 0.7 && Math.hypot(a.x - b.x, a.y - b.y) < 95)
+          ) {
+            continue;
+          }
+
+          ctx.strokeStyle = `rgba(200,208,216,${0.16 + amount * 0.1})`;
+          ctx.lineWidth = 0.75;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.stroke();
+        }
       }
-      points.forEach((p,i)=>{ctx.fillStyle=i===Math.min(19,points.length-1)?"#8B87FF":"rgba(228,233,238,.45)";ctx.beginPath();ctx.arc(p.x,p.y,i%7===0?2.3:1.35,0,Math.PI*2);ctx.fill();});
-      const g=ctx.createLinearGradient(0,0,w,0);g.addColorStop(0,"#0B0F12");g.addColorStop(.4,"#0B0F12");g.addColorStop(1,"rgba(11,15,18,.03)");ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
+
+      points.forEach((point, i) => {
+        ctx.fillStyle =
+          i === Math.min(19, points.length - 1)
+            ? "#8B87FF"
+            : `rgba(228,233,238,${i % 7 === 0 ? 0.65 : 0.37})`;
+        ctx.beginPath();
+        ctx.arc(
+          point.x,
+          point.y,
+          i % 7 === 0 || i === 19 ? 2.4 : 1.4,
+          0,
+          Math.PI * 2,
+        );
+        ctx.fill();
+      });
+
+      const mask = ctx.createLinearGradient(0, 0, width, 0);
+      mask.addColorStop(0, "#0B0F12");
+      mask.addColorStop(0.38, "#0B0F12");
+      mask.addColorStop(0.72, "rgba(11,15,18,.74)");
+      mask.addColorStop(1, "rgba(11,15,18,.02)");
+      ctx.fillStyle = mask;
+      ctx.fillRect(0, 0, width, height);
+
+      const bottom = ctx.createLinearGradient(0, height * 0.68, 0, height);
+      bottom.addColorStop(0, "rgba(11,15,18,0)");
+      bottom.addColorStop(1, "#0B0F12");
+      ctx.fillStyle = bottom;
+      ctx.fillRect(0, height * 0.68, width, height * 0.32);
     };
-    const loop=()=>{t+=.025;draw();if(!reduce.matches)raf=requestAnimationFrame(loop)};
-    resize();draw();if(!reduce.matches)raf=requestAnimationFrame(loop);
-    const ro=new ResizeObserver(resize);ro.observe(canvas);
-    return()=>{cancelAnimationFrame(raf);ro.disconnect()};
-  },[]);
+
+    const stop = () => {
+      if (frame !== null) cancelAnimationFrame(frame);
+      frame = null;
+      last = 0;
+    };
+
+    const tick = (stamp: number) => {
+      frame = null;
+      if (!alive || !visible || document.hidden || media.matches) return;
+
+      const delta = last ? Math.min((stamp - last) / 1000, 0.05) : 0;
+      last = stamp;
+      time += delta;
+      draw();
+      frame = requestAnimationFrame(tick);
+    };
+
+    const sync = () => {
+      stop();
+      if (!alive) return;
+      if (media.matches) {
+        draw();
+      } else if (visible && !document.hidden) {
+        frame = requestAnimationFrame(tick);
+      }
+    };
+
+    const resize = () => {
+      const rect = canvas.getBoundingClientRect();
+      width = rect.width;
+      height = rect.height;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(width * dpr);
+      canvas.height = Math.round(height * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      draw();
+    };
+
+    const resizeObserver = new ResizeObserver(resize);
+    resizeObserver.observe(canvas);
+
+    const intersection = new IntersectionObserver((entries) => {
+      visible = entries[0]?.isIntersecting ?? true;
+      sync();
+    });
+    intersection.observe(canvas);
+
+    document.addEventListener("visibilitychange", sync);
+    media.addEventListener("change", sync);
+
+    resize();
+    sync();
+
+    return () => {
+      alive = false;
+      stop();
+      resizeObserver.disconnect();
+      intersection.disconnect();
+      document.removeEventListener("visibilitychange", sync);
+      media.removeEventListener("change", sync);
+    };
+  }, []);
+
   return <canvas ref={ref} className="latest-hero-motion" aria-hidden="true" />;
 }
 
