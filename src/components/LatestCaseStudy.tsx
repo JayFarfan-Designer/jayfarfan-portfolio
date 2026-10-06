@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 import { useLanguage } from "@/lib/language";
 import { latestCases, type LatestCase } from "@/data/latestCases";
 import { latestImages, latestImageBackgrounds } from "@/data/latestAssets";
@@ -49,9 +50,10 @@ function CaseFigure({ item, lang, hero = false }: { item: AnyObj; lang: "es" | "
 }
 
 function Block({ block, index, lang }: { block: AnyObj; index: number; lang: "es" | "en" }) {
-  const body: React.ReactNode[] = [];
+  const body: ReactNode[] = [];
   if (block.p) block.p.forEach((p: any, i: number) => body.push(<Html key={"p"+i} value={p} lang={lang} className="lc-p" />));
   if (block.list) body.push(<ul key="list">{block.list.map((x: any, i: number) => <li key={i}><Html value={x} lang={lang} /></li>)}</ul>);
+  if (block.t === "list" && block.items) body.push(<ul key="items">{block.items.map((x: any, i: number) => <li key={i}><Html value={x} lang={lang} /></li>)}</ul>);
   if (block.callouts) body.push(<div key="callouts" className="lc-callouts">{block.callouts.map((c: AnyObj, i: number) => <div className="lc-callout" key={i}><strong>{clean(c.h,lang)}</strong>{c.p && <Html value={c.p} lang={lang} />}</div>)}</div>);
   if (block.callout) body.push(<div key="callout" className="lc-callout single"><Html value={block.callout} lang={lang} /></div>);
   if (block.cells) body.push(<div key="cells" className="lc-cells">{block.cells.map((c: AnyObj, i: number) => <div className="lc-cell" key={i}><div className="lc-num">{clean(c.n,lang)}</div><h4>{clean(c.h,lang)}</h4><Html value={c.p} lang={lang}/></div>)}</div>);
