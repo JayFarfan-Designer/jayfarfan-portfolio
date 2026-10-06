@@ -36,7 +36,7 @@ function CaseFigure({ item, lang, hero = false }: { item: AnyObj; lang: "es" | "
   return (
     <figure className={item.wide ? "lc-figure wide" : "lc-figure"}>
       <div className={[hero ? "lc-frame hero" : "lc-frame", item.evidence ? `evidence-${item.evidence}` : ""].filter(Boolean).join(" ")} style={{ background: imageBg(key) }}>
-        <img src={imageSrc(key)} alt={clean(item.cap, lang)} loading={hero ? "eager" : "lazy"} />
+        <img src={imageSrc(key)} alt={clean(item.cap, lang)} loading={hero ? "eager" : "lazy"} decoding="async" />
         {key === "diners_confidential" && (
           <div className="lc-confidential">
             <strong>{lang === "es" ? "Contenido protegido por confidencialidad" : "Content protected by confidentiality"}</strong>
