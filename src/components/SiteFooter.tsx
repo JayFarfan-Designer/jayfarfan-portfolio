@@ -3,38 +3,16 @@ import { useLanguage } from "@/lib/language";
 export function SiteFooter() {
   const { t } = useLanguage();
   return (
-    <footer className="border-t border-hairline mt-16">
-      <div className="container-editorial py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div className="inline-flex items-center gap-2.5">
-          <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-foreground text-background font-display text-[0.78rem] font-semibold">
-            JF
-          </span>
-          <span className="font-display text-sm font-medium tracking-tight">
-            Jay Farfan
-          </span>
+    <footer className="latest-footer">
+      <div className="latest-wrap latest-footer-grid">
+        <div>
+          <a href="/" className="latest-wordmark footer" aria-label="Jay Farfán, inicio"><span>Jay Farfán</span><i>.</i></a>
+          <p>{t("Product Designer peruano, basado en Quito. Trabajo en productos digitales entre research, estrategia y UX/UI.","Peruvian Product Designer based in Quito. I work on digital products across research, strategy and UX/UI.")}</p>
         </div>
-        <div className="eyebrow text-xs">
-          © {new Date().getFullYear()} —{" "}
-          {t(
-            "Diseñado y construido por Jay Farfan",
-            "Designed & built by Jay Farfan"
-          )}
-        </div>
-        <div className="flex items-center gap-6 eyebrow text-xs">
-          <a
-            href="https://www.linkedin.com/in/jayfarfan/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-foreground link-underline"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="mailto:josem4n@gmail.com"
-            className="hover:text-foreground link-underline"
-          >
-            Email
-          </a>
+        <div className="latest-footer-links">
+          <a href="/#contact">{t("Contacto","Contact")}</a>
+          <a href="https://www.linkedin.com/in/jayfarfan/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          <a href="mailto:josem4n@gmail.com">josem4n@gmail.com</a>
         </div>
       </div>
     </footer>
