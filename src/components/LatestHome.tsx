@@ -273,7 +273,7 @@ export function LatestHome() {
         <div className="latest-wrap">
           <div className="latest-eyebrow">{t("Recomendaciones","Endorsements")}</div>
           <h2 className="latest-quotes-title">{t("Lo que dicen las personas con las que he trabajado","What people I’ve worked with say")}</h2>
-          <div className="latest-quotes">{quotes.map(q=><figure className="latest-quote" key={q.name}><p>“{lang==="es"?q.es:q.en}”</p><div className="latest-who">{q.img?<img src={q.img} alt=""/>:<div className="latest-avatar-fallback">RS</div>}<div><a href={q.url} target="_blank" rel="noreferrer">{q.name}</a><span>{q.role}</span></div></div></figure>)}</div>
+          <div className="latest-quotes">{quotes.map(q=><figure className="latest-quote" key={q.name}><p>“{lang==="es"?q.es:q.en}”</p><div className="latest-who">{q.img?<img src={q.img} alt="" loading="lazy" decoding="async"/>:<div className="latest-avatar-fallback">RS</div>}<div><a href={q.url} target="_blank" rel="noreferrer">{q.name}</a><span>{q.role}</span></div></div></figure>)}</div>
         </div>
       </section>
 
@@ -289,5 +289,5 @@ export function LatestHome() {
 
 function Metric({value,text}:{value:string;text:string}){return <div className="latest-metric"><b>{value}</b><span>{text}</span></div>}
 function ProjectCard({p,lang}:{p:(typeof projects)[number];lang:"es"|"en"}){
-  return <Link to="/work/$slug" params={{slug:p.slug}} className="latest-card"><div className="latest-thumb" style={{background:p.bg}}><img src={p.image} alt=""/></div><div className="latest-card-body"><div className="latest-card-meta">{p.number} · {p.client}</div><h3>{lang==="es"?p.es:p.en}</h3><p>{p.tags}</p><span>{lang==="es"?"Ver caso":"View case"} →</span></div></Link>
+  return <Link to="/work/$slug" params={{slug:p.slug}} className="latest-card"><div className="latest-thumb" style={{background:p.bg}}><img src={p.image} alt="" loading="lazy" decoding="async"/></div><div className="latest-card-body"><div className="latest-card-meta">{p.number} · {p.client}</div><h3>{lang==="es"?p.es:p.en}</h3><p>{p.tags}</p><span>{lang==="es"?"Ver caso":"View case"} →</span></div></Link>
 }
