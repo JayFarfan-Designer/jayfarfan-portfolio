@@ -1,9 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
 import { useLanguage } from "@/lib/language";
-import minsaHero from "@/assets/minsa-hero.png";
-import certeziaHero from "@/assets/certezia-hero.webp";
-import pabloHero from "@/assets/pablo-hero.png";
+import { latestImages } from "@/data/latestAssets";
 import eliana from "@/assets/eliana.jpg";
 import solangie from "@/assets/solangie.jpg";
 import willington from "@/assets/willington.jpg";
@@ -196,7 +194,7 @@ function HeroMotion() {
 const projects = [
   {
     slug:"minsa",
-    image:minsaHero,
+    image:latestImages.minsa_cover,
     number:"01",
     client:"MINSA Perú · DIGITAL-HUMANS",
     es:"Carné de vacunación usado por más de 10M de personas",
@@ -206,7 +204,7 @@ const projects = [
   },
   {
     slug:"certezia",
-    image:certeziaHero,
+    image:latestImages.certezia_cover,
     number:"02",
     client:"Certezia · DIGITAL-HUMANS",
     es:"Firma digital con DNIe: menos pasos y 8/10 de NPS",
@@ -216,7 +214,7 @@ const projects = [
   },
   {
     slug:"pablo",
-    image:pabloHero,
+    image:latestImages.pablo_cover,
     number:"03",
     client:"Pablo · Komu AI",
     es:"Pablo: +150% de adopción del plan de pago",
