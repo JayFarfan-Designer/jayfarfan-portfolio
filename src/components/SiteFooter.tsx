@@ -10,7 +10,7 @@ export function SiteFooter() {
           <p>{t("Product Designer peruano, basado en Quito. Trabajo en productos digitales entre research, estrategia y UX/UI.","Peruvian Product Designer based in Quito. I work on digital products across research, strategy and UX/UI.")}</p>
         </div>
         <div className="latest-footer-links">
-          <a href="/#contact">{t("Contacto","Contact")}</a>
+          <a href="/contact">{t("Contacto","Contact")}</a>
           <a href="https://www.linkedin.com/in/jayfarfan/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
           <a href="mailto:josem4n@gmail.com">josem4n@gmail.com</a>
         </div>
