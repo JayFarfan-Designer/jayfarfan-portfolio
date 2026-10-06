@@ -30,7 +30,7 @@ function AboutPage(){
     <main className="latest-about">
       <section className="latest-section">
         <div className="latest-wrap latest-about-top">
-          <div className="latest-portrait"><img src={portrait} alt="Jay Farfán" loading="eager"/></div>
+          <div className="latest-portrait"><img src={portrait} alt="Jay Farfán" loading="eager" decoding="async" fetchPriority="high"/></div>
           <div>
             <div className="latest-eyebrow">{t("Sobre mí","About me")}</div>
             <h1>{t("Cambié de profesión. Conservé la forma de resolver problemas.","I changed careers. I kept my approach to solving problems.")}</h1>
