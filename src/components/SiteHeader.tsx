@@ -17,7 +17,7 @@ export function SiteHeader() {
           <Link to="/work" onClick={()=>setOpen(false)}>{t("Experiencia","Experience")}</Link>
           <Link to="/process" onClick={()=>setOpen(false)}>{t("Proceso","Process")}</Link>
           <Link to="/about" onClick={()=>setOpen(false)}>{t("Sobre mí","About")}</Link>
-          <a href="/#contact" onClick={()=>setOpen(false)}>{t("Contacto","Contact")}</a>
+          <Link to="/contact" onClick={()=>setOpen(false)}>{t("Contacto","Contact")}</Link>
           <div className="latest-lang">
             <button aria-pressed={lang==="es"} onClick={()=>setLang("es")}>ES</button>
             <button aria-pressed={lang==="en"} onClick={()=>setLang("en")}>EN</button>
