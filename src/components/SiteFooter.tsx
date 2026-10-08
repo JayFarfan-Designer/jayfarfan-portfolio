@@ -15,6 +15,9 @@ export function SiteFooter() {
           <a href="mailto:josem4n@gmail.com">josem4n@gmail.com</a>
         </div>
       </div>
+      <div className="latest-wrap">
+        <p className="latest-footer-note">{t("Este portfolio se construyó enteramente con IA. Sin abrir Figma ni una vez. 🤖","This portfolio was built entirely with AI. Without opening Figma even once. 🤖")}</p>
+      </div>
     </footer>
   );
 }

@@ -312,6 +312,7 @@ body{background:var(--latest-bg);color:var(--latest-fg)}
 .latest-footer-links a{color:var(--latest-muted)}
 .latest-footer-links a:hover{color:var(--latest-fg);text-decoration:underline;text-underline-offset:4px}
 .latest-wordmark.footer{font-size:1.25rem}
+.latest-footer p.latest-footer-note{margin-top:1.75rem;padding-top:1.25rem;border-top:1px solid var(--latest-hair);max-width:none;color:var(--latest-fg);font-weight:500;font-size:clamp(1rem,1.5vw,1.125rem);line-height:1.6;text-align:left}
 @media(min-width:900px){.latest-footer-grid{grid-template-columns:1fr auto;align-items:start;gap:3rem}.latest-footer-links{align-items:flex-end;text-align:right}}
 @media(max-width:600px){.latest-facts{display:block}.latest-facts span{display:block}.latest-facts span+span:before{content:none}}
 
