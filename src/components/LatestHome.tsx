@@ -231,6 +231,29 @@ const quotes = [
   {img:willington,name:"Willington Jesús Ortiz Maurtua",role:"Software Engineer · Inetum",url:"https://www.linkedin.com/in/willington-jesus-ortiz-maurtua-a96163145/",es:"Lo que más destaco de Jay es su capacidad para mantener siempre al usuario como prioridad, transformando necesidades complejas en experiencias claras, funcionales y bien resueltas.",en:"What I highlight most about Jay is his ability to always keep the user as a priority, transforming complex needs into clear, functional, and well-resolved experiences."}
 ];
 
+function RobotIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="17.6"
+      height="17.6"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      className="latest-ai-badge-icon"
+    >
+      <circle cx="12" cy="2.5" r="1.5"/>
+      <path d="M11 3h2v4h-2z"/>
+      <rect x="3" y="6" width="18" height="16" rx="5"/>
+      <rect x=".5" y="11" width="3" height="6" rx="1.5"/>
+      <rect x="20.5" y="11" width="3" height="6" rx="1.5"/>
+      <circle cx="8" cy="12" r="2" fill="#0B0F12"/>
+      <circle cx="16" cy="12" r="2" fill="#0B0F12"/>
+      <rect x="8" y="17" width="8" height="2" rx="1" fill="#0B0F12"/>
+    </svg>
+  );
+}
+
 export function LatestHome() {
   const { lang, t } = useLanguage();
   const cv = lang === "es" ? "/CV_JayFarfan_ESP.pdf" : "/CV_JayFarfan_ENG.pdf";
@@ -239,7 +262,10 @@ export function LatestHome() {
       <section className="latest-section latest-hero">
         <HeroMotion />
         <div className="latest-wrap latest-hero-inner">
-          <div className="latest-availability"><span className="latest-dot"/>{t("Disponible para roles full-time y proyectos freelance","Available for full-time roles and freelance projects")}</div>
+          <div className="latest-hero-pills">
+            <div className="latest-availability"><span className="latest-dot"/>{t("Disponible para roles full-time y proyectos freelance","Available for full-time roles and freelance projects")}</div>
+            <div className="latest-ai-badge"><RobotIcon/>{t("Portafolio creado íntegramente con IA","Portfolio built entirely with AI")}</div>
+          </div>
           <h1>{t("Resuelvo problemas complejos combinando estrategia, criterio humano e inteligencia artificial.","I solve complex problems by combining strategy, human judgment and artificial intelligence.")}</h1>
           <div className="latest-facts"><span>{t("Product Designer peruano en Quito","Peruvian Product Designer based in Quito")}</span><span>{t("+5 años de experiencia","5+ years of experience")}</span></div>
           <div className="latest-actions"><a className="latest-btn primary" href="#work">{t("Ver experiencia","See experience")} ↓</a><a className="latest-btn secondary" href={cv} download>{t("Descargar CV","Download CV")} ↓</a></div>
