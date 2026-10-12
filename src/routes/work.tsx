@@ -4,6 +4,7 @@ import { latestImages, latestImageBackgrounds } from "@/data/latestAssets";
 import { useLanguage } from "@/lib/language";
 import { SiteFooter } from "@/components/SiteFooter";
 import { LatestContactSection } from "@/components/LatestSharedSections";
+import { trackEvent } from "@/lib/analytics";
 
 export const Route = createFileRoute("/work")({ component: WorkPage });
 
@@ -48,7 +49,7 @@ function WorkPage() {
               </>;
               return c.comingSoon
                 ? <div key={c.slug} className="latest-card coming">{body}</div>
-                : <Link key={c.slug} className="latest-card" to="/work/$slug" params={{slug:c.slug}}>{body}</Link>
+                : <Link key={c.slug} className="latest-card" to="/work/$slug" params={{slug:c.slug}} onClick={()=>trackEvent("case_open",{ project:c.slug, language:lang, target:"experience_card" })}>{body}</Link>
             })}
           </div>
           <div className="lc-next latest-work-next">
