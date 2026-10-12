@@ -1,5 +1,6 @@
 import { useLanguage } from "@/lib/language";
 import { latestImages } from "@/data/latestAssets";
+import { trackEvent } from "@/lib/analytics";
 
 type Localized = { es: string; en: string };
 
@@ -24,7 +25,7 @@ export function LatestEndorsements() {
               <div className="latest-who">
                 <img src={q.img} alt="" loading="lazy" decoding="async" />
                 <div>
-                  <a href={q.url} target="_blank" rel="noreferrer">{q.name}</a>
+                  <a href={q.url} target="_blank" rel="noreferrer" onClick={()=>trackEvent("linkedin_click",{ target:q.name, language:lang })}>{q.name}</a>
                   <span>{q.role}</span>
                 </div>
               </div>
@@ -53,9 +54,9 @@ export function LatestContactSection({ custom }: { custom?: Localized }) {
         <div>
           <p className="latest-lead">{copy}</p>
           <div className="latest-actions">
-            <a className="latest-btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=josem4n@gmail.com" target="_blank" rel="noreferrer">{t("Conversemos","Let’s talk")} ↗</a>
-            <a className="latest-btn secondary" href={cv} download>{t("Descargar CV","Download CV")} ↓</a>
-            <a className="latest-btn secondary" href="https://www.linkedin.com/in/jayfarfan/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a className="latest-btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=josem4n@gmail.com" target="_blank" rel="noreferrer" onClick={()=>trackEvent("contact_click",{ target:"gmail_compose", language:lang })}>{t("Conversemos","Let’s talk")} ↗</a>
+            <a className="latest-btn secondary" href={cv} download onClick={()=>trackEvent("cv_download",{ language:lang, target:"contact_section" })}>{t("Descargar CV","Download CV")} ↓</a>
+            <a className="latest-btn secondary" href="https://www.linkedin.com/in/jayfarfan/" target="_blank" rel="noreferrer" onClick={()=>trackEvent("linkedin_click",{ target:"jayfarfan", language:lang })}>LinkedIn ↗</a>
           </div>
         </div>
       </div>
