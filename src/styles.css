@@ -452,3 +452,41 @@ body{background:var(--latest-bg);color:var(--latest-fg)}
 .lc-frame.evidence-kindberry-ds{max-width:680px;margin-inline:auto}
 .lc-frame.evidence-kindberry-ds img{padding:clamp(.75rem,2vw,1.25rem);max-height:300px;object-fit:contain}
 @media(max-width:600px){.lc-frame.evidence-kindberry img{max-height:360px;padding:1rem}}
+
+
+/* Final Work export parity */
+.latest-metric{display:flex;flex-direction:column}
+.latest-metric-link{font-size:.8rem;line-height:1.5;margin-top:auto;padding-top:1rem;max-width:100%;overflow-wrap:anywhere;color:var(--latest-muted);text-decoration:underline;text-underline-offset:4px}
+.latest-metric-link:hover{color:var(--latest-fg)}
+
+.latest-back-to-top{position:fixed;right:calc(24px + env(safe-area-inset-right,0px));bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:40;width:44px;height:44px;padding:0;display:flex;align-items:center;justify-content:center;border:1px solid var(--latest-border);border-radius:50%;background:var(--latest-bg);color:var(--latest-fg);cursor:pointer;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease,color .2s ease,border-color .2s ease,visibility .2s;font-size:1.15rem}
+.latest-back-to-top.is-visible{opacity:1;visibility:visible;pointer-events:auto}
+.latest-back-to-top:hover{color:var(--latest-action);border-color:var(--latest-action)}
+.latest-back-to-top:focus-visible{outline:3px solid rgba(139,135,255,.55);outline-offset:4px}
+@media(max-width:767px){.latest-back-to-top{right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px))}}
+@media(prefers-reduced-motion:reduce){.latest-back-to-top{transition:none}}
+
+.latest-process strong,.latest-about strong{color:var(--latest-fg);font-weight:500}
+.latest-process-heading{display:grid;gap:1.5rem;align-items:start}
+.latest-process-heading>p,.latest-diamond-intro p{color:var(--latest-muted);line-height:1.6;max-width:58ch}
+.latest-diamond-intro p+p{margin-top:1rem}
+.latest-diamonds{display:grid;gap:2rem;margin-top:2.75rem}
+.latest-diamond-label{font-family:"JetBrains Mono",monospace;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--latest-muted);margin-bottom:.9rem;padding-left:.2rem}
+.latest-process-grid{display:grid;gap:1px;background:var(--latest-hair);border:1px solid var(--latest-hair);border-radius:1rem;overflow:hidden}
+.latest-process-cell{display:flex;flex-direction:column;background:#10141d;padding:1.7rem 1.5rem 1.9rem;min-width:0}
+.latest-process-cell h4{margin-top:.7rem;font-family:"Inter Tight","Inter",sans-serif;font-size:1.3rem;font-weight:500}
+.latest-process-cell p{margin-top:.8rem;color:var(--latest-muted);line-height:1.65}
+.latest-process-cell .lc-k{margin-top:1.2rem}
+.latest-cell-reference{margin-top:auto;padding-top:1rem}
+.latest-cell-reference>div:last-child{margin-top:.4rem;color:var(--latest-muted);line-height:1.6}
+.latest-cell-reference a{text-decoration:underline;text-underline-offset:4px}
+.latest-process-criterion{max-width:980px}
+.latest-process-criterion p{margin-top:1.6rem;font-family:"Inter Tight","Inter",sans-serif;font-weight:500;letter-spacing:-.02em;line-height:1.38;font-size:clamp(1.25rem,2.3vw,1.8rem);color:var(--latest-fg);max-width:48ch}
+.latest-skill-grid{display:grid;gap:1px;background:var(--latest-hair);border:1px solid var(--latest-hair);border-radius:1rem;overflow:hidden;margin-top:2.5rem}
+.latest-skill-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
+.latest-skill-tags span{border:1px solid var(--latest-border);border-radius:9999px;padding:.35rem .65rem;font-size:.78rem;color:var(--latest-muted)}
+.latest-skill-tags span.tool{border-color:rgba(139,135,255,.45);color:var(--latest-fg)}
+.latest-work-next p{margin-top:.5rem;color:var(--latest-muted);max-width:58ch}
+@media(min-width:720px){.latest-process-grid{grid-template-columns:1fr 1fr}.latest-skill-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.latest-process-heading{grid-template-columns:5fr 7fr;gap:4rem}.latest-process-heading>p,.latest-diamond-intro{padding-top:2.3rem}}
+@media(min-width:1100px){.latest-diamonds{grid-template-columns:1fr 1fr;gap:1.5rem}.latest-skill-grid{grid-template-columns:repeat(3,1fr)}}
