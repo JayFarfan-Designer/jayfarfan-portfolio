@@ -10,19 +10,25 @@ type LanguageContextValue = {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
+function initialLang(): Lang {
+  if (typeof window === "undefined") return "es";
+  try {
+    const stored = window.localStorage.getItem("pf-lang") as Lang | null;
+    if (stored === "es" || stored === "en") return stored;
+  } catch {}
+  return (window.navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en";
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("en");
+  const [lang, setLangState] = useState<Lang>(initialLang);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    const stored = window.localStorage.getItem("lang") as Lang | null;
-    if (stored === "es" || stored === "en") setLangState(stored);
-  }, []);
+    document.documentElement.lang = lang;
+  }, [lang]);
 
   const setLang = (l: Lang) => {
     setLangState(l);
-    if (typeof window !== "undefined") window.localStorage.setItem("lang", l);
-    if (typeof document !== "undefined") document.documentElement.lang = l;
+    try { window.localStorage.setItem("pf-lang", l); } catch {}
   };
 
   const t = (es: string, en: string) => (lang === "es" ? es : en);
