@@ -268,10 +268,10 @@ export function LatestHome() {
           <div className="latest-facts"><span>{t("Product Designer peruano en Quito","Peruvian Product Designer based in Quito")}</span><span>{t("+5 años de experiencia","5+ years of experience")}</span></div>
           <div className="latest-actions"><Link className="latest-btn primary" to="/work">{t("Ver experiencia","See experience")} ↓</Link><a className="latest-btn secondary" href={cv} download>{t("Descargar CV","Download CV")} ↓</a></div>
           <div className="latest-metrics">
-            <Metric value="+10M" text={t("de personas usaron una app pública de salud que rediseñé","people used a public health app I redesigned")} />
-            <Metric value="8/10" text={t("de NPS en pruebas con usuarios de una firma digital","NPS in user tests of a digital signature flow")} />
-            <Metric value="+150%" text={t("de adopción del plan de pago de un asistente financiero","paid-plan adoption of a financial assistant")} />
-            <Metric value="+55%" text={t("de conversión en un marketplace automotriz rediseñado","conversion in a redesigned automotive marketplace")} />
+            <Metric value="+10M" text={t("de personas usaron una app pública de salud que rediseñé","people used a public health app I redesigned")} slug="minsa" project={t("Carné de Vacunación","Vaccination Record")} />
+            <Metric value="8/10" text={t("de NPS en pruebas con usuarios de una firma digital","NPS in user tests of a digital signature flow")} slug="certezia" project="Certezia" />
+            <Metric value="+150%" text={t("de adopción del plan de pago de un asistente financiero","paid-plan adoption of a financial assistant")} slug="pablo" project="Pablo" />
+            <Metric value="+55%" text={t("de conversión en un marketplace automotriz rediseñado","conversion in a redesigned automotive marketplace")} slug="karway" project="Karway" />
           </div>
         </div>
       </section>
@@ -311,7 +311,10 @@ export function LatestHome() {
   );
 }
 
-function Metric({value,text}:{value:string;text:string}){return <div className="latest-metric"><b>{value}</b><span>{text}</span></div>}
+function Metric({value,text,slug,project}:{value:string;text:string;slug:string;project:string}) {
+  const { lang } = useLanguage();
+  return <div className="latest-metric"><b>{value}</b><span>{text}</span><Link className="latest-metric-link" to="/work/$slug" params={{slug}}>{lang==="es"?"Ver proyecto":"View project"} {project} →</Link></div>
+}
 function ProjectCard({p,lang}:{p:(typeof projects)[number];lang:"es"|"en"}){
   return <Link to="/work/$slug" params={{slug:p.slug}} className="latest-card"><div className="latest-thumb" style={{background:p.bg}}><img src={p.image} alt="" loading="lazy" decoding="async"/></div><div className="latest-card-body"><div className="latest-card-meta">{p.number} · {p.client}</div><h3>{lang==="es"?p.es:p.en}</h3><p>{p.tags}</p><span>{lang==="es"?"Ver caso":"View case"} →</span></div></Link>
 }
