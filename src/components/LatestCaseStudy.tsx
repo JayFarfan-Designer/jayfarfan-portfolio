@@ -4,6 +4,7 @@ import { useLanguage } from "@/lib/language";
 import { latestCases, type LatestCase } from "@/data/latestCases";
 import { latestImages, latestImageBackgrounds } from "@/data/latestAssets";
 import { SiteFooter } from "@/components/SiteFooter";
+import { LatestContactSection } from "@/components/LatestSharedSections";
 
 type AnyObj = Record<string, any>;
 
@@ -122,6 +123,7 @@ export function LatestCaseStudy({ caseData }: { caseData: LatestCase }) {
           <div className="lc-next"><div><div className="latest-eyebrow">{lang==="es"?"Siguiente caso":"Next case"}</div><h3>{clean(next.short,lang)}</h3></div><Link className="latest-btn secondary" to="/work/$slug" params={{slug:next.slug}}>{lang==="es"?"Ver caso":"View case"} →</Link></div>
         </div>
       </article>
+      <LatestContactSection custom={c.cta} />
       <SiteFooter />
     </>
   );
