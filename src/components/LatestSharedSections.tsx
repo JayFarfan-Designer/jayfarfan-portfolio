@@ -39,7 +39,7 @@ export function LatestEndorsements() {
 
 export function LatestContactSection({ custom }: { custom?: Localized }) {
   const { lang, t } = useLanguage();
-  const cv = lang === "es" ? "/CV_JayFarfan_ESP.pdf" : "/CV_JayFarfan_ENG.pdf";
+  const cv = lang === "es" ? "/CV_JayFarfan_ESP.pdf?v=4f0020ce0b04" : "/CV_JayFarfan_ENG.pdf?v=c16b7559f9b8";
   const copy = custom?.[lang] ?? t(
     "Trabajo desde Quito, Ecuador, y estoy abierto a oportunidades como Product Designer / UX/UI Designer y a proyectos freelance. Colaboro en remoto con equipos de cualquier parte del mundo.",
     "I’m based in Quito, Ecuador, and open to Product Designer / UX/UI Designer opportunities and freelance projects. I collaborate remotely with teams anywhere in the world."
@@ -54,7 +54,7 @@ export function LatestContactSection({ custom }: { custom?: Localized }) {
         <div>
           <p className="latest-lead">{copy}</p>
           <div className="latest-actions">
-            <a className="latest-btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=josem4n@gmail.com" target="_blank" rel="noreferrer" onClick={()=>trackEvent("contact_click",{ target:"gmail_compose", language:lang })}>{t("Conversemos","Let’s talk")} ↗</a>
+            <a className="latest-btn primary" href="mailto:jayf@digitalhumans.design" target="_blank" rel="noreferrer" onClick={()=>trackEvent("contact_click",{ target:"email", language:lang })}>{t("Conversemos","Let’s talk")} ↗</a>
             <a className="latest-btn secondary" href={cv} download onClick={()=>trackEvent("cv_download",{ language:lang, target:"contact_section" })}>{t("Descargar CV","Download CV")} ↓</a>
             <a className="latest-btn secondary" href="https://www.linkedin.com/in/jayfarfan/" target="_blank" rel="noreferrer" onClick={()=>trackEvent("linkedin_click",{ target:"jayfarfan", language:lang })}>LinkedIn ↗</a>
           </div>

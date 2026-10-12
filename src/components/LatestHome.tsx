@@ -248,7 +248,7 @@ function RobotIcon() {
 
 export function LatestHome() {
   const { lang, t } = useLanguage();
-  const cv = lang === "es" ? "/CV_JayFarfan_ESP.pdf" : "/CV_JayFarfan_ENG.pdf";
+  const cv = lang === "es" ? "/CV_JayFarfan_ESP.pdf?v=4f0020ce0b04" : "/CV_JayFarfan_ENG.pdf?v=c16b7559f9b8";
   return (
     <div className="latest-home">
       <section className="latest-section latest-hero">

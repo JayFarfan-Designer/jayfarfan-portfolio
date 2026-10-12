@@ -13,7 +13,7 @@ export function SiteFooter() {
         <div className="latest-footer-links">
           <a href="/contact" onClick={()=>trackEvent("contact_click",{ target:"contact_page", language:lang })}>{t("Contacto","Contact")}</a>
           <a href="https://www.linkedin.com/in/jayfarfan/" target="_blank" rel="noreferrer" onClick={()=>trackEvent("linkedin_click",{ target:"jayfarfan", language:lang })}>LinkedIn ↗</a>
-          <a href="mailto:josem4n@gmail.com" onClick={()=>trackEvent("contact_click",{ target:"email", language:lang })}>josem4n@gmail.com</a>
+          <a href="mailto:jayf@digitalhumans.design" onClick={()=>trackEvent("contact_click",{ target:"email", language:lang })}>jayf@digitalhumans.design</a>
         </div>
       </div>
       <div className="latest-wrap">

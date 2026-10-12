@@ -6,7 +6,7 @@ import { trackEvent } from "@/lib/analytics";
 export function SiteHeader() {
   const { lang, setLang, t } = useLanguage();
   const [open, setOpen] = useState(false);
-  const cvHref = lang === "es" ? "/CV_JayFarfan_ESP.pdf" : "/CV_JayFarfan_ENG.pdf";
+  const cvHref = lang === "es" ? "/CV_JayFarfan_ESP.pdf?v=4f0020ce0b04" : "/CV_JayFarfan_ENG.pdf?v=c16b7559f9b8";
   return (
     <header className="latest-site-header">
       <div className="latest-wrap latest-header-bar">

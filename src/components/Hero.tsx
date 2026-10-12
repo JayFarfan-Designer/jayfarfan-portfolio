@@ -3,7 +3,7 @@ import { NodeNetwork } from "./NodeNetwork";
 
 export function Hero() {
   const { t, lang } = useLanguage();
-  const cvHref = lang === "es" ? "/CV_JayFarfan_ESP.pdf" : "/CV_JayFarfan_ENG.pdf";
+  const cvHref = lang === "es" ? "/CV_JayFarfan_ESP.pdf?v=4f0020ce0b04" : "/CV_JayFarfan_ENG.pdf?v=c16b7559f9b8";
   const cvFile = lang === "es" ? "CV_JayFarfan_ESP.pdf" : "CV_JayFarfan_ENG.pdf";
   return (
     <section className="relative min-h-[88vh] md:min-h-[92vh] flex items-center overflow-hidden border-b border-hairline">
