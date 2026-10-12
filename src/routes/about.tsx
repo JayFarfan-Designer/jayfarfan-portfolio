@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useLanguage } from "@/lib/language";
 import { latestImages } from "@/data/latestAssets";
 import { SiteFooter } from "@/components/SiteFooter";
+import { LatestContactSection, LatestEndorsements } from "@/components/LatestSharedSections";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
@@ -25,7 +26,7 @@ const principles = [
 function AboutPage(){
   const {lang,t}=useLanguage();
   const cv=lang==="es"?"/CV_JayFarfan_ESP.pdf":"/CV_JayFarfan_ENG.pdf";
-  const portrait=(latestImages as any).jay_portrait;
+  const portrait=latestImages.jay_portrait;
   return <>
     <main className="latest-about">
       <section className="latest-section">
@@ -35,8 +36,8 @@ function AboutPage(){
             <div className="latest-eyebrow">{t("Sobre mí","About me")}</div>
             <h1>{t("Cambié de profesión. Conservé la forma de resolver problemas.","I changed careers. I kept my approach to solving problems.")}</h1>
             <div className="latest-about-copy">
-              <p>{t("Soy peruano, vivo en Quito y trabajé varios años como Ingeniero Civil. Durante la pandemia empecé a aprender programación y encontré mi camino hacia el diseño de productos digitales.","I’m Peruvian, based in Quito, and spent several years working as a Civil Engineer. During the pandemic, I started learning programming and found my way into digital product design.")}</p>
-              <p>{t("De la ingeniería me traje tres formas de mirar los problemas: pensamiento sistémico, diseño bajo restricciones y atención a las personas. Hoy las aplico para conectar información y flujos, tomar decisiones viables y crear experiencias accesibles.","Engineering gave me three ways to approach problems: systems thinking, design within constraints and attention to people. Today, I apply them to connect information and flows, make feasible decisions and create accessible experiences.")}</p>
+              <p>{lang==="es"?<>Soy peruano, vivo en Quito y trabajé varios años como <strong>Ingeniero Civil</strong>. Durante la pandemia empecé a aprender programación y encontré mi camino hacia el diseño de productos digitales.</>:<>I’m Peruvian, based in Quito, and spent several years working as a <strong>Civil Engineer</strong>. During the pandemic, I started learning programming and found my way into digital product design.</>}</p>
+              <p>{lang==="es"?<>De la ingeniería me traje tres formas de mirar los problemas: <strong>pensamiento sistémico</strong>, <strong>diseño bajo restricciones</strong> y <strong>atención a las personas</strong>. Hoy las aplico para conectar información y flujos, tomar decisiones viables y crear experiencias accesibles.</>:<>Engineering gave me three ways to approach problems: <strong>systems thinking</strong>, <strong>design within constraints</strong> and <strong>attention to people</strong>. Today, I apply them to connect information and flows, make feasible decisions and create accessible experiences.</>}</p>
               <p>{t("Antes de diseñar, observo cómo las personas usan el producto y alineo sus necesidades con el negocio y las posibilidades del equipo. Hoy soy cofundador de DIGITAL-HUMANS y trabajo en fintech, govtech y marketplaces entre Perú y Ecuador.","Before designing, I observe how people use the product and align their needs with business goals and what the team can build. Today, I’m a cofounder of DIGITAL-HUMANS, working across fintech, govtech and marketplaces in Peru and Ecuador.")}</p>
             </div>
             <div className="latest-actions"><a href={cv} download className="latest-btn primary">{t("Descargar CV","Download CV")} ↓</a><Link to="/work" className="latest-btn secondary">{t("Ver experiencia","View experience")} →</Link></div>
@@ -46,9 +47,7 @@ function AboutPage(){
 
       <section className="latest-section">
         <div className="latest-wrap">
-          <div className="latest-eyebrow">{t("Principios","Principles")}</div>
-          <h2>{t("Cómo trabajo","How I work")}</h2>
-          <p className="latest-lead">{t("Cada proyecto es un reto distinto. En todos los casos, estos principios guían mis decisiones de Diseño.","Every project is a different challenge. In every case, these principles guide my design decisions.")}</p>
+          <div className="latest-process-heading"><div><div className="latest-eyebrow">{t("Principios","Principles")}</div><h2>{t("Cómo trabajo","How I work")}</h2></div><p>{t("Cada proyecto es un reto distinto. En todos los casos, estos principios guían mis decisiones de Diseño.","Every project is a different challenge. In every case, these principles guide my design decisions.")}</p></div>
           <div className="latest-principles">{principles.map((p,i)=><div className="latest-stage" key={i}><div className="latest-card-meta">0{i+1}</div><h3>{lang==="es"?p[0]:p[1]}</h3><p>{lang==="es"?p[2]:p[3]}</p></div>)}</div>
         </div>
       </section>
@@ -59,10 +58,14 @@ function AboutPage(){
           <div>
             <p>{t("Soy peruano y vivo en Quito, así que buena parte de mi tiempo fuera del trabajo gira alrededor de la comida. Me gusta cocinar, probar restaurantes y encontrar lugares que me recuerden a Perú. 🇵🇪","I’m Peruvian and live in Quito, so much of my time outside work revolves around food. I enjoy cooking, trying restaurants and finding places that remind me of Peru. 🇵🇪")}</p>
             <p>{t("Cuando viajo, busco dónde comen los locales, pruebo algo nuevo y casi siempre termino comparándolo con algún plato peruano. 🍽️","When I travel, I look for where locals eat, try something new and almost always end up comparing it with a Peruvian dish. 🍽️")}</p>
-            <p>{t("De ahí salió una idea que quiero desarrollar algún día: Jama, un directorio de restaurantes peruanos en el extranjero.","That inspired an idea I want to build someday: Jama, a directory of Peruvian restaurants abroad.")}</p>
+            <p>{lang==="es"?<>De ahí salió una idea que quiero desarrollar algún día: <strong>Jama</strong>, un directorio de restaurantes peruanos en el extranjero. Quiero ayudar a otros peruanos y a cualquiera con ganas de comer bien a encontrar lugares que realmente valgan la pena.</>:<>That inspired an idea I want to build someday: <strong>Jama</strong>, a directory of Peruvian restaurants abroad. I want to help other Peruvians, and anyone looking for a good meal, find places that are truly worth visiting.</>}</p>
+            <p>{t("Por ahora sigue siendo un proyecto personal. Pero ya tiene nombre, así que algo de compromiso hay. 😄","For now, it’s still a personal project. But it already has a name, so there’s at least some commitment. 😄")}</p>
           </div>
         </div>
       </section>
+
+      <LatestEndorsements />
+      <LatestContactSection />
     </main>
     <SiteFooter/>
   </>
