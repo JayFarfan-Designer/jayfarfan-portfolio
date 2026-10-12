@@ -2,9 +2,7 @@ import { useEffect, useRef } from "react";
 import { Link } from "@tanstack/react-router";
 import { useLanguage } from "@/lib/language";
 import { latestImages } from "@/data/latestAssets";
-import eliana from "@/assets/eliana.jpg";
-import solangie from "@/assets/solangie.jpg";
-import willington from "@/assets/willington.jpg";
+import { LatestContactSection, LatestEndorsements } from "@/components/LatestSharedSections";
 
 function HeroMotion() {
   const ref = useRef<HTMLCanvasElement>(null);
@@ -268,7 +266,7 @@ export function LatestHome() {
           </div>
           <h1>{t("Resuelvo problemas complejos combinando estrategia, criterio humano e inteligencia artificial.","I solve complex problems by combining strategy, human judgment and artificial intelligence.")}</h1>
           <div className="latest-facts"><span>{t("Product Designer peruano en Quito","Peruvian Product Designer based in Quito")}</span><span>{t("+5 años de experiencia","5+ years of experience")}</span></div>
-          <div className="latest-actions"><a className="latest-btn primary" href="#work">{t("Ver experiencia","See experience")} ↓</a><a className="latest-btn secondary" href={cv} download>{t("Descargar CV","Download CV")} ↓</a></div>
+          <div className="latest-actions"><Link className="latest-btn primary" to="/work">{t("Ver experiencia","See experience")} ↓</Link><a className="latest-btn secondary" href={cv} download>{t("Descargar CV","Download CV")} ↓</a></div>
           <div className="latest-metrics">
             <Metric value="+10M" text={t("de personas usaron una app pública de salud que rediseñé","people used a public health app I redesigned")} />
             <Metric value="8/10" text={t("de NPS en pruebas con usuarios de una firma digital","NPS in user tests of a digital signature flow")} />
