@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useLanguage } from "@/lib/language";
 import { useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 export function SiteHeader() {
   const { lang, setLang, t } = useLanguage();
@@ -17,12 +18,12 @@ export function SiteHeader() {
           <Link to="/work" onClick={()=>setOpen(false)}>{t("Experiencia","Experience")}</Link>
           <Link to="/process" onClick={()=>setOpen(false)}>{t("Proceso","Process")}</Link>
           <Link to="/about" onClick={()=>setOpen(false)}>{t("Sobre mí","About")}</Link>
-          <Link to="/contact" onClick={()=>setOpen(false)}>{t("Contacto","Contact")}</Link>
+          <Link to="/contact" onClick={()=>{ trackEvent("contact_click",{ target:"contact_page", language:lang }); setOpen(false); }}>{t("Contacto","Contact")}</Link>
           <div className="latest-lang">
-            <button aria-pressed={lang==="es"} onClick={()=>setLang("es")}>ES</button>
-            <button aria-pressed={lang==="en"} onClick={()=>setLang("en")}>EN</button>
+            <button aria-pressed={lang==="es"} onClick={()=>{ if(lang!=="es") trackEvent("language_switch",{ language:"es", previous_language:lang }); setLang("es"); }}>ES</button>
+            <button aria-pressed={lang==="en"} onClick={()=>{ if(lang!=="en") trackEvent("language_switch",{ language:"en", previous_language:lang }); setLang("en"); }}>EN</button>
           </div>
-          <a className="latest-btn secondary small" href={cvHref} download>{t("Descargar CV","Download CV")} ↓</a>
+          <a className="latest-btn secondary small" href={cvHref} download onClick={()=>trackEvent("cv_download",{ language:lang, target:"header" })}>{t("Descargar CV","Download CV")} ↓</a>
         </nav>
       </div>
     </header>
