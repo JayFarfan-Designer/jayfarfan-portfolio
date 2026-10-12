@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://jayfarfan.com/</loc><lastmod>2026-05-22</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://jayfarfan.com/about</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://jayfarfan.com/work/minsa</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://jayfarfan.com/work/certezia</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://jayfarfan.com/work/komu-ai</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://jayfarfan.com/work/karway</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://jayfarfan.com/work/kindberry</loc><lastmod>2026-05-22</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://jayfarfan.com/</loc></url>
+  <url><loc>https://jayfarfan.com/work</loc></url>
+  <url><loc>https://jayfarfan.com/process</loc></url>
+  <url><loc>https://jayfarfan.com/about</loc></url>
+  <url><loc>https://jayfarfan.com/contact</loc></url>
+  <url><loc>https://jayfarfan.com/work/minsa</loc></url>
+  <url><loc>https://jayfarfan.com/work/certezia</loc></url>
+  <url><loc>https://jayfarfan.com/work/pablo</loc></url>
+  <url><loc>https://jayfarfan.com/work/diners</loc></url>
+  <url><loc>https://jayfarfan.com/work/karway</loc></url>
+  <url><loc>https://jayfarfan.com/work/kindberry</loc></url>
 </urlset>
