@@ -5,6 +5,7 @@ import { latestCases, type LatestCase } from "@/data/latestCases";
 import { latestImages, latestImageBackgrounds } from "@/data/latestAssets";
 import { SiteFooter } from "@/components/SiteFooter";
 import { LatestContactSection } from "@/components/LatestSharedSections";
+import { trackEvent } from "@/lib/analytics";
 
 type AnyObj = Record<string, any>;
 
@@ -120,7 +121,7 @@ export function LatestCaseStudy({ caseData }: { caseData: LatestCase }) {
 
           {c.blocks?.map((b:AnyObj,i:number)=><Block key={i} block={b} index={i} lang={lang}/>)}
 
-          <div className="lc-next"><div><div className="latest-eyebrow">{lang==="es"?"Siguiente caso":"Next case"}</div><h3>{clean(next.short,lang)}</h3></div><Link className="latest-btn secondary" to="/work/$slug" params={{slug:next.slug}}>{lang==="es"?"Ver caso":"View case"} →</Link></div>
+          <div className="lc-next"><div><div className="latest-eyebrow">{lang==="es"?"Siguiente caso":"Next case"}</div><h3>{clean(next.short,lang)}</h3></div><Link className="latest-btn secondary" to="/work/$slug" params={{slug:next.slug}} onClick={()=>trackEvent("case_open",{ project:next.slug, language:lang, target:"next_case" })}>{lang==="es"?"Ver caso":"View case"} →</Link></div>
         </div>
       </article>
       <LatestContactSection custom={c.cta} />
