@@ -3,6 +3,7 @@ import { latestCases } from "@/data/latestCases";
 import { latestImages, latestImageBackgrounds } from "@/data/latestAssets";
 import { useLanguage } from "@/lib/language";
 import { SiteFooter } from "@/components/SiteFooter";
+import { LatestContactSection } from "@/components/LatestSharedSections";
 
 export const Route = createFileRoute("/work")({ component: WorkPage });
 
@@ -50,8 +51,16 @@ function WorkPage() {
                 : <Link key={c.slug} className="latest-card" to="/work/$slug" params={{slug:c.slug}}>{body}</Link>
             })}
           </div>
+          <div className="lc-next latest-work-next">
+            <div>
+              <h3>{lang==="es"?"¿Cómo llegué a cada resultado?":"How did I get to each result?"}</h3>
+              <p>{lang==="es"?"Mira cómo integro IA en cada etapa del proceso, sin perder criterio humano.":"See how I integrate AI at each stage of the process without losing human judgment."}</p>
+            </div>
+            <Link className="latest-btn secondary" to="/process">{lang==="es"?"Ver mi proceso":"See my process"} →</Link>
+          </div>
         </div>
       </main>
+      <LatestContactSection />
       <SiteFooter />
     </>
   );
