@@ -26,7 +26,7 @@ export function BackToTop() {
       aria-label={t("Volver arriba", "Back to top")}
       aria-hidden={!visible}
       tabIndex={visible ? 0 : -1}
-      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      onClick={() => { document.getElementById("app")?.focus({ preventScroll: true }); const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches; window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }); }}
     >
       ↑
     </button>
