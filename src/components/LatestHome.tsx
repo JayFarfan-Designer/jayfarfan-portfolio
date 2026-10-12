@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { useLanguage } from "@/lib/language";
 import { latestImages } from "@/data/latestAssets";
 import { LatestContactSection, LatestEndorsements } from "@/components/LatestSharedSections";
+import { trackEvent } from "@/lib/analytics";
 
 function HeroMotion() {
   const ref = useRef<HTMLCanvasElement>(null);
@@ -259,7 +260,7 @@ export function LatestHome() {
           </div>
           <h1>{t("Resuelvo problemas complejos combinando estrategia, criterio humano e inteligencia artificial.","I solve complex problems by combining strategy, human judgment and artificial intelligence.")}</h1>
           <div className="latest-facts"><span>{t("Product Designer peruano en Quito","Peruvian Product Designer based in Quito")}</span><span>{t("+5 años de experiencia","5+ years of experience")}</span></div>
-          <div className="latest-actions"><Link className="latest-btn primary" to="/work">{t("Ver experiencia","See experience")} ↓</Link><a className="latest-btn secondary" href={cv} download>{t("Descargar CV","Download CV")} ↓</a></div>
+          <div className="latest-actions"><Link className="latest-btn primary" to="/work" onClick={()=>trackEvent("experience_click",{ language:lang, target:"work" })}>{t("Ver experiencia","See experience")} ↓</Link><a className="latest-btn secondary" href={cv} download onClick={()=>trackEvent("cv_download",{ language:lang, target:"home_hero" })}>{t("Descargar CV","Download CV")} ↓</a></div>
           <div className="latest-metrics">
             <Metric value="+10M" text={t("de personas usaron una app pública de salud que rediseñé","people used a public health app I redesigned")} slug="minsa" project={t("Carné de Vacunación","Vaccination Record")} />
             <Metric value="8/10" text={t("de NPS en pruebas con usuarios de una firma digital","NPS in user tests of a digital signature flow")} slug="certezia" project="Certezia" />
@@ -275,7 +276,7 @@ export function LatestHome() {
           <h2>{t("Proyectos destacados","Featured projects")}</h2>
           <p className="latest-lead">{t("He trabajado en productos de fintech, govtech y marketplaces, como parte de equipos de diseño y liderando proyectos. Mi base en Ingeniería Civil se refleja en cómo conecto sistemas, trabajo con restricciones y considero el uso real de cada producto. Estos casos muestran mi trabajo desde research y definición del problema hasta diseño, validación y colaboración con desarrollo.","I’ve worked on fintech, govtech and marketplace products, as part of design teams and leading projects. My Civil Engineering background shapes how I connect systems, work within constraints and consider how people actually use each product. These cases show my work from research and problem definition through design, validation and collaboration with engineering.")}</p>
           <div className="latest-projects">{projects.map(p=><ProjectCard key={p.slug} p={p} lang={lang}/>)}</div>
-          <div className="latest-actions"><Link className="latest-btn primary" to="/work">{t("Ver toda mi experiencia","See all my experience")} →</Link></div>
+          <div className="latest-actions"><Link className="latest-btn primary" to="/work" onClick={()=>trackEvent("experience_click",{ language:lang, target:"work_all" })}>{t("Ver toda mi experiencia","See all my experience")} →</Link></div>
         </div>
       </section>
 
@@ -293,8 +294,8 @@ export function LatestHome() {
 
 function Metric({value,text,slug,project}:{value:string;text:string;slug:string;project:string}) {
   const { lang } = useLanguage();
-  return <div className="latest-metric"><b>{value}</b><span>{text}</span><Link className="latest-metric-link" to="/work/$slug" params={{slug}}>{lang==="es"?"Ver proyecto":"View project"} {project} →</Link></div>
+  return <div className="latest-metric"><b>{value}</b><span>{text}</span><Link className="latest-metric-link" to="/work/$slug" params={{slug}} onClick={()=>trackEvent("case_open",{ project:slug, language:lang, target:"metric" })}>{lang==="es"?"Ver proyecto":"View project"} {project} →</Link></div>
 }
 function ProjectCard({p,lang}:{p:(typeof projects)[number];lang:"es"|"en"}){
-  return <Link to="/work/$slug" params={{slug:p.slug}} className="latest-card"><div className="latest-thumb" style={{background:p.bg}}><img src={p.image} alt="" loading="lazy" decoding="async"/></div><div className="latest-card-body"><div className="latest-card-meta">{p.number} · {p.client}</div><h3>{lang==="es"?p.es:p.en}</h3><p>{p.tags}</p><span>{lang==="es"?"Ver caso":"View case"} →</span></div></Link>
+  return <Link to="/work/$slug" params={{slug:p.slug}} className="latest-card" onClick={()=>trackEvent("case_open",{ project:p.slug, language:lang, target:"featured_card" })}><div className="latest-thumb" style={{background:p.bg}}><img src={p.image} alt="" loading="lazy" decoding="async"/></div><div className="latest-card-body"><div className="latest-card-meta">{p.number} · {p.client}</div><h3>{lang==="es"?p.es:p.en}</h3><p>{p.tags}</p><span>{lang==="es"?"Ver caso":"View case"} →</span></div></Link>
 }
