@@ -1,6 +1,7 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { LanguageProvider } from "@/lib/language";
 import { SiteHeader } from "@/components/SiteHeader";
+import { BackToTop } from "@/components/BackToTop";
 
 import appCss from "../styles.css?url";
 
@@ -112,6 +113,7 @@ function RootComponent() {
   return (
     <LanguageProvider>
       <SiteHeader />
+      <BackToTop />
       <main className="">
         <Outlet />
       </main>
