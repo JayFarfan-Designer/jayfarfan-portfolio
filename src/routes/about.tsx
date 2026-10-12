@@ -3,6 +3,7 @@ import { useLanguage } from "@/lib/language";
 import { latestImages } from "@/data/latestAssets";
 import { SiteFooter } from "@/components/SiteFooter";
 import { LatestContactSection, LatestEndorsements } from "@/components/LatestSharedSections";
+import { trackEvent } from "@/lib/analytics";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
@@ -40,7 +41,7 @@ function AboutPage(){
               <p>{lang==="es"?<>De la ingeniería me traje tres formas de mirar los problemas: <strong>pensamiento sistémico</strong>, <strong>diseño bajo restricciones</strong> y <strong>atención a las personas</strong>. Hoy las aplico para conectar información y flujos, tomar decisiones viables y crear experiencias accesibles.</>:<>Engineering gave me three ways to approach problems: <strong>systems thinking</strong>, <strong>design within constraints</strong> and <strong>attention to people</strong>. Today, I apply them to connect information and flows, make feasible decisions and create accessible experiences.</>}</p>
               <p>{t("Antes de diseñar, observo cómo las personas usan el producto y alineo sus necesidades con el negocio y las posibilidades del equipo. Hoy soy cofundador de DIGITAL-HUMANS y trabajo en fintech, govtech y marketplaces entre Perú y Ecuador.","Before designing, I observe how people use the product and align their needs with business goals and what the team can build. Today, I’m a cofounder of DIGITAL-HUMANS, working across fintech, govtech and marketplaces in Peru and Ecuador.")}</p>
             </div>
-            <div className="latest-actions"><a href={cv} download className="latest-btn primary">{t("Descargar CV","Download CV")} ↓</a><Link to="/work" className="latest-btn secondary">{t("Ver experiencia","View experience")} →</Link></div>
+            <div className="latest-actions"><a href={cv} download className="latest-btn primary" onClick={()=>trackEvent("cv_download",{ language:lang, target:"about" })}>{t("Descargar CV","Download CV")} ↓</a><Link to="/work" className="latest-btn secondary" onClick={()=>trackEvent("experience_click",{ language:lang, target:"work" })}>{t("Ver experiencia","View experience")} →</Link></div>
           </div>
         </div>
       </section>
