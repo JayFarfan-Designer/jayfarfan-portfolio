@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useLanguage } from "@/lib/language";
 import { SiteFooter } from "@/components/SiteFooter";
 import { LatestContactSection } from "@/components/LatestSharedSections";
+import { trackEvent } from "@/lib/analytics";
 
 export const Route = createFileRoute("/process")({ component: ProcessPage });
 
@@ -46,7 +47,7 @@ function StageCard({s,lang}:{s:(typeof stages)[number];lang:"es"|"en"}){
     <p>{s.what[lang]}</p>
     <div className="lc-k">{lang==="es"?"Dónde uso IA":"Where I use AI"}</div><p>{s.ai[lang]}</p>
     <div className="lc-k">{lang==="es"?"Lo que decido yo":"What I decide"}</div><p>{s.me[lang]}</p>
-    <div className="latest-cell-reference"><div className="lc-k">{lang==="es"?"Evidencia":"Evidence"}</div><div>{s.ev.map((e,i)=><span key={e[0]}>{i>0?" · ":null}<Link to="/work/$slug" params={{slug:e[0]}}>{e[1][lang]}</Link></span>)}</div></div>
+    <div className="latest-cell-reference"><div className="lc-k">{lang==="es"?"Evidencia":"Evidence"}</div><div>{s.ev.map((e,i)=><span key={e[0]}>{i>0?" · ":null}<Link to="/work/$slug" params={{slug:e[0]}} onClick={()=>trackEvent("case_open",{ project:e[0], language:lang, target:"process_evidence" })}>{e[1][lang]}</Link></span>)}</div></div>
   </div>
 }
 
@@ -77,7 +78,7 @@ function ProcessPage(){
 
       <section className="latest-section"><div className="latest-wrap"><div className="latest-process-criterion"><div className="latest-eyebrow">{t("Cómo uso la IA","How I use AI")}</div><h2>{t("Uso IA para avanzar más rápido, no para que decida por mí.","I use AI to move faster, not to let it decide for me.")}</h2><p>{t("La uso para ordenar research, explorar alternativas, resumir información y construir prototipos con más velocidad. Pero no tomo un resultado de IA como evidencia: vuelvo a los datos, lo contrasto con usuarios y con el equipo y decido qué tiene sentido conservar.","I use it to organize research, explore alternatives, summarize information and build prototypes faster. But I don’t take an AI result as evidence: I go back to the data, check it with users and the team and decide what makes sense to keep.")}</p></div></div></section>
 
-      <section className="latest-section"><div className="latest-wrap"><div className="latest-process-heading"><div><div className="latest-eyebrow">Skillset</div><h2>{t("Lo que sé hacer","What I do")}</h2></div><p>{t("Trabajo principalmente entre research, estrategia de producto y diseño de interfaces. Según el proyecto, puedo moverme desde discovery hasta una solución lista para desarrollo.","I work mainly across research, product strategy and interface design. Depending on the project, I can move from discovery to a solution ready for development.")}</p></div><div className="latest-skill-grid">{skills.map((g)=><div className="latest-process-cell" key={g.h.es}><h4>{g.h[lang]}</h4><div className="latest-skill-tags">{g.s.map(k=><span className={g.tool?"tool":""} key={k}>{bi(k,lang)}</span>)}</div><div className="latest-cell-reference"><div className="lc-k">{t("En proyectos como","In projects like")}</div><div>{g.ev.map((e,i)=><span key={e[0]}>{i>0?" · ":null}<Link to="/work/$slug" params={{slug:e[0]}}>{e[1]}</Link></span>)}</div></div></div>)}</div></div></section>
+      <section className="latest-section"><div className="latest-wrap"><div className="latest-process-heading"><div><div className="latest-eyebrow">Skillset</div><h2>{t("Lo que sé hacer","What I do")}</h2></div><p>{t("Trabajo principalmente entre research, estrategia de producto y diseño de interfaces. Según el proyecto, puedo moverme desde discovery hasta una solución lista para desarrollo.","I work mainly across research, product strategy and interface design. Depending on the project, I can move from discovery to a solution ready for development.")}</p></div><div className="latest-skill-grid">{skills.map((g)=><div className="latest-process-cell" key={g.h.es}><h4>{g.h[lang]}</h4><div className="latest-skill-tags">{g.s.map(k=><span className={g.tool?"tool":""} key={k}>{bi(k,lang)}</span>)}</div><div className="latest-cell-reference"><div className="lc-k">{t("En proyectos como","In projects like")}</div><div>{g.ev.map((e,i)=><span key={e[0]}>{i>0?" · ":null}<Link to="/work/$slug" params={{slug:e[0]}} onClick={()=>trackEvent("case_open",{ project:e[0], language:lang, target:"skillset_evidence" })}>{e[1]}</Link></span>)}</div></div></div>)}</div></div></section>
 
       <LatestContactSection />
     </main>
