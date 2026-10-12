@@ -1,7 +1,8 @@
 import { useLanguage } from "@/lib/language";
+import { trackEvent } from "@/lib/analytics";
 
 export function SiteFooter() {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
   return (
     <footer className="latest-footer">
       <div className="latest-wrap latest-footer-grid">
@@ -10,9 +11,9 @@ export function SiteFooter() {
           <p>{t("Product Designer peruano, basado en Quito. Trabajo en productos digitales entre research, estrategia y UX/UI.","Peruvian Product Designer based in Quito. I work on digital products across research, strategy and UX/UI.")}</p>
         </div>
         <div className="latest-footer-links">
-          <a href="/contact">{t("Contacto","Contact")}</a>
-          <a href="https://www.linkedin.com/in/jayfarfan/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-          <a href="mailto:josem4n@gmail.com">josem4n@gmail.com</a>
+          <a href="/contact" onClick={()=>trackEvent("contact_click",{ target:"contact_page", language:lang })}>{t("Contacto","Contact")}</a>
+          <a href="https://www.linkedin.com/in/jayfarfan/" target="_blank" rel="noreferrer" onClick={()=>trackEvent("linkedin_click",{ target:"jayfarfan", language:lang })}>LinkedIn ↗</a>
+          <a href="mailto:josem4n@gmail.com" onClick={()=>trackEvent("contact_click",{ target:"email", language:lang })}>josem4n@gmail.com</a>
         </div>
       </div>
       <div className="latest-wrap">
