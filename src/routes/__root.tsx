@@ -114,7 +114,7 @@ function RootComponent() {
     <LanguageProvider>
       <SiteHeader />
       <BackToTop />
-      <main className="">
+      <main id="app" tabIndex={-1} className="">
         <Outlet />
       </main>
     </LanguageProvider>
