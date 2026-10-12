@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLanguage } from "@/lib/language";
 import { SiteFooter } from "@/components/SiteFooter";
+import { trackEvent } from "@/lib/analytics";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
@@ -36,9 +37,9 @@ function ContactPage() {
                 )}
               </p>
               <div className="latest-actions">
-                <a className="latest-btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=josem4n@gmail.com" target="_blank" rel="noreferrer">{t("Conversemos","Let’s talk")} ↗</a>
-                <a className="latest-btn secondary" href={cv} download>{t("Descargar CV","Download CV")} ↓</a>
-                <a className="latest-btn secondary" href="https://www.linkedin.com/in/jayfarfan/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+                <a className="latest-btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=josem4n@gmail.com" target="_blank" rel="noreferrer" onClick={()=>trackEvent("contact_click",{ target:"gmail_compose", language:lang })}>{t("Conversemos","Let’s talk")} ↗</a>
+                <a className="latest-btn secondary" href={cv} download onClick={()=>trackEvent("cv_download",{ language:lang, target:"contact_page" })}>{t("Descargar CV","Download CV")} ↓</a>
+                <a className="latest-btn secondary" href="https://www.linkedin.com/in/jayfarfan/" target="_blank" rel="noreferrer" onClick={()=>trackEvent("linkedin_click",{ target:"jayfarfan", language:lang })}>LinkedIn ↗</a>
               </div>
             </div>
           </div>
